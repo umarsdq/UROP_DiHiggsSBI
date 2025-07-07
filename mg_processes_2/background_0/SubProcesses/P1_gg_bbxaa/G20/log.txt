@@ -1,0 +1,335 @@
+ Process in group number            1
+ A PDF is used, so alpha_s(MZ) is going to be modified
+ Old value of alpha_s from param_card:   0.11839999999999999     
+  ****************************************
+ 
+       NNPDFDriver version 1.0.3
+   Grid: NNPDF23nlo_as_0119_qed_mem0.grid
+  ****************************************
+ New value of alpha_s from PDF nn23nlo:  0.11899999999999999     
+ Define smin to   21625.000000000000     
+ *****************************************************
+ *               MadGraph/MadEvent                   *
+ *        --------------------------------           *
+ *          http://madgraph.hep.uiuc.edu             *
+ *          http://madgraph.phys.ucl.ac.be           *
+ *          http://madgraph.roma2.infn.it            *
+ *        --------------------------------           *
+ *                                                   *
+ *          PARAMETER AND COUPLING VALUES            *
+ *                                                   *
+ *****************************************************
+
+  External Params
+  ---------------------------------
+  
+ aEWM1 =    132.50700000000001     
+ mdl_Gf =    1.1663700000000000E-005
+ aS =   0.11839999999999999     
+ mdl_ymb =    4.7000000000000002     
+ mdl_ymt =    172.00000000000000     
+ mdl_ymtau =    1.7769999999999999     
+ mdl_MZ =    91.187600000000003     
+ mdl_MT =    172.00000000000000     
+ mdl_MB =    0.0000000000000000     
+ mdl_MH =    125.00000000000000     
+ mdl_MTA =    0.0000000000000000     
+ mdl_WZ =    2.4160230000000000     
+ mdl_WW =    2.0029499999999998     
+ mdl_WT =    1.4708000000000001     
+ mdl_WH =    4.0879999999999996E-003
+  Internal Params
+  ---------------------------------
+  
+ mdl_conjg__CKM3x3 =    1.0000000000000000     
+ mdl_conjg__CKM1x1 =    1.0000000000000000     
+ mdl_CKM3x3 =    1.0000000000000000     
+ mdl_complexi =                (0.0000000000000000,1.0000000000000000)
+ mdl_MZ__exp__2 =    8315.1783937600012     
+ mdl_MZ__exp__4 =    69142191.720053151     
+ mdl_sqrt__2 =    1.4142135623730951     
+ mdl_MH__exp__2 =    15625.000000000000     
+ mdl_aEW =    7.5467711139788835E-003
+ mdl_MW =    80.418232696860471     
+ mdl_sqrt__aEW =    8.6872153846781555E-002
+ mdl_ee =   0.30795376724436879     
+ mdl_MW__exp__2 =    6467.0921500863988     
+ mdl_sw2 =   0.22225455139488892     
+ mdl_cw =   0.88189877457966293     
+ mdl_sqrt__sw2 =   0.47143880980980862     
+ mdl_sw =   0.47143880980980862     
+ mdl_g1 =   0.34919400743146284     
+ mdl_gw =   0.65322107734109924     
+ mdl_vev =    246.22056907348579     
+ mdl_vev__exp__2 =    60624.568634871190     
+ mdl_lam =   0.12886689630821155     
+ mdl_yb =    2.6995322804122736E-002
+ mdl_yt =   0.98791394091683182     
+ mdl_ytau =    1.0206529494239594E-002
+ mdl_muH =    88.388347648318444     
+ mdl_I1x33 =          (2.69953228041227358E-002,0.0000000000000000)
+ mdl_I2x33 =               (0.98791394091683182,0.0000000000000000)
+ mdl_I3x33 =               (0.98791394091683182,0.0000000000000000)
+ mdl_I4x33 =          (2.69953228041227358E-002,0.0000000000000000)
+ mdl_ee__exp__2 =    9.4835522759998875E-002
+ mdl_sw__exp__2 =   0.22225455139488889     
+ mdl_cw__exp__2 =   0.77774544860511108     
+  Internal Params evaluated point by point
+  ----------------------------------------
+  
+ mdl_sqrt__aS =   0.34409301068170506     
+ mdl_G__exp__2 =    1.4878582807401259     
+  Couplings of sm
+  ---------------------------------
+  
+        GC_10 =  -0.12198E+01   0.00000E+00
+        GC_11 =   0.00000E+00   0.12198E+01
+         GC_1 =  -0.00000E+00  -0.10265E+00
+         GC_2 =   0.00000E+00   0.20530E+00
+
+ Collider parameters:
+ --------------------
+
+ Running at P P   machine @    100000.00000000000       GeV
+ PDF set = nn23nlo
+ alpha_s(Mz)= 0.1190 running at 2 loops.
+ alpha_s(Mz)= 0.1190 running at 2 loops.
+ Renormalization scale set on event-by-event basis
+ Factorization   scale set on event-by-event basis
+
+
+ getting user params
+Enter number of events and max and min iterations: 
+ Number of events and iterations         4000           5           3
+Enter desired fractional accuracy: 
+ Desired fractional accuracy:   0.10000000000000001     
+Enter 0 for fixed, 2 for adjustable grid: 
+Suppress amplitude (0 no, 1 yes)? 
+ Using suppressed amplitude.
+Exact helicity sum (0 yes, n = number/event)? 
+ Monte-Carlo over helicities
+ 
+ ********************************************
+ * You are using the DiscreteSampler module *
+ *      part of the MG5_aMC framework       *
+ *         Author: Valentin Hirschi         *
+ ********************************************
+ 
+Enter Configuration Number: 
+Running Configuration Number:   20
+ Not subdividing B.W.
+ Attempting mappinvarients           1           6
+ Determine nb_t
+ T-channel found:            2
+ Completed mapping           6
+ about to integrate           10        4000           7           3          10           1
+ Using non-zero grid deformation.
+ 10 dimensions   4000 events 10 invarients  7 iterations  1 config(s),  (0.99)
+ Using h-tuple random number sequence.
+ Error opening grid
+ Using Uniform Grid!          24
+ Using uniform alpha   1.0000000000000000     
+ Grid defined OK
+ Masses: 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+ Set CM energy to     100000.00
+ Mapping Graph          20  to config          20
+ Determine nb_t
+ T-channel found:            2
+Setting grid   1    0.50540E-07   1
+Setting grid   2    0.62500E-07   1
+Setting grid   3    0.78400E-07   1
+ Transforming s_hat 1/s            9   2.1625000000000005E-006   21625.000000000000        9999999999.9999981     
+Using random seed offsets    20 :      1
+  with seed                   30
+ Ranmar initialization seeds        8311        9405
+  Particle       3       4       5       6
+      Et >    25.0    25.0    28.0    28.0
+       E >     0.0     0.0     0.0     0.0
+     Eta <     2.8     2.8     2.7     2.7
+   xqcut:      0.0     0.0     0.0     0.0
+d R # 3  >    -0.0     0.3     0.9     0.9
+d R # 4  >    -0.0    -0.0     0.9     0.9
+d R # 5  >    -0.0    -0.0    -0.0     0.3
+s min # 3>     0.0  7225.0     0.0     0.0
+s min # 4>     0.0     0.0     0.0     0.0
+s min # 5>     0.0     0.0     0.0 14400.0
+xqcutij # 3>     0.0     0.0     0.0     0.0
+xqcutij # 4>     0.0     0.0     0.0     0.0
+xqcutij # 5>     0.0     0.0     0.0     0.0
+ alpha_s for scale    99.116164264983482       is   0.11750998143947983     
+ RESET CUMULATIVE VARIABLE
+ DiscreteSampler:: WARNING, the bin '1' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '2' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '3' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '4' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '5' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '6' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '7' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '8' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '9' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '10' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '11' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '12' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '13' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '14' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '15' of dimension 'Helicity' will be used for reference even though it has been probed only 6 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '16' of dimension 'Helicity' will be used for reference even though it has been probed only 3 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '17' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '18' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '19' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '20' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '21' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '22' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '23' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '24' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '25' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '26' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '27' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '28' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '29' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '30' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '31' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '32' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '33' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '34' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '35' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '36' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '37' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '38' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '39' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '40' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '41' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '42' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '43' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '44' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '45' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '46' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '47' of dimension 'Helicity' will be used for reference even though it has been probed only 3 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '48' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '49' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '50' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '51' of dimension 'Helicity' will be used for reference even though it has been probed only 3 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '52' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '53' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '54' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '55' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '56' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '57' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '58' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '59' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '60' of dimension 'Helicity' will be used for reference even though it has been probed only 3 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '61' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '62' of dimension 'Helicity' will be used for reference even though it has been probed only 0 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '63' of dimension 'Helicity' will be used for reference even though it has been probed only 1 times (minimum requested is 20 times).
+ DiscreteSampler:: WARNING, the bin '64' of dimension 'Helicity' will be used for reference even though it has been probed only 2 times (minimum requested is 20 times).
+ Iteration  1   Mean: 0.7190E-04 Abs mean: 0.7190E-04   Fluctuation:  0.231E-04   0.989E-03     0.0%
+  1    0.7190E-04 0.7190E-04 +- 0.2314E-04      2.51
+ Writing out events   5.1356063596205576E-007   2.5137135924017229     
+ Relative summed weights:
+  0.1074E+00  0.0000E+00
+  0.2574E+00  0.0000E+00
+  0.4373E+00  0.0000E+00
+  0.1979E+00  0.0000E+00
+ Relative number of events:
+  0.3000E+00  0.0000E+00
+  0.3000E+00  0.0000E+00
+  0.2429E+00  0.0000E+00
+  0.1571E+00  0.0000E+00
+ Events:
+          21           0
+          21           0
+          17           0
+          11           0
+ Iteration  2   Mean: 0.8103E-04 Abs mean: 0.8103E-04   Fluctuation:  0.146E-04   0.323E-01     0.2%
+  2    0.8103E-04 0.8103E-04 +- 0.1460E-04      9.50
+ Relative summed weights:
+  0.2743E+00  0.0000E+00
+  0.1543E+00  0.0000E+00
+  0.1704E+00  0.0000E+00
+  0.4010E+00  0.0000E+00
+ Relative number of events:
+  0.2495E+00  0.0000E+00
+  0.2495E+00  0.0000E+00
+  0.2552E+00  0.0000E+00
+  0.2459E+00  0.0000E+00
+ Events:
+         693           0
+         693           0
+         709           0
+         683           0
+ Iteration  3   Mean: 0.5508E-04 Abs mean: 0.5508E-04   Fluctuation:  0.365E-05   0.972E-02     0.1%
+  3    0.5508E-04 0.5508E-04 +- 0.3647E-05      4.40
+ Relative summed weights:
+  0.2574E+00  0.0000E+00
+  0.2505E+00  0.0000E+00
+  0.2295E+00  0.0000E+00
+  0.2626E+00  0.0000E+00
+ Relative number of events:
+  0.2507E+00  0.0000E+00
+  0.2505E+00  0.0000E+00
+  0.2584E+00  0.0000E+00
+  0.2405E+00  0.0000E+00
+ Events:
+        1105           0
+        1104           0
+        1139           0
+        1060           0
+ Accuracy:    0.104   0.100   0.061   2.909
+ Found         3660  events.
+ Wrote           25  events.
+ Actual xsec    5.8663279942021364E-005
+ Correct abs xsec    5.8663279942021364E-005
+ Event xsec    5.8663279942021398E-005
+ Events wgts > 1:            2
+ % Cross section > 1:    7.1325561231474764E-007   1.2158468006215790     
+ Iteration  4   Mean: 0.5513E-04 Abs mean: 0.5513E-04   Fluctuation:  0.139E-05   0.265E-02     0.1%
+  4    0.5513E-04 0.5513E-04 +- 0.1388E-05      2.18
+ Relative summed weights:
+  0.2763E+00  0.0000E+00
+  0.2408E+00  0.0000E+00
+  0.2265E+00  0.0000E+00
+  0.2564E+00  0.0000E+00
+ Relative number of events:
+  0.2585E+00  0.0000E+00
+  0.2427E+00  0.0000E+00
+  0.2377E+00  0.0000E+00
+  0.2611E+00  0.0000E+00
+ Events:
+        1944           0
+        1825           0
+        1787           0
+        1963           0
+ Accuracy:    0.037   0.100   0.023   2.463
+ Finished due to accuracy    3.6515728256644474E-002  0.10000000000000001     
+
+ -------------------------------------------------------------------------------
+ Accumulated results:   Integral =  0.5565E-04
+                        Std dev  =  0.1295E-05
+                       Cross sec =  0.5565E-04
+             Chi**2 per DoF.     =      2.4634
+ -------------------------------------------------------------------------------
+ Found         6643  events.
+ Wrote          358  events.
+ Actual xsec    5.5560343883198179E-005
+ Correct abs xsec    5.5560343883198179E-005
+ Event xsec    5.5560343883197922E-005
+ Events wgts > 1:            7
+ % Cross section > 1:    4.8175425847446876E-007  0.86708293146500248     
+-------------------------------------------------
+---------------------------
+ Results Last   3 iters: Integral =   0.5556E-04
+                     Abs integral =   0.5556E-04
+                          Std dev =   0.1296E-05
+                  Chi**2 per DoF. =      1.5776
+-------------------------------------------------
+---------------------------
+ Status  0.10000000000000001                5           7
+
+ls status:
+events.lhe
+ftn26
+input_app.txt
+log.txt
+multijob.dat
+results.dat
+run1_app.log

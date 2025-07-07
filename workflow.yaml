@@ -1,24 +1,24 @@
 # Data setup (step 1)
-data_dir: /global/u1/r/rmastand/nsbi_for_dihiggs/data
-morphing_setup: /global/u1/r/rmastand/nsbi_for_dihiggs/data/setup.h5
+data_dir: /home/hep/us322/SBI/nsbi_for_dihiggs/data
+morphing_setup: /home/hep/us322/SBI/nsbi_for_dihiggs/data/setup.h5
 
 # MG generation (step 2)
 madgraph:
-    dir: /global/u1/r/rmastand/MG5_aMC_v3_5_1/
-    n_runs: 25
-    output_dir: /pscratch/sd/r/rmastand/hh_batching/mg_processes
+    dir: /home/hep/us322/mg5amcnlo/
+    n_runs: 2
+    output_dir: /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes
     energy: 100
 
 # Delphes (step 3)
 delphes:
-    input_dir_prefix: /pscratch/sd/r/rmastand/hh_batching/events_03_16/
-    output_file: /pscratch/sd/r/rmastand/hh_batching/post_delphes_data/delphes
-    long_term_storage_dir: /global/cfs/cdirs/m3246/rmastand/hh_prod/post_delphes_data
+    input_dir_prefix: /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/
+    output_file: /vols/cms/us322/post_delphes_data/delphes
+    long_term_storage_dir: /vols/cms/us322/post_delphes_data
     
 # Sampling (step 4)
 sampling:
-    input_dir: /global/cfs/cdirs/m3246/rmastand/hh_prod/post_delphes_data/
-    output_dir: /global/cfs/cdirs/m3246/rmastand/hh_prod/samples/
+    input_dir: /vols/cms/us322/post_delphes_data/
+    output_dir: /home/hep/us322/SBI/nsbi_for_dihiggs/samples/
     
 # Plotting
 plotting:

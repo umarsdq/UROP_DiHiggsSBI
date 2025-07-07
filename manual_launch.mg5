@@ -1,0 +1,14 @@
+# Manual launch script to bypass the parton_shower KeyError
+launch
+# Select shower
+1
+# Select detector simulation
+2
+# Select analysis
+2
+# Select MadSpin
+2
+# Select reweighting
+1
+# Done
+0 

@@ -1,0 +1,53 @@
+#************************************************************
+#*                     MadGraph5_aMC@NLO                    *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*         VERSION 3.5.1                 2023-07-11         *
+[1;31m#*                                                          *[1;0m
+[1;31m#*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
+[1;31m#*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
+[1;31m#*                                                          *[1;0m
+#*                                                          *
+#*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadGraph5_aMC@NLO         *
+#*                                                          *
+#*     run as ./bin/mg5_aMC  filename                       *
+#*                                                          *
+#************************************************************
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set low_mem_multicore_nlo_generation False
+set complex_mass_scheme False
+set include_lepton_initiated_processes False
+set gauge unitary
+set loop_optimized_output True
+set loop_color_flows False
+set max_npoint_for_channel 0
+set default_unset_couplings 99
+set max_t_for_channel 99
+set zerowidth_tchannel True
+set nlo_mixed_expansion True
+#import proc_v4 /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_1/manual_launch.mg5
+Traceback (most recent call last):
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1543, in onecmd
+    return self.onecmd_orig(line, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1492, in onecmd_orig
+    return func(arg, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/master_interface.py", line 281, in do_import
+    self.cmd.do_import(self, *args, **opts)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/madgraph_interface.py", line 5732, in do_import
+    self.import_mg4_proc_card(proc_card)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/madgraph_interface.py", line 5810, in import_mg4_proc_card
+    raise self.InvalidCmd('\"%s\" is not a valid path' % filepath)
+madgraph.InvalidCmd: "/home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_1/manual_launch.mg5" is not a valid path
+Fail to write options with error No model currently active, please import a model!

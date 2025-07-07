@@ -1,0 +1,4 @@
+1       u u~ > b b~ a a,c c~ > b b~ a a
+mirror  u~ u > b b~ a a,c~ c > b b~ a a
+2       d d~ > b b~ a a,s s~ > b b~ a a
+mirror  d~ d > b b~ a a,s~ s > b b~ a a

@@ -1,0 +1,1115 @@
+[1;31mNote that this is a development version.
+This version is intended for development/beta testing and NOT for production.
+This version has not been fully tested (if at all) and might have limited user support (if at all)[0m
+Running MG5 in debug mode
+('WARNING: loading of madgraph too slow!!!', 0.6782870292663574)
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+[1;31m*                                                          *[1;0m
+[1;31m*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
+[1;31m*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
+[1;31m*                                                          *[1;0m
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../../mg5amcnlo/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /home/hep/us322/mg5amcnlo/HEPTools/lib
+set collier to /home/hep/us322/mg5amcnlo/HEPTools/lib
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/madminer/cards/mg_commands_1.dat
+The import format was not given, so we guess it as command
+launch /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt  
+INFO: load configuration from /home/hep/us322/mg5amcnlo/input/mg5_configuration.txt  
+INFO: load configuration from /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+generate_events run_01
+[1;34m"Pythia8" not valid option for "shower"[0m
+The following switches determine which programs are run:
+/================ Description =================|=========== values ===========|====== other options ======\
+| 1. Choose the shower/hadronization program   | [1m  shower[0m = [01mNot Avail.[0m        |   Please install module   |
+| 2. Choose the detector simulation program    | [1mdetector[0m = [01mNot Avail.[0m        |   Please install module   |
+| 3. Choose an analysis package (plot/convert) | [1manalysis[0m = [01mNot Avail.[0m        |   Please install module   |
+| 4. Decay onshell particles                   | [1m madspin[0m = [31mOFF[0m               |   ON|onshell|full         |
+| 5. Add weights to events for new hypp.       | [1mreweight[0m = [31mOFF[0m               |   ON                      |
+\=========================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/================ Description =================|=========== values ===========|====== other options ======\
+| 1. Choose the shower/hadronization program   | [1m  shower[0m = [01mNot Avail.[0m        |   Please install module   |
+| 2. Choose the detector simulation program    | [1mdetector[0m = [01mNot Avail.[0m        |   Please install module   |
+| 3. Choose an analysis package (plot/convert) | [1manalysis[0m = [01mNot Avail.[0m        |   Please install module   |
+| 4. Decay onshell particles                   | [1m madspin[0m = [31mOFF[0m               |   ON|onshell|full         |
+| 5. Add weights to events for new hypp.       | [1mreweight[0m = [31mOFF[0m               |   ON                      |
+\=========================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/================ Description =================|=========== values ===========|====== other options ======\
+| 1. Choose the shower/hadronization program   | [1m  shower[0m = [01mNot Avail.[0m        |   Please install module   |
+| 2. Choose the detector simulation program    | [1mdetector[0m = [01mNot Avail.[0m        |   Please install module   |
+| 3. Choose an analysis package (plot/convert) | [1manalysis[0m = [01mNot Avail.[0m        |   Please install module   |
+| 4. Decay onshell particles                   | [1m madspin[0m = [31mOFF[0m               |   ON|onshell|full         |
+| 5. Add weights to events for new hypp.       | [1mreweight[0m = [31mOFF[0m               |   ON                      |
+\=========================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/================ Description =================|=========== values ===========|====== other options ======\
+| 1. Choose the shower/hadronization program   | [1m  shower[0m = [01mNot Avail.[0m        |   Please install module   |
+| 2. Choose the detector simulation program    | [1mdetector[0m = [01mNot Avail.[0m        |   Please install module   |
+| 3. Choose an analysis package (plot/convert) | [1manalysis[0m = [01mNot Avail.[0m        |   Please install module   |
+| 4. Decay onshell particles                   | [1m madspin[0m = [31mOFF[0m               |   ON|onshell|full         |
+| 5. Add weights to events for new hypp.       | [1mreweight[0m = [31mOFF[0m               |   ON                      |
+\=========================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/================ Description =================|=========== values ===========|====== other options ======\
+| 1. Choose the shower/hadronization program   | [1m  shower[0m = [01mNot Avail.[0m        |   Please install module   |
+| 2. Choose the detector simulation program    | [1mdetector[0m = [01mNot Avail.[0m        |   Please install module   |
+| 3. Choose an analysis package (plot/convert) | [1manalysis[0m = [01mNot Avail.[0m        |   Please install module   |
+| 4. Decay onshell particles                   | [1m madspin[0m = [31mOFF[0m               |   ON|onshell|full         |
+| 5. Add weights to events for new hypp.       | [1mreweight[0m = [31mOFF[0m               |   ON                      |
+\=========================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param : [32mparam_card.dat[0m                                 |
+|  [31m2[0m. run   : [32mrun_card.dat[0m                                   |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, enter path]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse 0 value[0m
+[1;32mDEBUG: keep SDE to 2 [0m
+INFO: Update the dependent parameter of the param_card.dat 
+[1;34mWARNING: update the strong coupling value (alpha_s) to the value from the pdf selected: 0.119 [0m
+[1;34mWARNING: Unknow type of information in the card: dim64f2l,renor,dim64f,dim62f,dim6,loop,dim64f4l [0m
+Generating 50000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+[1;32mwrite compile file for card: /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/param_card.dat[0m
+[1;34mWARNING: information about "sminputs [1]" is missing using default value: 132.507. [0m
+[1;34mWARNING: information about "yukawa [5]" is missing using default value: 4.7. [0m
+[1;34mWARNING: information about "yukawa [15]" is missing using default value: 1.777. [0m
+[1;32mrun_card missed argument polbeam1. Takes default: 0.0[0m
+[1;32mrun_card missed argument polbeam2. Takes default: 0.0[0m
+[1;32mrun_card missed argument nb_proton1. Takes default: 1[0m
+[1;32mrun_card missed argument nb_proton2. Takes default: 1[0m
+[1;32mrun_card missed argument nb_neutron1. Takes default: 0[0m
+[1;32mrun_card missed argument nb_neutron2. Takes default: 0[0m
+[1;32mrun_card missed argument mass_ion1. Takes default: -1.0[0m
+[1;32mrun_card missed argument mass_ion2. Takes default: -1.0[0m
+[1;32mrun_card missed argument pdlabel1. Takes default: nn23nlo[0m
+[1;32mrun_card missed argument pdlabel2. Takes default: nn23nlo[0m
+[1;32mrun_card missed argument fixed_fac_scale1. Takes default: False[0m
+[1;32mrun_card missed argument fixed_fac_scale2. Takes default: False[0m
+[1;32mrun_card missed argument fixed_extra_scale. Takes default: False[0m
+[1;32mrun_card missed argument mue_ref_fixed. Takes default: 91.188[0m
+[1;32mrun_card missed argument mue_over_ref. Takes default: 1.0[0m
+[1;32mrun_card missed argument ievo_eva. Takes default: 0[0m
+[1;32mrun_card missed argument ickkw. Takes default: 0[0m
+[1;32mrun_card missed argument highestmult. Takes default: 1[0m
+[1;32mrun_card missed argument ktscheme. Takes default: 1[0m
+[1;32mrun_card missed argument alpsfact. Takes default: 1.0[0m
+[1;32mrun_card missed argument chcluster. Takes default: False[0m
+[1;32mrun_card missed argument pdfwgt. Takes default: True[0m
+[1;32mrun_card missed argument asrwgtflavor. Takes default: 5[0m
+[1;32mrun_card missed argument clusinfo. Takes default: True[0m
+[1;32mrun_card missed argument lhe_version. Takes default: 3.0[0m
+[1;32mrun_card missed argument auto_ptj_mjj. Takes default: True[0m
+[1;32mrun_card missed argument xqcut. Takes default: 0.0[0m
+[1;32mrun_card missed argument gridrun. Takes default: False[0m
+[1;32mrun_card missed argument fixed_couplings. Takes default: True[0m
+[1;32mrun_card missed argument mc_grouped_subproc. Takes default: True[0m
+[1;32mrun_card missed argument xmtcentral. Takes default: 0.0[0m
+[1;32mrun_card missed argument d. Takes default: 1.0[0m
+[1;32mrun_card missed argument issgridfile. Takes default: [0m
+[1;32mrun_card missed argument tmin_for_channel. Takes default: -1.0[0m
+[1;32mrun_card missed argument small_width_treatment. Takes default: 1e-06[0m
+[1;32mrun_card missed argument bias_parameters. Takes default: {}[0m
+compile Source Directory
+Error: no DISPLAY environment variable specified
+[1;32mCompiling the bias module 'dummy'[0m
+Using random number seed offset = 27
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO: Compiling for process 1/2. 
+INFO:     P1_gg_bbxaa  
+[1;32mDEBUG: nb_hel: 28 zero amp: 0 bad_amps_hel: 0/840 [0m
+  0%|          | 0/874 [00:00<?, ?it/s] 59%|█████▊    | 512/874 [00:00<00:00, 5097.85it/s]100%|██████████| 874/874 [00:00<00:00, 7209.80it/s]INFO: Compiling for process 2/2. 
+INFO:     P1_qq_bbxaa  
+[1;32mDEBUG: nb_hel: 16 zero amp: 0 bad_amps_hel: 0/320 [0m
+
+  0%|          | 0/841 [00:00<?, ?it/s]100%|██████████| 841/841 [00:00<00:00, 17090.08it/s][1;32mDEBUG: nb_hel: 16 zero amp: 0 bad_amps_hel: 0/320 [0m
+
+  0%|          | 0/841 [00:00<?, ?it/s]100%|██████████| 841/841 [00:00<00:00, 20048.02it/s]INFO:     P1_gg_bbxaa  
+INFO:     P1_qq_bbxaa  
+INFO:  Idle: 1,  Running: 7,  Completed: 0 [ current time: 15h03 ] 
+INFO:  Idle: 0,  Running: 7,  Completed: 1 [  29.5s  ] 
+INFO:  Idle: 0,  Running: 5,  Completed: 3 [  43.6s  ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 4 [  54.2s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 5 [  1m 3s  ] 
+INFO:  Idle: 0,  Running: 1,  Completed: 7 [  1m 29s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 8 [  2m 31s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 8 [  2m 31s  ] 
+INFO: End survey 
+refine 50000
+Creating Jobs
+INFO: Refine results to 50000 
+INFO: Generating 50000.0 unweighted events. 
+sum of cpu time of last step: 9m00s
+INFO: Effective Luminosity 126548379.53407975 pb^-1 
+[1;32mDEBUG: channel G2 need to improve by 1.18 (xsec=4.67e-08 pb, iter=5) [0m
+[1;32mDEBUG: channel G2 need to improve by 1.80 (xsec=7.2449e-07 pb, iter=5) [0m
+[1;32mDEBUG: channel G19 need to improve by 1.81 (xsec=4.8278e-06 pb, iter=4) [0m
+[1;32mDEBUG: channel G1 need to improve by 3.11 (xsec=1.9656e-07 pb, iter=4) [0m
+[1;32mDEBUG: channel G9 need to improve by 4.49 (xsec=7.1975e-06 pb, iter=4) [0m
+[1;32mDEBUG: channel G27 need to improve by 12.05 (xsec=1.8491e-05 pb, iter=3) [0m
+[1;32mDEBUG: channel G16 need to improve by 16.12 (xsec=1.248e-05 pb, iter=3) [0m
+[1;32mDEBUG: channel G20 need to improve by 19.65 (xsec=5.556e-05 pb, iter=4) [0m
+[1;32mDEBUG: channel G10 need to improve by 26.64 (xsec=5.1811e-05 pb, iter=3) [0m
+[1;32mDEBUG: channel G7 need to improve by 66.60 (xsec=0.00011063 pb, iter=3) [0m
+[1;32mDEBUG: channel G9 need to improve by 235.66 (xsec=1.8635e-05 pb, iter=3) [0m
+[1;32mDEBUG: channel G8 need to improve by 358.49 (xsec=5.6617e-05 pb, iter=3) [0m
+[1;32mDEBUG: channel G15 need to improve by 372.20 (xsec=5.8894e-05 pb, iter=3) [0m
+[1;32mDEBUG: channel G7 need to improve by 757.77 (xsec=7.7976e-05 pb, iter=3) [0m
+INFO: need to improve 14 channels 
+[1;32mDEBUG: G2 : need 5.909809324241524 event. Need 1 split job of 5000 points [0m
+[1;32mDEBUG: G2 : need 91.68303548864544 event. Need 1 split job of 5000 points [0m
+[1;32mDEBUG: G19 : need 610.9502667146302 event. Need 1 split job of 5000 points [0m
+[1;32mDEBUG: G1 : need 24.874349481218715 event. Need 1 split job of 5000 points [0m
+[1;32mDEBUG: G9 : need 910.831961696539 event. Need 1 split job of 5000 points [0m
+[1;32mDEBUG: G27 : need 2340.0060859646687 event. Need 3 split job of 5000 points [0m
+[1;32mDEBUG: G16 : need 1579.3237765853153 event. Need 2 split job of 5000 points [0m
+[1;32mDEBUG: G20 : need 7031.027966913471 event. Need 8 split job of 5000 points [0m
+[1;32mDEBUG: G10 : need 6556.598092040206 event. Need 7 split job of 5000 points [0m
+[1;32mDEBUG: G7 : need 14000.047227855242 event. Need 14 split job of 5000 points [0m
+[1;32mDEBUG: G9 : need 2358.229052617576 event. Need 3 split job of 5000 points [0m
+[1;32mDEBUG: G8 : need 7164.789604080993 event. Need 8 split job of 5000 points [0m
+[1;32mDEBUG: G15 : need 7452.940264280092 event. Need 8 split job of 5000 points [0m
+[1;32mDEBUG: G7 : need 9867.736442549402 event. Need 10 split job of 5000 points [0m
+- Current estimate of cross-section: 0.00047412697199999997 +- 6.217816855613426e-06
+    P1_gg_bbxaa 
+    P1_qq_bbxaa 
+INFO:  Idle: 1,  Running: 67,  Completed: 0 [ current time: 15h06 ] 
+INFO:  Idle: 0,  Running: 67,  Completed: 1 [  35.3s  ] 
+INFO:  Idle: 0,  Running: 65,  Completed: 3 [  39.7s  ] 
+INFO:  Idle: 0,  Running: 60,  Completed: 8 [  44.7s  ] 
+INFO:  Idle: 0,  Running: 53,  Completed: 15 [  51.6s  ] 
+INFO:  Idle: 0,  Running: 52,  Completed: 16 [  1m 18s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp0KMo8N')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fb686a238a0 in ???
+#1  0x7fb686a243f9 in ???
+#2  0x7fb686a250bf in ???
+#3  0x7fb686c5cd32 in ???
+#4  0x7fb686c5bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fb6866295cf in ???
+#15  0x7fb68662967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 51,  Completed: 17 [  1m 44s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpwj4HXZ')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f2f842238a0 in ???
+#1  0x7f2f842243f9 in ???
+#2  0x7f2f842250bf in ???
+#3  0x7f2f8445cd32 in ???
+#4  0x7f2f8445bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f2f83e295cf in ???
+#15  0x7f2f83e2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 50,  Completed: 18 [  2m 0s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpJJtO7M')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f44dfc238a0 in ???
+#1  0x7f44dfc243f9 in ???
+#2  0x7f44dfc250bf in ???
+#3  0x7f44dfe5cd32 in ???
+#4  0x7f44dfe5bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f44df8295cf in ???
+#15  0x7f44df82967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 49,  Completed: 19 [  2m 3s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmplwvk4e')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fd66d6238a0 in ???
+#1  0x7fd66d6243f9 in ???
+#2  0x7fd66d6250bf in ???
+#3  0x7fd66d85cd32 in ???
+#4  0x7fd66d85bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fd66d2295cf in ???
+#15  0x7fd66d22967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 48,  Completed: 20 [  2m 9s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpdvrAoM')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp7QrVTv')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fbcda8238a0 in ???
+#1  0x7fbcda8243f9 in ???
+#2  0x7fbcda8250bf in ???
+#3  0x7fbcdaa5cd32 in ???
+#4  0x7fbcdaa5bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fbcda4295cf in ???
+#15  0x7fbcda42967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+#0  0x7f2d8d8238a0 in ???
+#1  0x7f2d8d8243f9 in ???
+#2  0x7f2d8d8250bf in ???
+#3  0x7f2d8da5cd32 in ???
+#4  0x7f2d8da5bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x41185e in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f2d8d4295cf in ???
+#15  0x7f2d8d42967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+INFO:  Idle: 0,  Running: 47,  Completed: 21 [  2m 14s  ] 
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpzB6ddx')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fb6072238a0 in ???
+#1  0x7fb6072243f9 in ???
+#2  0x7fb6072250bf in ???
+#3  0x7fb60745cd32 in ???
+#4  0x7fb60745bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fb606e295cf in ???
+#15  0x7fb606e2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpSbQRBC')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f6494c238a0 in ???
+#1  0x7f6494c243f9 in ???
+#2  0x7f6494c250bf in ???
+#3  0x7f6494e5cd32 in ???
+#4  0x7f6494e5bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x41185e in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f64948295cf in ???
+#15  0x7f649482967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 44,  Completed: 24 [  2m 22s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpbGFSi0')
+Fortran runtime error: No space left on device
+
+Error termination. Backtrace:
+#0  0x7f0bd04238a0 in ???
+#1  0x7f0bd04243f9 in ???
+#2  0x7f0bd04250bf in ???
+#3  0x7f0bd065cd32 in ???
+#4  0x7f0bd065bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f0bd00295cf in ???
+#15  0x7f0bd002967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 43,  Completed: 25 [  2m 55s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpoHB1BY')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fd467e238a0 in ???
+#1  0x7fd467e243f9 in ???
+#2  0x7fd467e250bf in ???
+#3  0x7fd46805cd32 in ???
+#4  0x7fd46805bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fd467a295cf in ???
+#15  0x7fd467a2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 42,  Completed: 26 [  3m 5s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpt8V58V')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fb4348238a0 in ???
+#1  0x7fb4348243f9 in ???
+#2  0x7fb4348250bf in ???
+#3  0x7fb434a5cd32 in ???
+#4  0x7fb434a5bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fb4344295cf in ???
+#15  0x7fb43442967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 41,  Completed: 27 [  3m 9s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmptuK4S8')
+Fortran runtime error: No space left on device
+
+Error termination. Backtrace:
+#0  0x7f8df40238a0 in ???
+#1  0x7f8df40243f9 in ???
+#2  0x7f8df40250bf in ???
+#3  0x7f8df425cd32 in ???
+#4  0x7f8df425bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f8df3c295cf in ???
+#15  0x7f8df3c2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 40,  Completed: 28 [  3m 14s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpXtMpV0')
+Fortran runtime error: No space left on device
+
+Error termination. Backtrace:
+#0  0x7f9f2ae238a0 in ???
+#1  0x7f9f2ae243f9 in ???
+#2  0x7f9f2ae250bf in ???
+#3  0x7f9f2b05cd32 in ???
+#4  0x7f9f2b05bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f9f2aa295cf in ???
+#15  0x7f9f2aa2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 39,  Completed: 29 [  3m 19s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpaHUC3M')
+Fortran runtime error: No space left on device
+
+Error termination. Backtrace:
+#0  0x7f87340238a0 in ???
+#1  0x7f87340243f9 in ???
+#2  0x7f87340250bf in ???
+#3  0x7f873425cd32 in ???
+#4  0x7f873425bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f8733c295cf in ???
+#15  0x7f8733c2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 38,  Completed: 30 [  3m 29s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpoSO5dO')
+Fortran runtime error: No space left on device
+
+Error termination. Backtrace:
+#0  0x7fd9b22238a0 in ???
+#1  0x7fd9b22243f9 in ???
+#2  0x7fd9b22250bf in ???
+#3  0x7fd9b245cd32 in ???
+#4  0x7fd9b245bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fd9b1e295cf in ???
+#15  0x7fd9b1e2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 37,  Completed: 31 [  3m 35s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpbOZCQy')
+Fortran runtime error: No space left on device
+
+Error termination. Backtrace:
+#0  0x7fdb91e238a0 in ???
+#1  0x7fdb91e243f9 in ???
+#2  0x7fdb91e250bf in ???
+#3  0x7fdb9205cd32 in ???
+#4  0x7fdb9205bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fdb91a295cf in ???
+#15  0x7fdb91a2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 36,  Completed: 32 [  3m 41s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpSW70M4')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fe9360238a0 in ???
+#1  0x7fe9360243f9 in ???
+#2  0x7fe9360250bf in ???
+#3  0x7fe93625cd32 in ???
+#4  0x7fe93625bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fe935c295cf in ???
+#15  0x7fe935c2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 35,  Completed: 33 [  4m 8s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpfhwoeG')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fba526238a0 in ???
+#1  0x7fba526243f9 in ???
+#2  0x7fba526250bf in ???
+#3  0x7fba5285cd32 in ???
+#4  0x7fba5285bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fba522295cf in ???
+#15  0x7fba5222967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 34,  Completed: 34 [  4m 12s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpmEnx1N')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f85bec238a0 in ???
+#1  0x7f85bec243f9 in ???
+#2  0x7f85bec250bf in ???
+#3  0x7f85bee5cd32 in ???
+#4  0x7f85bee5bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x4117ec in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f85be8295cf in ???
+#15  0x7f85be82967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 33,  Completed: 35 [  4m 38s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpEvYley')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f03328238a0 in ???
+#1  0x7f03328243f9 in ???
+#2  0x7f03328250bf in ???
+#3  0x7f0332a5cd32 in ???
+#4  0x7f0332a5bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f03324295cf in ???
+#15  0x7f033242967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpHleflj')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f4dcd8238a0 in ???
+#1  0x7f4dcd8243f9 in ???
+#2  0x7f4dcd8250bf in ???
+#3  0x7f4dcda5cd32 in ???
+#4  0x7f4dcda5bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f4dcd4295cf in ???
+#15  0x7f4dcd42967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 31,  Completed: 37 [  4m 44s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp7IXd50')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f849aa238a0 in ???
+#1  0x7f849aa243f9 in ???
+#2  0x7f849aa250bf in ???
+#3  0x7f849ac5cd32 in ???
+#4  0x7f849ac5bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f849a6295cf in ???
+#15  0x7f849a62967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpsIS3m5')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f4cf90238a0 in ???
+#1  0x7f4cf90243f9 in ???
+#2  0x7f4cf90250bf in ???
+#3  0x7f4cf925cd32 in ???
+#4  0x7f4cf925bd90 in ???
+#5  0x46b811 in ???
+#6  0x40e245 in ???
+#7  0x41185e in ???
+#8  0x43010c in ???
+#9  0x43095d in ???
+#10  0x43234f in ???
+#11  0x44c6d5 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f4cf8c295cf in ???
+#15  0x7f4cf8c2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 29,  Completed: 39 [  4m 50s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpPZmpNb')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f3b53e238a0 in ???
+#1  0x7f3b53e243f9 in ???
+#2  0x7f3b53e250bf in ???
+#3  0x7f3b5405cd32 in ???
+#4  0x7f3b5405bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f3b53a295cf in ???
+#15  0x7f3b53a2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 28,  Completed: 40 [  4m 57s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp2gZxHT')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f57f26238a0 in ???
+#1  0x7f57f26243f9 in ???
+#2  0x7f57f26250bf in ???
+#3  0x7f57f285cd32 in ???
+#4  0x7f57f285bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f57f22295cf in ???
+#15  0x7f57f222967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpNuSzZ3')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f5c864238a0 in ???
+#1  0x7f5c864243f9 in ???
+#2  0x7f5c864250bf in ???
+#3  0x7f5c8665cd32 in ???
+#4  0x7f5c8665bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f5c860295cf in ???
+#15  0x7f5c8602967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 26,  Completed: 42 [  5m 2s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp5qj6Uk')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f62316238a0 in ???
+#1  0x7f62316243f9 in ???
+#2  0x7f62316250bf in ???
+#3  0x7f623185cd32 in ???
+#4  0x7f623185bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f62312295cf in ???
+#15  0x7f623122967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp2nhejz')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7fc0eae238a0 in ???
+#1  0x7fc0eae243f9 in ???
+#2  0x7fc0eae250bf in ???
+#3  0x7fc0eb05cd32 in ???
+#4  0x7fc0eb05bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7fc0eaa295cf in ???
+#15  0x7fc0eaa2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 24,  Completed: 44 [  5m 7s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpecEmgY')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7ff6054238a0 in ???
+#1  0x7ff6054243f9 in ???
+#2  0x7ff6054250bf in ???
+#3  0x7ff60565cd32 in ???
+#4  0x7ff60565bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7ff6050295cf in ???
+#15  0x7ff60502967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 23,  Completed: 45 [  5m 28s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpSZ3Eei')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f05dbc238a0 in ???
+#1  0x7f05dbc243f9 in ???
+#2  0x7f05dbc250bf in ???
+#3  0x7f05dbe5cd32 in ???
+#4  0x7f05dbe5bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x431abb in ???
+#9  0x432474 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f05db8295cf in ???
+#15  0x7f05db82967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 22,  Completed: 46 [  5m 33s  ] 
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmpBc8mpW')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f7d246238a0 in ???
+#1  0x7f7d246243f9 in ???
+#2  0x7f7d246250bf in ???
+#3  0x7f7d2485cd32 in ???
+#4  0x7f7d2485bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f7d242295cf in ???
+#15  0x7f7d2422967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+At line 279 of file rw_events.f (unit = 27, file = '/tmp/gfortrantmp8VlRSq')
+Fortran runtime error: Bad address
+
+Error termination. Backtrace:
+#0  0x7f52ec2238a0 in ???
+#1  0x7f52ec2243f9 in ???
+#2  0x7f52ec2250bf in ???
+#3  0x7f52ec45cd32 in ???
+#4  0x7f52ec45bd90 in ???
+#5  0x46eb2d in ???
+#6  0x40dce5 in ???
+#7  0x4112a5 in ???
+#8  0x4310fe in ???
+#9  0x432459 in ???
+#10  0x43401d in ???
+#11  0x44f9f1 in ???
+#12  0x404642 in ???
+#13  0x4047c4 in ???
+#14  0x7f52ebe295cf in ???
+#15  0x7f52ebe2967f in ???
+#16  0x4023e4 in ???
+#17  0xffffffffffffffff in ???
+rm: cannot remove 'results.dat': No such file or directory
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 20,  Completed: 48 [  5m 44s  ] 
+INFO:  Idle: 0,  Running: 19,  Completed: 49 [  8m 39s  ] 
+INFO:  Idle: 0,  Running: 17,  Completed: 51 [  8m 55s  ] 
+INFO:  Idle: 0,  Running: 16,  Completed: 52 [  8m 59s  ] 
+INFO:  Idle: 0,  Running: 14,  Completed: 54 [  9m 3s  ] 
+INFO:  Idle: 0,  Running: 13,  Completed: 55 [  9m 12s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 57 [  9m 17s  ] 
+INFO:  Idle: 0,  Running: 9,  Completed: 59 [  9m 38s  ] 
+INFO:  Idle: 0,  Running: 8,  Completed: 60 [  9m 46s  ] 
+INFO:  Idle: 0,  Running: 7,  Completed: 61 [  11m 35s  ] 
+INFO:  Idle: 0,  Running: 6,  Completed: 62 [  11m 43s  ] 
+INFO:  Idle: 0,  Running: 5,  Completed: 63 [  11m 56s  ] 
+At line 195 of file driver.f (unit = 27, file = '/tmp/gfortrantmpCxB4g0')
+Fortran runtime error: Sequential READ or WRITE not allowed after EOF marker, possibly use REWIND or BACKSPACE
+
+Error termination. Backtrace:
+#0  0x7f6072a238a0 in ???
+#1  0x7f6072a243f9 in ???
+#2  0x7f6072a250bf in ???
+#3  0x7f6072c5b23d in ???
+#4  0x4046b8 in ???
+#5  0x4047c4 in ???
+#6  0x7f60726295cf in ???
+#7  0x7f607262967f in ???
+#8  0x4023e4 in ???
+#9  0xffffffffffffffff in ???
+ERROR DETECTED
+INFO:  Idle: 0,  Running: 4,  Completed: 64 [  12m 7s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 65 [  16m 48s  ] 
+INFO:  Idle: 0,  Running: 2,  Completed: 66 [  21m 42s  ] 
+INFO:  Idle: 0,  Running: 1,  Completed: 67 [  21m 54s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 68 [  31m 11s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 68 [  31m 11s  ] 
+INFO: Combining runs 
+[1;32mfind 10 multijob in /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_gg_bbxaa/G7[0m
+[1;31mError when reading /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_gg_bbxaa/G7a0/results.dat[0m
+
+[1;31mCommand "generate_events run_01" interrupted with error:
+ValueError : could not convert string to float: ''
+Please report this bug on https://bugs.launchpad.net/mg5amcnlo
+More information is found in '/home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes_2/background_0/run_01_tag_1_debug.log'.
+Please attach this file to your report.[0m
+INFO:  
+INFO:  
+quit
+INFO:  
+quit
