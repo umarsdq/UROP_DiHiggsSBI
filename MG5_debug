@@ -1,0 +1,162 @@
+#************************************************************
+#*                     MadGraph5_aMC@NLO                    *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*         VERSION 3.5.1                 2023-07-11         *
+[1;31m#*                                                          *[1;0m
+[1;31m#*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
+[1;31m#*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
+[1;31m#*                                                          *[1;0m
+#*                                                          *
+#*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadGraph5_aMC@NLO         *
+#*                                                          *
+#*     run as ./bin/mg5_aMC  filename                       *
+#*                                                          *
+#************************************************************
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set low_mem_multicore_nlo_generation False
+set complex_mass_scheme False
+set include_lepton_initiated_processes False
+set gauge unitary
+set loop_optimized_output True
+set loop_color_flows False
+set max_npoint_for_channel 0
+set default_unset_couplings 99
+set max_t_for_channel 99
+set zerowidth_tchannel True
+set nlo_mixed_expansion True
+import model SMEFTatNLO-LO
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
+define j = p
+generate p p > H H   QED=2 QCD=2 NP=2
+output /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/signal_sm
+Traceback (most recent call last):
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1543, in onecmd
+    return self.onecmd_orig(line, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1492, in onecmd_orig
+    return func(arg, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/master_interface.py", line 281, in do_import
+    self.cmd.do_import(self, *args, **opts)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/madgraph_interface.py", line 5693, in do_import
+    self.import_command_file(args[1])
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1691, in import_command_file
+    self.exec_cmd(line, precmd=True)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1572, in exec_cmd
+    stop = Cmd.onecmd_orig(current_interface, line, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1492, in onecmd_orig
+    return func(arg, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/master_interface.py", line 299, in do_output
+    self.cmd.do_output(self, line, *args, **opts)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/madgraph_interface.py", line 8278, in do_output
+    self.finalize(nojpeg, flaglist=flaglist)
+  File "/home/hep/us322/mg5amcnlo/madgraph/interface/madgraph_interface.py", line 8608, in finalize
+    self._curr_exporter.finalize(self._curr_matrix_elements,
+  File "/home/hep/us322/mg5amcnlo/madgraph/iolibs/export_v4.py", line 6454, in finalize
+    super(ProcessExporterFortranMEGroup, self).finalize(*args, **opts)
+  File "/home/hep/us322/mg5amcnlo/madgraph/iolibs/export_v4.py", line 4471, in finalize
+    misc.call([pjoin(self.dir_path, 'bin', 'internal', 'gen_jpeg-pl')],
+  File "/home/hep/us322/mg5amcnlo/madgraph/various/misc.py", line 911, in deco_f
+    return f(arg, *args, **opt)
+  File "/home/hep/us322/mg5amcnlo/madgraph/various/misc.py", line 942, in call
+    return subprocess.call(arg, *args, **opt)
+  File "/home/hep/us322/miniforge3/envs/nsbi_dihiggs/lib/python3.8/subprocess.py", line 342, in call
+    return p.wait(timeout=timeout)
+  File "/home/hep/us322/miniforge3/envs/nsbi_dihiggs/lib/python3.8/subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "/home/hep/us322/miniforge3/envs/nsbi_dihiggs/lib/python3.8/subprocess.py", line 1822, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/home/hep/us322/miniforge3/envs/nsbi_dihiggs/lib/python3.8/subprocess.py", line 1780, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+                          MadGraph5_aMC@NLO Options    
+                          ----------------    
+                auto_update 	:	7
+        complex_mass_scheme 	:	False
+    default_unset_couplings 	:	99
+                      gauge 	:	unitary
+         group_subprocesses 	:	Auto
+  ignore_six_quark_processes 	:	False
+  include_lepton_initiated_processes 	:	False
+           loop_color_flows 	:	False
+      loop_optimized_output 	:	True
+  low_mem_multicore_nlo_generation 	:	False
+     max_npoint_for_channel 	:	0
+          max_t_for_channel 	:	99
+        nlo_mixed_expansion 	:	True
+               stdout_level 	:	10 (user set)
+         zerowidth_tchannel 	:	True
+
+                         MadEvent Options    
+                          ----------------    
+     automatic_html_opening 	:	True
+                    nb_core 	:	None
+        notification_center 	:	True
+                   run_mode 	:	2
+
+                      Configuration Options    
+                      ---------------------    
+                        OLP 	:	MadLoop
+   acknowledged_v3.1_syntax 	:	True (user set)
+         auto_convert_model 	:	False
+         cluster_local_path 	:	None
+           cluster_nb_retry 	:	1
+              cluster_queue 	:	None (user set)
+         cluster_retry_wait 	:	300
+               cluster_size 	:	100
+      cluster_status_update 	:	(600, 30)
+          cluster_temp_path 	:	None
+               cluster_type 	:	condor
+                    collier 	:	/home/hep/us322/mg5amcnlo/HEPTools/lib (user set)
+                contur_path 	:	./HEPTools/contur
+               cpp_compiler 	:	None
+             crash_on_error 	:	False
+               delphes_path 	:	/home/hep/us322/mg5amcnlo/HEPTools/Delphes (user set)
+                      eMELA 	:	None (user set)
+                 eps_viewer 	:	None
+        exrootanalysis_path 	:	./ExRootAnalysis
+              f2py_compiler 	:	None
+          f2py_compiler_py2 	:	None
+          f2py_compiler_py3 	:	None
+                    fastjet 	:	None (user set)
+           fortran_compiler 	:	None
+                      golem 	:	None (user set)
+                 hepmc_path 	:	None (user set)
+                  hwpp_path 	:	None (user set)
+                     lhapdf 	:	/home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config (user set)
+                 lhapdf_py2 	:	/home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config (user set)
+                 lhapdf_py3 	:	/home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config (user set)
+          madanalysis5_path 	:	None (user set)
+           madanalysis_path 	:	./MadAnalysis
+  mg5amc_py8_interface_path 	:	/home/hep/us322/mg5amcnlo/HEPTools/MG5aMC_PY8_interface (user set)
+                      ninja 	:	/home/hep/us322/mg5amcnlo/HEPTools/lib (user set)
+        output_dependencies 	:	external
+                   pineappl 	:	pineappl
+            pythia-pgs_path 	:	./pythia-pgs
+               pythia8_path 	:	/home/hep/us322/mg5amcnlo/HEPTools/pythia8/install (user set)
+                 rivet_path 	:	./HEPTools/rivet
+                    samurai 	:	None
+               syscalc_path 	:	./SysCalc
+                    td_path 	:	./td
+                text_editor 	:	None
+                thepeg_path 	:	None (user set)
+                    timeout 	:	60
+                web_browser 	:	None
+                  yoda_path 	:	./HEPTools/yoda

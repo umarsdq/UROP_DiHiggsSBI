@@ -2,14 +2,14 @@ import numpy as np
 import matplotlib
 from matplotlib import pyplot as plt
 import os
-import torch
-from numba import cuda 
+import torch  # type: ignore
+from numba import cuda  # type: ignore
 import argparse
 import pickle
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.utils import shuffle
+from sklearn.preprocessing import StandardScaler  # type: ignore
+from sklearn.model_selection import train_test_split  # type: ignore
+from sklearn.utils import shuffle  # type: ignore
 
 from helpers.network_training import *
 from helpers.utils import np_to_torch, crop_feature
@@ -26,7 +26,6 @@ parser.add_argument("-c1",action='store_true',help="Train classifier 1")
 parser.add_argument("-c2",action='store_true',help="Train classifier 2")
 parser.add_argument("-c3",action='store_true',help="Train classifier 3")
 parser.add_argument("-s", "--seed", help = "Random seed", default = 0)
-
 
 # Read arguments from command line
 args = parser.parse_args()
@@ -55,6 +54,10 @@ run_configs["network_id"] = run_id
 run_configs["seed"] = args.seed
 seed = int(args.seed)
 
+# Ensure output directories exist
+os.makedirs("run_configs", exist_ok=True)
+os.makedirs("models", exist_ok=True)
+
 # features to train on
 
 # in order: m_hh, pt_bb, pt_aa, deltaR_aa, deltaR_bb, a0_pt, a1_pt, b0_pt, b1_pt
@@ -62,7 +65,8 @@ seed = int(args.seed)
 run_configs["features"] = [15, 16, 17, 10, 9, 0, 2, 5, 7][:int(args.num_features)]
 
 
-run_configs["bkg.N_train"] = 10000000 # To reduce training time, if necessary
+run_configs["bkg.N_train"] = 10000000 # ORIGINAL used in paper
+#run_configs["bkg.N_train"] = 10000000 # To reduce training time
 
 # network architecture
 run_configs["network.type"] = args.network
@@ -94,17 +98,21 @@ features = run_configs["features"]
 parameter_code = run_configs["parameter_code"]
 
 # load in the samples
-samples_SM = np.load(f'{samples_dir}/plain_real/{identity_code}/x_sm.npy')[:,features]
-samples_alt = np.load(f'{samples_dir}/plain_real/{identity_code}/x_alt_{parameter_code}.npy')[:,features]
-samples_bkg = np.load(f'{samples_dir}/plain_real/delphes_b0/x_bkg.npy')[:,features]
+samples_SM = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/x_sm.npy')[:,features]
+samples_alt = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/x_alt_{parameter_code}.npy')[:,features]
+samples_bkg = np.load(f'{samples_dir}/plain_real/delphes_b0/{parameter_code}/x_bkg.npy')[:,features]
 # load in the theta values
-theta_alt = np.load(f'{samples_dir}/plain_real/{identity_code}/theta_alt_{parameter_code}.npy')
-theta_alt_sm = np.load(f'{samples_dir}/plain_real/{identity_code}/theta_alt_{parameter_code}.npy')
+theta_alt = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/theta_alt_{parameter_code}.npy')
+theta_alt_sm = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/theta_alt_{parameter_code}.npy')
 
 # shuffle the samples, since they are grouped in chunks of generating theta out of the box
 #samples_alt, theta_alt, samples_SM, theta_alt_sm = shuffle(samples_alt, theta_alt, samples_SM, theta_alt_sm, random_state = 42) 
 
 # crop to the number of desired signal events
+
+# ----- Fixing ValueError with Theta Size ----
+#N_train = min(samples_SM.shape[0], samples_alt.shape[0], samples_bkg.shape[0], theta_alt.shape[0], theta_alt_sm.shape[0])
+
 samples_SM = samples_SM[:N_train]
 samples_alt = samples_alt[:N_train]
 samples_bkg = samples_bkg[:N_train]
@@ -150,9 +158,17 @@ def train_classifier(train_set_0, train_set_1, loc_id):
     
     
     print("Starting network training...")
-    epochs, losses, losses_val = train_network(X_train, Y_train, X_val, Y_val, dense_net, optimizer, run_configs["hyperparam.n_epochs"], run_configs["hyperparam.batch_size"], device, seed = seed, train_bnn = False, kl_weight = kl_weight, network_id = f"models/{run_id}_{loc_id}", use_early_stop = True, min_delta = 0, patience_ES = run_configs["hyperparam.patience_ES"], patience_lr = run_configs["hyperparam.patience_lr"], loss_type = "BCE")
-
-    
+    epochs, losses, losses_val = train_network(X_train, Y_train, X_val, Y_val,
+                                               dense_net, optimizer, 
+                                               run_configs["hyperparam.n_epochs"],
+                                               run_configs["hyperparam.batch_size"],
+                                               device, seed = seed, train_bnn = False,
+                                               kl_weight = kl_weight,
+                                               network_id = f"models/{run_id}_{loc_id}",
+                                               use_early_stop = True, min_delta = 0, 
+                                               patience_ES = run_configs["hyperparam.patience_ES"],
+                                               patience_lr = run_configs["hyperparam.patience_lr"],
+                                               loss_type = "BCE")
 
 print(f"Using {args.network} type networks.")
     

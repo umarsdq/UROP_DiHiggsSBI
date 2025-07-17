@@ -60,9 +60,6 @@ additional_benchmarks = ["morphing_basis_vector_1", "morphing_basis_vector_2", "
 
 
 if args.sm:
-    # Create directories for MadGraph process
-    process_dir = "{mg_process_output_dir}/signal_sm".format(mg_process_output_dir = workflow["madgraph"]["output_dir"])
-    os.makedirs(f"{process_dir}/Cards", exist_ok=True)
 
     miner.run_multiple(
         sample_benchmarks=["sm"],
@@ -70,7 +67,7 @@ if args.sm:
         mg_process_directory="{mg_process_output_dir}/signal_sm".format(mg_process_output_dir = workflow["madgraph"]["output_dir"]),
         proc_card_file=f"{working_dir}/cards/proc_card_signal.dat",
         param_card_template_file=f"{working_dir}/cards/restrict_LO.dat",
-        #madspin_card_file=f"{working_dir}/cards/madspin_card.dat",
+        madspin_card_file=f"{working_dir}/cards/madspin_card.dat",
         run_card_files=run_cards_signal,
         pythia8_card_file=f"{working_dir}/cards/pythia8_card.dat", 
         log_directory=f"{working_dir}/logs/signal_sm",
@@ -80,9 +77,6 @@ if args.sm:
     )
 
 if args.supp:
-    # Create directories for MadGraph process
-    process_dir = "{mg_process_output_dir}/signal_supp/morphing_basis_vector_{supp_id}".format(mg_process_output_dir = workflow["madgraph"]["output_dir"], supp_id = args.supp_id)
-    os.makedirs(f"{process_dir}/Cards", exist_ok=True)
     
     miner.run_multiple(
         #sample_benchmarks=additional_benchmarks,
@@ -91,7 +85,7 @@ if args.supp:
         mg_process_directory="{mg_process_output_dir}/signal_supp/morphing_basis_vector_{supp_id}".format(mg_process_output_dir = workflow["madgraph"]["output_dir"], supp_id = args.supp_id),
         proc_card_file=f"{working_dir}/cards/proc_card_signal.dat",
         param_card_template_file=f"{working_dir}/cards/restrict_LO.dat",
-        #madspin_card_file=f"{working_dir}/cards/madspin_card.dat",
+        madspin_card_file=f"{working_dir}/cards/madspin_card.dat",
         run_card_files=run_cards_signal,
         pythia8_card_file=f"{working_dir}/cards/pythia8_card.dat", 
         log_directory=f"{working_dir}/logs/signal_supp",
@@ -103,10 +97,6 @@ if args.supp:
 
 if args.b:
     for i in range(1):
-        # Create directories for MadGraph process
-        process_dir = "{mg_process_output_dir}_2/background_{idd}".format(mg_process_output_dir = workflow["madgraph"]["output_dir"], idd = i)
-        os.makedirs(f"{process_dir}/Cards", exist_ok=True)
-        
         miner.run_multiple(
             is_background=True,
             sample_benchmarks=["sm"],

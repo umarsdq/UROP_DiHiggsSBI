@@ -1,9 +1,0 @@
-
-        launch /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/signal_sm
-        shower=Pythia8
-        detector=OFF
-        analysis=OFF
-        madspin=OFF
-        reweight=ON
-        done
-        

@@ -49,7 +49,7 @@ if args.process_code == "signal":
 
     combine_and_shuffle(
         to_combine,
-        '{long_term_storage_dir}/delphes_s_shuffled.h5'.format(long_term_storage_dir=workflow["delphes"]["long_term_storage_dir"])
+        '{long_term_storage_dir}/delphes_s_shuffled_100TeV.h5'.format(long_term_storage_dir=workflow["delphes"]["long_term_storage_dir"])
     )
 
 elif args.process_code == "background": # i.e. background only
@@ -61,7 +61,7 @@ elif args.process_code == "background": # i.e. background only
         to_combine.append('{long_term_storage_dir}/delphes_background_0_batch_{batch_num}.h5'.format(long_term_storage_dir=workflow["delphes"]["long_term_storage_dir"], batch_num=i))
     combine_and_shuffle(
         to_combine,
-        '{long_term_storage_dir}/delphes_b0_shuffled.h5'.format(long_term_storage_dir=workflow["delphes"]["long_term_storage_dir"]),
+        '{long_term_storage_dir}/delphes_b0_shuffled_100TeV.h5'.format(long_term_storage_dir=workflow["delphes"]["long_term_storage_dir"]),
         k_factors=k_factors_background
     )
 

@@ -79,7 +79,7 @@ for run_id in range(int(args.start), int(args.stop)+1):
                                weights="lhe",
                             sampled_from_benchmark=sampled_from_benchmark,
                             is_background=is_background,
-                            k_factor= 1/0,)
+                            k_factor= 1.0,)
 
                                                                        
 # Now we run Delphes on these samples (you can also do this externally and then add the keyword `delphes_filename` when calling `DelphesReader.add_sample()`):

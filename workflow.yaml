@@ -4,21 +4,22 @@ morphing_setup: /home/hep/us322/SBI/nsbi_for_dihiggs/data/setup.h5
 
 # MG generation (step 2)
 madgraph:
-    dir: /home/hep/us322/mg5amcnlo/
-    n_runs: 2
+    dir: /home/hep/us322/mg5amcnlo
+    n_runs: 1
     output_dir: /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes
     energy: 100
 
 # Delphes (step 3)
 delphes:
-    input_dir_prefix: /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/
+    input_dir_prefix: /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes
     output_file: /vols/cms/us322/post_delphes_data/delphes
     long_term_storage_dir: /vols/cms/us322/post_delphes_data
     
 # Sampling (step 4)
 sampling:
-    input_dir: /vols/cms/us322/post_delphes_data/
-    output_dir: /home/hep/us322/SBI/nsbi_for_dihiggs/samples/
+    #input_dir: /vols/cms/us322/post_delphes_data
+    input_dir: /home/hep/us322/SBI/nsbi_for_dihiggs/data
+    output_dir: /vols/cms/us322/nsbi_dihiggs/samples
     
 # Plotting
 plotting:

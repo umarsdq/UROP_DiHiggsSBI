@@ -161,7 +161,7 @@ notification_center = False
 
 #! lhapdf-config
 #!  If None: try to find one available on the system
-lhapdf = lhapdf-config
+# lhapdf = lhapdf-config
 
 #! fastjet-config
 #!  If None: try to find one available on the system
@@ -220,8 +220,7 @@ lhapdf = lhapdf-config
 # applgrid = applgrid-config
 # amcfast = amcfast-config
 
-
-mg5_path = /Users/felixkling/work/MG5_aMC_v2_6_5
+mg5_path = /home/hep/us322/mg5amcnlo
 
 # MG5 MAIN DIRECTORY
-mg5_path = /Users/felixkling/work/MG5_aMC_v2_6_5
+mg5_path = /home/hep/us322/mg5amcnlo

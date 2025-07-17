@@ -1,9 +1,0 @@
-
-        launch /home/hep/us322/SBI/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_1
-        shower=Pythia8
-        detector=OFF
-        analysis=OFF
-        madspin=OFF
-        reweight=ON
-        done
-        

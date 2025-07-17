@@ -1,2 +1,3 @@
 import model SMEFTatNLO-LO
-generate p p > H H   aEW=2 aS=2 NP=2 [QCD]
+#set acknowledged_v3.1_syntax True --global
+generate p p > H H   QED=2 QCD=2 NP=2

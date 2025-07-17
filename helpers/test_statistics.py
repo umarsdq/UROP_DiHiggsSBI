@@ -2,7 +2,8 @@ import numpy as np
 import torch
 
 from helpers.utils import np_to_torch
-from madminer import SampleAugmenter, sampling
+from madminer.sampling import SampleAugmenter
+from madminer import sampling
 
 
 eps = 1e-10
@@ -31,7 +32,7 @@ def get_N_sig_obs_at_c_point(data_input_dir, input_precode, c_point, N_sig_SM_ta
     """
     
     # load in the sampler
-    sampler = SampleAugmenter(f'{data_input_dir}/{input_precode}_shuffled.h5')
+    sampler = SampleAugmenter(f'{data_input_dir}/{input_precode}_shuffled_100TeV.h5')
     
     # get the scale factor to the SM
     _, xsecs_morphing, _ = sampler.cross_sections(theta=sampling.morphing_point((0,0,0)))
@@ -64,7 +65,7 @@ def get_test_statistic_rate_at_c_points(data_input_dir, input_precode, c_grid, N
     """
     
     # load in the sampler
-    sampler = SampleAugmenter(f'{data_input_dir}/{input_precode}_shuffled.h5')
+    sampler = SampleAugmenter(f'{data_input_dir}/{input_precode}_shuffled_100TeV.h5')
     
     # get the scale factor to the SM
     _, xsecs_morphing, _ = sampler.cross_sections(theta=sampling.morphing_point((0,0,0)))
@@ -87,8 +88,6 @@ def get_test_statistic_rate_at_c_points(data_input_dir, input_precode, c_grid, N
 
 def eval_test_statistic_shape(samples_test, c_grid, trained_network, device):
     
-
-    Evaluate the bnn a different time for every point in the test set (all thetas at once)
     llr_vals = []
     with torch.no_grad():
         for x_loc_index in range(samples_test.shape[0]):

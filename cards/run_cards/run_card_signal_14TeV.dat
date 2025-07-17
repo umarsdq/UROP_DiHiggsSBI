@@ -145,3 +145,7 @@ systematics = systematics_program ! none, systematics [python], SysCalc [deprece
 # (note that etmiss/ptll/ptheavy/ht/sorted cuts always apply)
 #*********************************************************************
    False  = cut_decays       ! Cut decay products
+
+#**** Umar - Fixing parton_shower KeyError:
+
+'PYTHIA8' = parton_shower ! Parton shower to use (PYTHIA8, HERWIG6, HERWIG7, OFF)

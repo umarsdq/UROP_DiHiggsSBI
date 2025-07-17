@@ -1,0 +1,16 @@
+bkg.N_train: 10000000
+features:
+- 15
+hyperparam.batch_size: 1024
+hyperparam.lr: 0.001
+hyperparam.n_epochs: 150
+hyperparam.patience_ES: 20
+hyperparam.patience_lr: 5
+input_precode: delphes_s
+network.layers:
+- 32
+- 32
+network.type: dense
+network_id: dense_s1_c0c1_f1
+parameter_code: c0c1
+seed: '1'
