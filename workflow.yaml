@@ -1,0 +1,34 @@
+# Data setup (step 1)
+data_dir: /vols/cms/us322/nsbi_for_dihiggs/data
+morphing_setup: /vols/cms/us322/nsbi_for_dihiggs/data/setup.h5
+
+# MG generation (step 2)
+madgraph:
+    dir: /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo
+    #dir: /vols/cms/us322/test_sbi/mg5amcnlo
+    n_runs: 1
+    output_dir: /vols/cms/us322/nsbi_for_dihiggs/mg_processes
+    energy: 14 # 100 TeV (FC) or 14 TeV (HL-LHC)
+
+# Delphes (step 3)
+delphes:
+    input_dir_prefix: /vols/cms/us322/nsbi_for_dihiggs/events
+    output_file: /vols/cms/us322/post_delphes_data/delphes
+    long_term_storage_dir: /vols/cms/us322/post_delphes_data
+    
+# Sampling (step 4)
+sampling:
+    #input_dir: /vols/cms/us322/post_delphes_data
+    input_dir: /vols/cms/us322/nsbi_for_dihiggs/data
+    output_dir: /vols/cms/us322/nsbi_dihiggs/samples
+    
+# Plotting
+plotting:
+    fancy_name:
+        c0: $c_{\phi}$
+        c1: $c_{\phi d}$
+        c2: $c_{t \phi}$
+    color:
+        c0: red
+        c1: blue
+        c2: green

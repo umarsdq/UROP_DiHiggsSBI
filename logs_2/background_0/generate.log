@@ -1,0 +1,205 @@
+[1;31mNote that this is a development version.
+This version is intended for development/beta testing and NOT for production.
+This version has not been fully tested (if at all) and might have limited user support (if at all)[0m
+Running MG5 in debug mode
+('WARNING: loading of madgraph too slow!!!', 4.711342811584473)
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.6.3                 2025-06-12         *
+[1;31m*                                                          *[1;0m
+[1;31m*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
+[1;31m*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
+[1;31m*                                                          *[1;0m
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../test_sbi/mg5amcnlo/input/mg5_configuration.txt 
+set fastjet to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/fastjet/bin/fastjet-config
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lib
+set collier to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lib
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+set lhapdf to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /vols/cms/us322/tmp/generate.mg5
+The import format was not given, so we guess it as command
+generate p p > b b~ a a
+No model currently active, so we import the Standard Model
+INFO: Restrict model sm with file ../test_sbi/mg5amcnlo/models/sm/restrict_default.dat . 
+[1;32mDEBUG: Simplifying conditional expressions [0m
+[1;32mDEBUG: remove interactions: u s w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: u b w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: c d w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: c b w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: t d w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: t s w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: s u w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: b u w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: d c w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: b c w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: d t w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: s t w+ at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: c c h at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: e- e- h at order: QED=1 [0m
+[1;32mDEBUG: remove interactions: mu- mu- h at order: QED=1 [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_100', 1), ('GC_104', 1), ('GC_108', 1), ('GC_40', 1), ('GC_41', 1), ('GC_45', 1), ('GC_49', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_21', 1), ('GC_27', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_15', 1), ('GC_30', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_38', 1), ('GC_39', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_3', 1), ('GC_4', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_50', 1), ('GC_51', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_54', 1), ('GC_56', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_66', 1), ('GC_67', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_70', 1), ('GC_73', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_74', 1), ('GC_75', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_77', 1), ('GC_78', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_76', 1), ('GC_79', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_7', 1), ('GC_9', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_96', 1), ('GC_97', -1)  [0m
+[1;32mDEBUG: remove parameters: mdl_lamWS [0m
+[1;32mDEBUG: remove parameters: mdl_AWS [0m
+[1;32mDEBUG: remove parameters: mdl_rhoWS [0m
+[1;32mDEBUG: remove parameters: mdl_etaWS [0m
+[1;32mDEBUG: remove parameters: mdl_ymc [0m
+[1;32mDEBUG: remove parameters: mdl_yme [0m
+[1;32mDEBUG: remove parameters: mdl_ymm [0m
+[1;32mDEBUG: remove parameters: mdl_MC [0m
+[1;32mDEBUG: remove parameters: mdl_Me [0m
+[1;32mDEBUG: remove parameters: mdl_MM [0m
+[1;32mDEBUG: remove parameters: mdl_WTau [0m
+[1;32mDEBUG: remove parameters: mdl_lamWS__exp__2 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM1x2 [0m
+[1;32mDEBUG: remove parameters: mdl_lamWS__exp__3 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM1x3 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM2x1 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM2x3 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM3x1 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM3x2 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM1x3 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM2x3 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM2x1 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM3x1 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM3x2 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM1x2 [0m
+[1;32mDEBUG: remove parameters: mdl_yc [0m
+[1;32mDEBUG: remove parameters: mdl_ye [0m
+[1;32mDEBUG: remove parameters: mdl_ym [0m
+[1;32mDEBUG: remove parameters: mdl_I1x31 [0m
+[1;32mDEBUG: remove parameters: mdl_I1x32 [0m
+[1;32mDEBUG: remove parameters: mdl_I2x12 [0m
+[1;32mDEBUG: remove parameters: mdl_I2x13 [0m
+[1;32mDEBUG: remove parameters: mdl_I2x22 [0m
+[1;32mDEBUG: remove parameters: mdl_I2x23 [0m
+[1;32mDEBUG: remove parameters: mdl_I2x32 [0m
+[1;32mDEBUG: remove parameters: mdl_I3x21 [0m
+[1;32mDEBUG: remove parameters: mdl_I3x22 [0m
+[1;32mDEBUG: remove parameters: mdl_I3x23 [0m
+[1;32mDEBUG: remove parameters: mdl_I3x31 [0m
+[1;32mDEBUG: remove parameters: mdl_I3x32 [0m
+[1;32mDEBUG: remove parameters: mdl_I4x13 [0m
+[1;32mDEBUG: remove parameters: mdl_I4x23 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM1x1 [0m
+[1;32mDEBUG: remove parameters: mdl_CKM2x2 [0m
+[1;32mDEBUG: fix parameter value: mdl_CKM3x3 [0m
+[1;32mDEBUG: fix parameter value: mdl_conjg__CKM3x3 [0m
+[1;32mDEBUG: remove parameters: mdl_conjg__CKM2x2 [0m
+[1;32mDEBUG: fix parameter value: mdl_conjg__CKM1x1 [0m
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying coupling order WEIGHTED<=6: WEIGTHED IS QCD+2*QED 
+INFO: Trying process: g g > b b~ a a WEIGHTED<=6 @1  
+INFO: Process has 30 diagrams 
+INFO: Trying process: u u~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: u c~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Trying process: c u~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Trying process: c c~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: d d~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: d s~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Trying process: s d~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Trying process: s s~ > b b~ a a WEIGHTED<=6 @1  
+INFO: Process has 20 diagrams 
+INFO: Process u~ u > b b~ a a added to mirror process u u~ > b b~ a a 
+INFO: Process c~ c > b b~ a a added to mirror process c c~ > b b~ a a 
+INFO: Process d~ d > b b~ a a added to mirror process d d~ > b b~ a a 
+INFO: Process s~ s > b b~ a a added to mirror process s s~ > b b~ a a 
+5 processes with 110 diagrams generated in 0.386 s
+Total: 5 processes with 110 diagrams
+output /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0
+INFO: directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0 already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: initialize a new directory: background_0 
+INFO: remove old information in background_0 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > b b~ a a WEIGHTED<=6 @1 
+INFO: Processing color information for process: g g > b b~ a a @1 
+INFO: Generating Helas calls for process: u u~ > b b~ a a WEIGHTED<=6 @1 
+INFO: Processing color information for process: u u~ > b b~ a a @1 
+INFO: Combined process c c~ > b b~ a a WEIGHTED<=6 @1 with process u u~ > b b~ a a WEIGHTED<=6 @1 
+INFO: Generating Helas calls for process: d d~ > b b~ a a WEIGHTED<=6 @1 
+INFO: Reusing existing color information for process: d d~ > b b~ a a @1 
+INFO: Combined process s s~ > b b~ a a WEIGHTED<=6 @1 with process d d~ > b b~ a a WEIGHTED<=6 @1 
+INFO: Creating files in directory P1_gg_bbxaa 
+INFO: Generating Feynman diagrams for Process: g g > b b~ a a WEIGHTED<=6 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_bbxaa 
+INFO: Creating files in directory P1_qq_bbxaa 
+INFO: Generating Feynman diagrams for Process: u u~ > b b~ a a WEIGHTED<=6 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > b b~ a a WEIGHTED<=6 @1 
+INFO: Finding symmetric diagrams for subprocess group qq_bbxaa 
+Generated helas calls for 3 subprocesses (70 diagrams) in 0.146 s
+Wrote files for 149 helas calls in 0.780 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates VVV1 set of routines with options: P0[0m
+ALOHA: aloha creates FFV1 routines[0m
+ALOHA: aloha creates 2 routines in  0.820 s
+save configuration file to /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate jpeg diagrams 
+INFO: Generate web pages 
+Output to directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0 done.
+Type "launch" to generate events from this process, or see
+/vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/README
+Run "open index.html" to see more information about this process.
+quit
