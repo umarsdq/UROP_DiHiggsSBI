@@ -1,0 +1,1002 @@
+[1;31mNote that this is a development version.
+This version is intended for development/beta testing and NOT for production.
+This version has not been fully tested (if at all) and might have limited user support (if at all)[0m
+Running MG5 in debug mode
+('WARNING: loading of madgraph too slow!!!', 16.616342544555664)
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+[1;31m*                                                          *[1;0m
+[1;31m*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
+[1;31m*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
+[1;31m*                                                          *[1;0m
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from mg5amcnlo/input/mg5_configuration.txt 
+set fastjet to /home/hep/us322/mg5amcnlo/HEPTools/fastjet/bin/fastjet-config
+set eMELA to /home/hep/us322/mg5amcnlo/HEPTools/eMELA/bin/eMELA-config
+set ninja to /home/hep/us322/mg5amcnlo/HEPTools/lib
+set collier to /home/hep/us322/mg5amcnlo/HEPTools/lib
+set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
+set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /tmp/generate.mg5
+The import format was not given, so we guess it as command
+import model SMEFTatNLO-LO
+INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restrict_LO.dat . 
+[1;32mDEBUG: Simplifying conditional expressions [0m
+[1;32mDEBUG: coupling with small value GC_468: 8.673617379884035e-19j treated as zero [0m
+[1;32mDEBUG: coupling with small value GC_471: (-8.673617379884035e-19+0j) treated as zero [0m
+[1;32mDEBUG: coupling with small value GC_521: -7.047314121155779e-19j treated as zero [0m
+[1;32mDEBUG: coupling with small value GC_543: -3.608224830031759e-16j treated as zero [0m
+[1;32mDEBUG: remove interactions: g g g at order: QCD=3 [0m
+[1;32mDEBUG: remove interactions: g g g g at order: QCD=4 [0m
+[1;32mDEBUG: remove interactions: c c g at order: QCD=3 [0m
+[1;32mDEBUG: remove interactions: d d g at order: QCD=3 [0m
+[1;32mDEBUG: remove interactions: s s g at order: QCD=3 [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_102', 1), ('GC_103', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_101', 1), ('GC_104', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1150', 1), ('GC_1152', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1154', 1), ('GC_1155', -1), ('GC_413', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_114', 1), ('GC_116', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_117', 1), ('GC_118', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_121', 1), ('GC_123', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_125', 1), ('GC_127', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_128', 1), ('GC_130', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_131', 1), ('GC_133', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_143', 1), ('GC_144', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_146', 1), ('GC_147', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_154', 1), ('GC_155', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_159', 1), ('GC_160', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_171', 1), ('GC_175', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_170', 1), ('GC_176', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_169', 1), ('GC_177', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_184', 1), ('GC_185', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_182', 1), ('GC_186', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_193', 1), ('GC_194', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_196', 1), ('GC_197', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_198', 1), ('GC_199', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1995', 1), ('GC_1996', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1998', 1), ('GC_1999', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2008', 1), ('GC_2010', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2011', 1), ('GC_2013', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_200', 1), ('GC_202', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1821', 1), ('GC_2021', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2023', 1), ('GC_2024', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2026', 1), ('GC_2028', -1), ('GC_2031', -1), ('GC_2035', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2027', 1), ('GC_2032', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2036', 1), ('GC_2038', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2039', 1), ('GC_2041', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2042', 1), ('GC_2044', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2045', 1), ('GC_2047', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2050', 1), ('GC_2052', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2053', 1), ('GC_2055', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2080', 1), ('GC_2081', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2082', 1), ('GC_2083', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2084', 1), ('GC_2085', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_209', 1), ('GC_210', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2100', 1), ('GC_2101', -1), ('GC_2104', -1), ('GC_2106', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2107', 1), ('GC_2108', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2109', 1), ('GC_2110', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2111', 1), ('GC_2112', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2113', 1), ('GC_2114', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2121', 1), ('GC_2122', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_2123', 1), ('GC_2124', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_212', 1), ('GC_214', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_215', 1), ('GC_217', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_218', 1), ('GC_220', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_221', 1), ('GC_223', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_224', 1), ('GC_226', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_227', 1), ('GC_229', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_230', 1), ('GC_231', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_238', 1), ('GC_239', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_241', 1), ('GC_242', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_246', 1), ('GC_248', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_255', 1), ('GC_257', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_259', 1), ('GC_260', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_262', 1), ('GC_264', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_265', 1), ('GC_267', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_268', 1), ('GC_270', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_277', 1), ('GC_278', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_323', 1), ('GC_324', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_342', 1), ('GC_343', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_344', 1), ('GC_345', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_346', 1), ('GC_347', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_348', 1), ('GC_349', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_353', 1), ('GC_354', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_361', 1), ('GC_364', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_365', 1), ('GC_368', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_36', 1), ('GC_37', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_371', 1), ('GC_372', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_377', 1), ('GC_378', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_380', 1), ('GC_381', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_382', 1), ('GC_383', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_384', 1), ('GC_385', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_386', 1), ('GC_387', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_388', 1), ('GC_389', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_390', 1), ('GC_391', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_395', 1), ('GC_396', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_398', 1), ('GC_399', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_3', 1), ('GC_4', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_401', 1), ('GC_402', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_404', 1), ('GC_405', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_406', 1), ('GC_407', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_408', 1), ('GC_409', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_415', 1), ('GC_416', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_433', 1), ('GC_434', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_432', 1), ('GC_435', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_438', 1), ('GC_440', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_437', 1), ('GC_441', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_436', 1), ('GC_442', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_45', 1), ('GC_46', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_469', 1), ('GC_470', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_476', 1), ('GC_477', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_484', 1), ('GC_487', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_485', 1), ('GC_488', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_48', 1), ('GC_49', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_491', 1), ('GC_494', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_495', 1), ('GC_497', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_498', 1), ('GC_500', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_51', 1), ('GC_52', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_526', 1), ('GC_529', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_531', 1), ('GC_533', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_532', 1), ('GC_534', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_530', 1), ('GC_535', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_537', 1), ('GC_539', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_538', 1), ('GC_540', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_536', 1), ('GC_541', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_548', 1), ('GC_549', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_7', 1), ('GC_9', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_97', 1), ('GC_98', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_100', 1), ('GC_99', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1043_66', 1), ('R2GC_1044_68', -1), ('UVGC_1768_127_1eps', -1), ('UVGC_1769_129_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1043_67', 1), ('R2GC_1044_69', -1), ('UVGC_1768_128_1eps', -1), ('UVGC_1769_130_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1048_71', 1), ('R2GC_1051_75', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1048_72', 1), ('R2GC_1051_76', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1062_97', 1), ('R2GC_1065_103', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1062_98', 1), ('R2GC_1065_104', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1061_95', 1), ('R2GC_1066_105', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1061_96', 1), ('R2GC_1066_106', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1067_107', 1), ('R2GC_1069_111', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1067_108', 1), ('R2GC_1069_112', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1070_113', 1), ('R2GC_1071_115', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1070_114', 1), ('R2GC_1071_116', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1072_117', 1), ('R2GC_1073_119', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1072_118', 1), ('R2GC_1073_120', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1075_122', 1), ('R2GC_1079_128', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1075_123', 1), ('R2GC_1079_129', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1090_150', 1), ('R2GC_1095_160', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1090_151', 1), ('R2GC_1095_161', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1089_148', 1), ('R2GC_1096_162', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1089_149', 1), ('R2GC_1096_163', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1097_164', 1), ('R2GC_1100_170', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1097_165', 1), ('R2GC_1100_171', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1101_172', 1), ('R2GC_1102_174', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1101_173', 1), ('R2GC_1102_175', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1107_178', 1), ('R2GC_1112_184', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1107_179', 1), ('R2GC_1112_185', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1132_224', 1), ('R2GC_1137_234', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1132_225', 1), ('R2GC_1137_235', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1131_222', 1), ('R2GC_1138_236', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1131_223', 1), ('R2GC_1138_237', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1139_238', 1), ('R2GC_1142_244', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1139_239', 1), ('R2GC_1142_245', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1147_250', 1), ('R2GC_1148_251', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1194_319', 1), ('R2GC_1195_321', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1194_320', 1), ('R2GC_1195_322', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1196_323', 1), ('R2GC_1197_325', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1196_324', 1), ('R2GC_1197_326', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1199_328', 1), ('R2GC_1203_335', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1199_329', 1), ('R2GC_1203_336', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1214_357', 1), ('R2GC_1219_367', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1214_358', 1), ('R2GC_1219_368', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1213_355', 1), ('R2GC_1220_369', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1213_356', 1), ('R2GC_1220_370', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1221_371', 1), ('R2GC_1224_377', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1221_372', 1), ('R2GC_1224_378', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1271_441', 1), ('R2GC_1272_442', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1270_440', 1), ('R2GC_1274_444', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1304_478', 1), ('R2GC_1305_480', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1304_479', 1), ('R2GC_1305_481', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1034_51', 1), ('R2GC_1318_520', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1327_552', 1), ('R2GC_1330_561', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1327_553', 1), ('R2GC_1330_562', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1326_551', 1), ('R2GC_1330_563', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1326_549', 1), ('R2GC_1331_564', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1326_550', 1), ('R2GC_1331_565', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1332_566', 1), ('R2GC_1334_573', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1332_567', 1), ('R2GC_1334_574', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1332_568', 1), ('R2GC_1334_575', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1339_587', 1), ('R2GC_1346_609', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1339_588', 1), ('R2GC_1346_610', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1338_586', 1), ('R2GC_1346_611', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1338_584', 1), ('R2GC_1347_612', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1338_585', 1), ('R2GC_1347_613', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1348_614', 1), ('R2GC_1352_626', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1348_615', 1), ('R2GC_1352_627', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1348_616', 1), ('R2GC_1352_628', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1358_648', 1), ('R2GC_1363_664', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1358_649', 1), ('R2GC_1363_665', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1357_647', 1), ('R2GC_1363_666', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1357_645', 1), ('R2GC_1364_667', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1357_646', 1), ('R2GC_1364_668', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1365_669', 1), ('R2GC_1368_680', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1365_670', 1), ('R2GC_1368_681', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1365_671', 1), ('R2GC_1368_682', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1369_683', 1), ('R2GC_1369_684', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1370_685', 1), ('R2GC_1370_686', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1393_761', 1), ('R2GC_1401_787', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1394_765', 1), ('R2GC_1401_788', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1394_766', 1), ('R2GC_1401_789', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1393_764', 1), ('R2GC_1401_790', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1393_762', 1), ('R2GC_1402_791', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1393_763', 1), ('R2GC_1402_792', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1403_793', 1), ('R2GC_1407_806', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1403_794', 1), ('R2GC_1407_807', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1403_795', 1), ('R2GC_1407_808', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1403_796', 1), ('R2GC_1407_809', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1419_851', 1), ('R2GC_1419_854', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_888', 1), ('R2GC_1429_892', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_889', 1), ('R2GC_1429_893', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_890', 1), ('R2GC_1429_894', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_891', 1), ('R2GC_1429_895', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1456_948', 1), ('R2GC_1458_950', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1462_954', 1), ('R2GC_1463_955', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1507_978', 1), ('R2GC_1508_979', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1513_984', 1), ('R2GC_1514_989', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1513_985', 1), ('R2GC_1514_990', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1513_986', 1), ('R2GC_1514_991', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1513_987', 1), ('R2GC_1514_992', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1513_988', 1), ('R2GC_1514_993', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1515_995', 1), ('R2GC_1516_1000', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1515_996', 1), ('R2GC_1516_1001', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1515_997', 1), ('R2GC_1516_1002', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1515_998', 1), ('R2GC_1516_1003', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1515_994', 1), ('R2GC_1516_999', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1517_1004', 1), ('R2GC_1519_1006', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1526_1009', 1), ('R2GC_1527_1010', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1528_1011', 1), ('R2GC_1530_1013', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1531_1014', 1), ('R2GC_1532_1015', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1533_1016', 1), ('R2GC_1534_1017', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1536_1019', 1), ('R2GC_1537_1020', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1535_1018', 1), ('R2GC_1538_1021', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1539_1022', 1), ('R2GC_1540_1023', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1543_1026', 1), ('R2GC_1544_1027', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1545_1028', 1), ('R2GC_1547_1030', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1556_1039', 1), ('R2GC_1557_1040', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1558_1041', 1), ('R2GC_1560_1043', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1561_1044', 1), ('R2GC_1562_1045', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1563_1046', 1), ('R2GC_1565_1048', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1567_1054', 1), ('R2GC_1568_1059', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1567_1055', 1), ('R2GC_1568_1060', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1567_1056', 1), ('R2GC_1568_1061', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1567_1057', 1), ('R2GC_1568_1062', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1567_1058', 1), ('R2GC_1568_1063', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1570_1065', 1), ('R2GC_1571_1066', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1573_1072', 1), ('R2GC_1574_1073', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1577_1076', 1), ('R2GC_1578_1077', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1582_1081', 1), ('R2GC_1583_1082', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1589_1090', 1), ('R2GC_1590_1091', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1592_1094', 1), ('R2GC_1593_1095', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1595_1097', 1), ('R2GC_1596_1098', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1598_1101', 1), ('R2GC_1599_1102', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1605_1107', 1), ('R2GC_1606_1108', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1609_1112', 1), ('R2GC_1610_1113', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1612_1116', 1), ('R2GC_1613_1118', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1612_1117', 1), ('R2GC_1613_1119', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1614_1120', 1), ('R2GC_1618_1125', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1620_1127', 1), ('R2GC_1621_1133', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1620_1128', 1), ('R2GC_1621_1134', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1620_1129', 1), ('R2GC_1621_1135', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1620_1130', 1), ('R2GC_1621_1136', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1620_1131', 1), ('R2GC_1621_1137', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1620_1132', 1), ('R2GC_1621_1138', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1624_1143', 1), ('R2GC_1625_1149', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1624_1144', 1), ('R2GC_1625_1150', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1624_1145', 1), ('R2GC_1625_1151', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1624_1146', 1), ('R2GC_1625_1152', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1624_1147', 1), ('R2GC_1625_1153', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1624_1148', 1), ('R2GC_1625_1154', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1641_1157', 1), ('R2GC_1642_1159', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1641_1158', 1), ('R2GC_1642_1160', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1643_1161', 1), ('R2GC_1645_1165', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1643_1162', 1), ('R2GC_1645_1166', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1682_1171', 1), ('R2GC_1683_1172', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1774_1208', 1), ('R2GC_1776_1210', -1), ('UVGC_1750_105_1eps', 1), ('UVGC_1751_106_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1774_1209', 1), ('R2GC_1776_1211', -1), ('UVGC_1774_133_1eps', 1), ('UVGC_1776_134_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1779_1214', 1), ('R2GC_1780_1216', -1), ('UVGC_1779_137_1eps', 1), ('UVGC_1780_139_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1779_1215', 1), ('R2GC_1780_1217', -1), ('UVGC_1779_138_1eps', 1), ('UVGC_1780_140_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1778_1212', 1), ('R2GC_1781_1218', -1), ('UVGC_1778_135_1eps', 1), ('UVGC_1781_141_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1778_1213', 1), ('R2GC_1781_1219', -1), ('UVGC_1778_136_1eps', 1), ('UVGC_1781_142_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1784_1222', 1), ('R2GC_1785_1224', -1), ('UVGC_1784_145_1eps', 1), ('UVGC_1785_147_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1784_1223', 1), ('R2GC_1785_1225', -1), ('UVGC_1784_146_1eps', 1), ('UVGC_1785_148_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1867_1294', 1), ('R2GC_1872_1302', -1), ('UVGC_1867_261_1eps', 1), ('UVGC_1872_267_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1867_1295', 1), ('R2GC_1872_1303', -1), ('UVGC_1867_262_1eps', 1), ('UVGC_1872_268_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1862_1287', 1), ('R2GC_1872_1304', -1), ('UVGC_1772_131_1eps', 1), ('UVGC_1773_132_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1869_1296', 1), ('R2GC_1874_1305', -1), ('UVGC_1869_263_1eps', 1), ('UVGC_1874_269_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1869_1297', 1), ('R2GC_1874_1306', -1), ('UVGC_1869_264_1eps', 1), ('UVGC_1874_270_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1870_1298', 1), ('R2GC_1875_1307', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1870_1299', 1), ('R2GC_1875_1308', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1862_1285', 1), ('R2GC_1877_1309', -1), ('UVGC_1862_255_1eps', 1), ('UVGC_1877_273_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1862_1286', 1), ('R2GC_1877_1310', -1), ('UVGC_1862_256_1eps', 1), ('UVGC_1877_274_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1864_1288', 1), ('R2GC_1879_1311', -1), ('UVGC_1864_257_1eps', 1), ('UVGC_1879_275_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1864_1289', 1), ('R2GC_1879_1312', -1), ('UVGC_1864_258_1eps', 1), ('UVGC_1879_276_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1865_1290', 1), ('R2GC_1880_1313', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1865_1291', 1), ('R2GC_1880_1314', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1882_1315', 1), ('R2GC_1887_1321', -1), ('UVGC_1882_279_1eps', 1), ('UVGC_1887_284_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1882_1316', 1), ('R2GC_1887_1322', -1), ('UVGC_1882_280_1eps', 1), ('UVGC_1887_285_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1882_1317', 1), ('R2GC_1887_1323', -1), ('UVGC_1882_281_1eps', 1), ('UVGC_1887_286_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1884_1318', 1), ('R2GC_1889_1324', -1), ('UVGC_1884_282_1eps', 1), ('UVGC_1889_287_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1885_1319', 1), ('R2GC_1890_1325', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1908_1366', 1), ('R2GC_1910_1370', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1908_1367', 1), ('R2GC_1910_1371', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1921_1377', 1), ('R2GC_1923_1380', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1922_1378', 1), ('R2GC_1924_1381', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1943_1390', 1), ('R2GC_1944_1391', -1), ('UVGC_1943_386_1eps', 1), ('UVGC_1944_387_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1946_1393', 1), ('R2GC_1947_1394', -1), ('UVGC_1946_389_1eps', 1), ('UVGC_1947_390_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1964_1397', 1), ('R2GC_1965_1398', -1), ('UVGC_1964_400_1eps', 1), ('UVGC_1965_401_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1968_1399', 1), ('R2GC_1969_1400', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1970_1401', 1), ('R2GC_1971_1402', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1995_1408', 1), ('R2GC_1996_1409', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1998_1411', 1), ('R2GC_1999_1412', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2008_1421', 1), ('R2GC_2010_1423', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2011_1424', 1), ('R2GC_2013_1426', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2023_1435', 1), ('R2GC_2024_1436', -1), ('UVGC_2023_459_1eps', 1), ('UVGC_2024_460_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2026_1438', 1), ('R2GC_2028_1440', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2031_1442', 1), ('R2GC_2035_1444', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2036_1445', 1), ('R2GC_2038_1447', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2039_1448', 1), ('R2GC_2041_1450', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2042_1451', 1), ('R2GC_2044_1453', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2045_1454', 1), ('R2GC_2047_1456', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2050_1458', 1), ('R2GC_2052_1460', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2053_1461', 1), ('R2GC_2055_1463', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2063_1470', 1), ('R2GC_2064_1471', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2069_1473', 1), ('R2GC_2070_1474', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2080_1476', 1), ('R2GC_2081_1477', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2082_1478', 1), ('R2GC_2083_1479', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2084_1480', 1), ('R2GC_2085_1481', -1), ('UVGC_2084_520_1eps', 1), ('UVGC_2085_522_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2088_1482', 1), ('R2GC_2089_1483', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2100_1485', 1), ('R2GC_2101_1486', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2104_1488', 1), ('R2GC_2106_1489', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2107_1490', 1), ('R2GC_2108_1491', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2109_1492', 1), ('R2GC_2110_1493', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2111_1494', 1), ('R2GC_2112_1495', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2113_1496', 1), ('R2GC_2114_1497', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2119_1499', 1), ('R2GC_2120_1500', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2121_1501', 1), ('R2GC_2122_1502', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2123_1503', 1), ('R2GC_2124_1504', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2125_1505', 1), ('R2GC_2126_1506', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1931_1387', 1), ('R2GC_2133_1509', -1), ('UVGC_1931_374_1eps', 1), ('UVGC_2133_568_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2156_1512', 1), ('R2GC_2157_1514', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2156_1513', 1), ('R2GC_2157_1515', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2164_1520', 1), ('R2GC_2167_1524', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2166_1523', 1), ('R2GC_2167_1525', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2165_1522', 1), ('R2GC_2168_1526', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2164_1521', 1), ('R2GC_2169_1527', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2175_1534', 1), ('R2GC_2176_1535', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2174_1532', 1), ('R2GC_2177_1536', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2174_1533', 1), ('R2GC_2177_1537', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2178_1538', 1), ('R2GC_2179_1539', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2170_1528', 1), ('R2GC_2182_1542', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2173_1531', 1), ('R2GC_2182_1543', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2171_1530', 1), ('R2GC_2184_1544', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2205_1552', 1), ('R2GC_2206_1554', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2205_1553', 1), ('R2GC_2206_1555', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2213_1559', 1), ('R2GC_2214_1561', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2213_1560', 1), ('R2GC_2214_1562', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2239_1582', 1), ('R2GC_2240_1583', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2238_1580', 1), ('R2GC_2241_1584', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2238_1581', 1), ('R2GC_2241_1585', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2242_1586', 1), ('R2GC_2243_1587', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2259_1598', 1), ('R2GC_2260_1599', -1), ('UVGC_2259_750_1eps', 1), ('UVGC_2260_751_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2266_1601', 1), ('R2GC_2267_1602', -1), ('UVGC_2266_753_1eps', 1), ('UVGC_2267_754_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1945_1392', 1), ('R2GC_2274_1604', -1), ('UVGC_1945_388_1eps', 1), ('UVGC_2274_756_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2282_1606', 1), ('R2GC_2284_1609', -1), ('UVGC_2282_758_1eps', 1), ('UVGC_2284_761_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2283_1607', 1), ('R2GC_2285_1610', -1), ('UVGC_2283_759_1eps', 1), ('UVGC_2285_762_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2283_1608', 1), ('R2GC_2285_1611', -1), ('UVGC_2283_760_1eps', 1), ('UVGC_2285_763_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2310_1621', 1), ('R2GC_2311_1622', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2312_1623', 1), ('R2GC_2314_1625', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2317_1628', 1), ('R2GC_2319_1630', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2321_1632', 1), ('R2GC_2322_1633', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2324_1635', 1), ('R2GC_2325_1636', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2344_1655', 1), ('R2GC_2345_1656', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2353_1663', 1), ('R2GC_2353_1664', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2366_1675', 1), ('R2GC_2367_1677', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2366_1676', 1), ('R2GC_2367_1678', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2370_1679', 1), ('R2GC_2372_1681', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2373_1682', 1), ('R2GC_2374_1683', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2391_1685', 1), ('R2GC_2392_1686', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2393_1687', 1), ('R2GC_2394_1688', -1), ('UVGC_2393_930_1eps', 1), ('UVGC_2394_933_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2400_1689', 1), ('R2GC_2402_1693', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2400_1690', 1), ('R2GC_2402_1694', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2405_1699', 1), ('R2GC_2407_1701', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2410_1705', 1), ('R2GC_2412_1707', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2413_1708', 1), ('R2GC_2415_1712', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2413_1709', 1), ('R2GC_2415_1713', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2419_1719', 1), ('R2GC_2420_1721', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2419_1720', 1), ('R2GC_2420_1722', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2421_1723', 1), ('R2GC_2422_1725', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2421_1724', 1), ('R2GC_2422_1726', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2424_1727', 1), ('R2GC_2425_1729', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2424_1728', 1), ('R2GC_2425_1730', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2432_1733', 1), ('R2GC_2433_1735', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2432_1734', 1), ('R2GC_2433_1736', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1015_21', 1), ('R2GC_552_1744', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_571_1758', 1), ('R2GC_572_1759', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1782_1220', 1), ('R2GC_587_1772', -1), ('UVGC_1782_143_1eps', 1), ('UVGC_1783_144_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_589_1773', 1), ('R2GC_590_1774', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_591_1775', 1), ('R2GC_592_1776', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_609_1792', 1), ('R2GC_610_1793', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1707_1193', 1), ('R2GC_658_1834', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_659_1835', 1), ('R2GC_661_1837', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_668_1844', 1), ('R2GC_669_1845', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_684_1856', 1), ('R2GC_686_1858', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_694_1864', 1), ('R2GC_695_1865', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_782_1890', 1), ('R2GC_783_1891', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_795_1898', 1), ('R2GC_796_1899', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_843_1927', 1), ('R2GC_845_1929', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_848_1930', 1), ('R2GC_850_1932', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_855_1937', 1), ('R2GC_856_1938', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_860_1941', 1), ('R2GC_861_1942', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_862_1943', 1), ('R2GC_863_1944', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_864_1945', 1), ('R2GC_865_1946', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_866_1947', 1), ('R2GC_867_1948', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_650_1826', 1), ('R2GC_871_1951', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_656_1832', 1), ('R2GC_881_1960', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_655_1831', 1), ('R2GC_882_1961', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_888_1967', 1), ('R2GC_889_1968', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_905_1983', 1), ('R2GC_907_1985', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_945_1996', 1), ('R2GC_947_1998', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_948_1999', 1), ('R2GC_949_2000', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_950_2001', 1), ('R2GC_951_2002', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_952_2003', 1), ('R2GC_953_2004', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_963_2014', 1), ('R2GC_965_2016', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_966_2017', 1), ('R2GC_967_2018', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_968_2019', 1), ('R2GC_969_2020', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_989_2031', 1), ('R2GC_990_2032', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1050_74', 1), ('R2GC_993_2035', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1111_183', 1), ('R2GC_996_2036', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_912_1989', 1), ('UVGC_1664_19', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1682_37', 1), ('UVGC_1683_38', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1682_37_1eps', 1), ('UVGC_1683_38_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1708_63', 1), ('UVGC_1710_65', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1708_63_1eps', 1), ('UVGC_1710_65_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1720_75', 1), ('UVGC_1721_76', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1720_75_1eps', 1), ('UVGC_1721_76_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1750_105', 1), ('UVGC_1751_106', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1768_127', 1), ('UVGC_1769_129', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1768_128', 1), ('UVGC_1769_130', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1772_131', 1), ('UVGC_1773_132', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1774_133', 1), ('UVGC_1776_134', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1779_137', 1), ('UVGC_1780_139', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1779_138', 1), ('UVGC_1780_140', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1778_135', 1), ('UVGC_1781_141', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1778_136', 1), ('UVGC_1781_142', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1782_143', 1), ('UVGC_1783_144', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1784_145', 1), ('UVGC_1785_147', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1784_146', 1), ('UVGC_1785_148', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1163_266', 1), ('UVGC_1796_167_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1819_1257', 1), ('UVGC_1819_194_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1820_1258', 1), ('UVGC_1820_195_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1821_1259', 1), ('UVGC_1821_196_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1822_1260', 1), ('UVGC_1822_197_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1024_37', 1), ('UVGC_1858_245_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_583_1769', 1), ('UVGC_1860_252_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1867_261', 1), ('UVGC_1872_267', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1867_262', 1), ('UVGC_1872_268', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1869_263', 1), ('UVGC_1874_269', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1869_264', 1), ('UVGC_1874_270', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1871_265', 1), ('UVGC_1876_271', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1871_265_1eps', 1), ('UVGC_1876_271_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1871_266', 1), ('UVGC_1876_272', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1871_266_1eps', 1), ('UVGC_1876_272_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1862_255', 1), ('UVGC_1877_273', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1862_256', 1), ('UVGC_1877_274', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1864_257', 1), ('UVGC_1879_275', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1864_258', 1), ('UVGC_1879_276', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1866_259', 1), ('UVGC_1881_277', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1866_259_1eps', 1), ('UVGC_1881_277_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1866_260', 1), ('UVGC_1881_278', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1866_260_1eps', 1), ('UVGC_1881_278_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1882_279', 1), ('UVGC_1887_284', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1882_280', 1), ('UVGC_1887_285', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1882_281', 1), ('UVGC_1887_286', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1884_282', 1), ('UVGC_1889_287', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1886_283', 1), ('UVGC_1891_288', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1886_283_1eps', 1), ('UVGC_1891_288_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1905_1362', 1), ('UVGC_1905_318_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1907_321_1eps', 1), ('UVGC_1907_323_1eps', -1), ('UVGC_1909_324_1eps', -1), ('UVGC_1909_326_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1907_321', 1), ('UVGC_1909_324', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1907_322_1eps', 1), ('UVGC_1909_325_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1907_323', 1), ('UVGC_1909_326', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1911_327', 1), ('UVGC_1912_330', -1), ('UVGC_1914_336', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1911_327_1eps', 1), ('UVGC_1912_330_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1911_328', 1), ('UVGC_1912_331', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1911_328_1eps', 1), ('UVGC_1912_331_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1911_329', 1), ('UVGC_1912_332', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_359', 1), ('UVGC_1923_362', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_359_1eps', 1), ('UVGC_1923_362_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_360', 1), ('UVGC_1923_363', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_360_1eps', 1), ('UVGC_1923_363_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_361', 1), ('UVGC_1923_364', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_361_1eps', 1), ('UVGC_1923_364_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1906_319', 1), ('UVGC_1926_367', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1930_1386', 1), ('UVGC_1929_372_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1933_376', 1), ('UVGC_1934_377', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1933_376_1eps', 1), ('UVGC_1934_377_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1732_87', 1), ('UVGC_1936_379', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1653_8_1eps', 1), ('UVGC_1936_379_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1731_86', 1), ('UVGC_1937_380', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1654_9_1eps', 1), ('UVGC_1937_380_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1939_382', 1), ('UVGC_1940_383', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1939_382_1eps', 1), ('UVGC_1940_383_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1943_386', 1), ('UVGC_1944_387', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1946_389', 1), ('UVGC_1947_390', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1948_1395', 1), ('UVGC_1948_391_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1926_367_1eps', 1), ('UVGC_1949_392_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1926_368_1eps', 1), ('UVGC_1949_393_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1962_398', 1), ('UVGC_1963_399', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1962_398_1eps', 1), ('UVGC_1963_399_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1964_400', 1), ('UVGC_1965_401', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1966_402', 1), ('UVGC_1967_403', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1966_402_1eps', 1), ('UVGC_1967_403_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1968_404', 1), ('UVGC_1969_405', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1968_404_1eps', 1), ('UVGC_1969_405_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1970_406', 1), ('UVGC_1971_407', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1970_406_1eps', 1), ('UVGC_1971_407_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1972_408', 1), ('UVGC_1973_409', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1972_408_1eps', 1), ('UVGC_1973_409_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1974_410', 1), ('UVGC_1975_411', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1974_410_1eps', 1), ('UVGC_1975_411_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1979_415', 1), ('UVGC_1980_416', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1979_415_1eps', 1), ('UVGC_1980_416_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1981_417', 1), ('UVGC_1982_418', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1981_417_1eps', 1), ('UVGC_1982_418_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1983_419', 1), ('UVGC_1984_420', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1983_419_1eps', 1), ('UVGC_1984_420_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1986_422', 1), ('UVGC_1987_423', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1986_422_1eps', 1), ('UVGC_1987_423_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1511_982', 1), ('UVGC_1988_424_1eps', -1), ('UVGC_1989_425_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1988_424', 1), ('UVGC_1989_425', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1991_1404', 1), ('UVGC_1991_427_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1995_431', 1), ('UVGC_1996_432', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1995_431_1eps', 1), ('UVGC_1996_432_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1998_434', 1), ('UVGC_1999_435', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1998_434_1eps', 1), ('UVGC_1999_435_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2008_444', 1), ('UVGC_2010_446', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2008_444_1eps', 1), ('UVGC_2010_446_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2011_447', 1), ('UVGC_2013_449', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2011_447_1eps', 1), ('UVGC_2013_449_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2021_1433', 1), ('UVGC_2021_457_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2022_1434', 1), ('UVGC_2022_458_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2023_459', 1), ('UVGC_2024_460', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2026_462', 1), ('UVGC_2028_464', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2026_462_1eps', 1), ('UVGC_2028_464_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2030_466', 1), ('UVGC_2034_470', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2030_466_1eps', 1), ('UVGC_2034_470_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2031_467', 1), ('UVGC_2035_471', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2031_467_1eps', 1), ('UVGC_2035_471_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2036_472', 1), ('UVGC_2038_474', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2036_472_1eps', 1), ('UVGC_2038_474_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2039_475', 1), ('UVGC_2041_477', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2039_475_1eps', 1), ('UVGC_2041_477_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2042_478', 1), ('UVGC_2044_480', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2042_478_1eps', 1), ('UVGC_2044_480_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2045_481', 1), ('UVGC_2047_483', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2045_481_1eps', 1), ('UVGC_2047_483_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2050_486', 1), ('UVGC_2052_488', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2050_486_1eps', 1), ('UVGC_2052_488_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2053_489', 1), ('UVGC_2055_491', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2053_489_1eps', 1), ('UVGC_2055_491_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2063_499', 1), ('UVGC_2064_500', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2063_499_1eps', 1), ('UVGC_2064_500_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2069_504', 1), ('UVGC_2070_505', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2069_504_1eps', 1), ('UVGC_2070_505_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2071_506', 1), ('UVGC_2072_507', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2071_506_1eps', 1), ('UVGC_2072_507_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2073_508', 1), ('UVGC_2075_510', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2073_508_1eps', 1), ('UVGC_2075_510_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2080_515', 1), ('UVGC_2081_516', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2080_515_1eps', 1), ('UVGC_2081_516_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2082_517', 1), ('UVGC_2083_518', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2082_517_1eps', 1), ('UVGC_2083_518_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2084_519', 1), ('UVGC_2085_521', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2084_520', 1), ('UVGC_2085_522', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2088_525', 1), ('UVGC_2089_526', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2088_525_1eps', 1), ('UVGC_2089_526_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2092_529', 1), ('UVGC_2093_530', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2092_529_1eps', 1), ('UVGC_2093_530_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2094_531', 1), ('UVGC_2095_532', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2094_531_1eps', 1), ('UVGC_2095_532_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2096_533', 1), ('UVGC_2098_535', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2096_533_1eps', 1), ('UVGC_2098_535_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2099_1484', 1), ('UVGC_2099_536_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2100_537', 1), ('UVGC_2101_538', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2100_537_1eps', 1), ('UVGC_2101_538_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2103_540', 1), ('UVGC_2105_542', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2103_540_1eps', 1), ('UVGC_2105_542_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2104_541', 1), ('UVGC_2106_543', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2104_541_1eps', 1), ('UVGC_2106_543_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2107_544', 1), ('UVGC_2108_545', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2107_544_1eps', 1), ('UVGC_2108_545_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2109_546', 1), ('UVGC_2110_547', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2109_546_1eps', 1), ('UVGC_2110_547_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2111_548', 1), ('UVGC_2112_549', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2111_548_1eps', 1), ('UVGC_2112_549_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2113_550', 1), ('UVGC_2114_551', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2113_550_1eps', 1), ('UVGC_2114_551_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2119_555', 1), ('UVGC_2120_556', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2119_555_1eps', 1), ('UVGC_2120_556_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2121_557', 1), ('UVGC_2122_558', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2121_557_1eps', 1), ('UVGC_2122_558_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2123_559', 1), ('UVGC_2124_560', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2123_559_1eps', 1), ('UVGC_2124_560_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2125_561', 1), ('UVGC_2126_562', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2125_561_1eps', 1), ('UVGC_2126_562_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1932_375', 1), ('UVGC_2132_567', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1932_375_1eps', 1), ('UVGC_2132_567_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1931_374', 1), ('UVGC_2133_568', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2137_572', 1), ('UVGC_2139_576', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2137_572_1eps', 1), ('UVGC_2139_576_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2137_573', 1), ('UVGC_2139_577', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2137_573_1eps', 1), ('UVGC_2139_577_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2140_578', 1), ('UVGC_2141_579', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2140_578_1eps', 1), ('UVGC_2141_579_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1647_2', 1), ('UVGC_2142_580_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2144_582', 1), ('UVGC_2145_584', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2144_582_1eps', 1), ('UVGC_2145_584_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2144_583', 1), ('UVGC_2145_585', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2144_583_1eps', 1), ('UVGC_2145_585_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2146_586', 1), ('UVGC_2147_587', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2146_586_1eps', 1), ('UVGC_2147_587_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_878_1957', 1), ('UVGC_2148_588_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_877_1956', 1), ('UVGC_2149_589_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2151_591', 1), ('UVGC_2153_595', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2151_591_1eps', 1), ('UVGC_2153_595_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2151_592', 1), ('UVGC_2153_596', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2151_592_1eps', 1), ('UVGC_2153_596_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2154_597', 1), ('UVGC_2155_598', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2154_597_1eps', 1), ('UVGC_2155_598_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2156_599', 1), ('UVGC_2157_601', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2156_599_1eps', 1), ('UVGC_2157_601_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2156_600', 1), ('UVGC_2157_602', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2156_600_1eps', 1), ('UVGC_2157_602_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_608', 1), ('UVGC_2167_616', -1), ('UVGC_2170_624', 1), ('UVGC_2182_650', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_608_1eps', 1), ('UVGC_2167_616_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_609', 1), ('UVGC_2167_617', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_609_1eps', 1), ('UVGC_2167_617_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2166_614', 1), ('UVGC_2167_618', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2166_614_1eps', 1), ('UVGC_2167_618_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2166_615', 1), ('UVGC_2167_619', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2166_615_1eps', 1), ('UVGC_2167_619_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2165_612', 1), ('UVGC_2168_620', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2165_612_1eps', 1), ('UVGC_2168_620_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2165_613', 1), ('UVGC_2168_621', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2165_613_1eps', 1), ('UVGC_2168_621_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_610', 1), ('UVGC_2169_622', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_610_1eps', 1), ('UVGC_2169_622_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_611', 1), ('UVGC_2169_623', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2164_611_1eps', 1), ('UVGC_2169_623_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_633', 1), ('UVGC_2176_636', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_633_1eps', 1), ('UVGC_2176_636_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_634', 1), ('UVGC_2176_637', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_634_1eps', 1), ('UVGC_2176_637_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_635', 1), ('UVGC_2176_638', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_635_1eps', 1), ('UVGC_2176_638_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_630_1eps', 1), ('UVGC_2177_639_1eps', -1), ('UVGC_2178_642_1eps', -1), ('UVGC_2179_645_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_631_1eps', 1), ('UVGC_2177_640_1eps', -1), ('UVGC_2178_643_1eps', -1), ('UVGC_2179_646_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_632_1eps', 1), ('UVGC_2177_641_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_630', 1), ('UVGC_2178_642', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_631', 1), ('UVGC_2178_643', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2177_639', 1), ('UVGC_2179_645', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2177_640', 1), ('UVGC_2179_646', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2178_644_1eps', 1), ('UVGC_2179_647_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2170_624_1eps', 1), ('UVGC_2182_650_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2170_625', 1), ('UVGC_2182_651', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2170_625_1eps', 1), ('UVGC_2182_651_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2173_629', 1), ('UVGC_2183_653', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2173_629_1eps', 1), ('UVGC_2183_653_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2171_627', 1), ('UVGC_2184_654', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2171_627_1eps', 1), ('UVGC_2184_654_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1794_165', 1), ('UVGC_2186_656', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1794_165_1eps', 1), ('UVGC_2186_656_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2191_661', 1), ('UVGC_2192_663', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2191_661_1eps', 1), ('UVGC_2192_663_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2191_662', 1), ('UVGC_2192_664', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2191_662_1eps', 1), ('UVGC_2192_664_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2197_669', 1), ('UVGC_2198_671', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2197_669_1eps', 1), ('UVGC_2198_671_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2197_670', 1), ('UVGC_2198_672', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2197_670_1eps', 1), ('UVGC_2198_672_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1672_27', 1), ('UVGC_2200_674_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2201_675', 1), ('UVGC_2202_676', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2201_675_1eps', 1), ('UVGC_2202_676_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_899_1977', 1), ('UVGC_2203_677_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_898_1976', 1), ('UVGC_2204_678_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2205_679', 1), ('UVGC_2206_681', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2205_679_1eps', 1), ('UVGC_2206_681_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2205_680', 1), ('UVGC_2206_682', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2205_680_1eps', 1), ('UVGC_2206_682_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2213_689', 1), ('UVGC_2214_691', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2213_689_1eps', 1), ('UVGC_2214_691_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2213_690', 1), ('UVGC_2214_692', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2213_690_1eps', 1), ('UVGC_2214_692_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1833_208', 1), ('UVGC_2217_695', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1833_208_1eps', 1), ('UVGC_2217_695_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2226_1574', 1), ('UVGC_2226_704_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1662_17', 1), ('UVGC_2231_710_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_720', 1), ('UVGC_2240_723', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_720_1eps', 1), ('UVGC_2240_723_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_721', 1), ('UVGC_2240_724', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_721_1eps', 1), ('UVGC_2240_724_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_722', 1), ('UVGC_2240_725', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_722_1eps', 1), ('UVGC_2240_725_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_717_1eps', 1), ('UVGC_2241_726_1eps', -1), ('UVGC_2242_729_1eps', -1), ('UVGC_2243_732_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_718_1eps', 1), ('UVGC_2241_727_1eps', -1), ('UVGC_2242_730_1eps', -1), ('UVGC_2243_733_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_719_1eps', 1), ('UVGC_2241_728_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_717', 1), ('UVGC_2242_729', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_718', 1), ('UVGC_2242_730', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2241_726', 1), ('UVGC_2243_732', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2241_727', 1), ('UVGC_2243_733', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2242_731_1eps', 1), ('UVGC_2243_734_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1680_35_1eps', 1), ('UVGC_2246_737_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1675_30', 1), ('UVGC_2251_742_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2259_750', 1), ('UVGC_2260_751', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2265_1600', 1), ('UVGC_2265_752_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2266_753', 1), ('UVGC_2267_754', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2272_1603', 1), ('UVGC_2272_755_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1945_388', 1), ('UVGC_2274_756', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2278_1605', 1), ('UVGC_2278_757_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2282_758', 1), ('UVGC_2284_761', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2283_759', 1), ('UVGC_2285_762', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2283_760', 1), ('UVGC_2285_763', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2293_767', 1), ('UVGC_2294_768', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2293_767_1eps', 1), ('UVGC_2294_768_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2300_772', 1), ('UVGC_2301_773', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2300_772_1eps', 1), ('UVGC_2301_773_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2310_784', 1), ('UVGC_2311_786', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2310_784_1eps', 1), ('UVGC_2311_786_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2310_785', 1), ('UVGC_2311_787', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2310_785_1eps', 1), ('UVGC_2311_787_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2312_788', 1), ('UVGC_2314_792', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2312_788_1eps', 1), ('UVGC_2314_792_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2312_789', 1), ('UVGC_2314_793', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2312_789_1eps', 1), ('UVGC_2314_793_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2317_798', 1), ('UVGC_2319_802', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2317_798_1eps', 1), ('UVGC_2319_802_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2317_799', 1), ('UVGC_2319_803', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2317_799_1eps', 1), ('UVGC_2319_803_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2321_806', 1), ('UVGC_2322_808', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2321_806_1eps', 1), ('UVGC_2322_808_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2321_807', 1), ('UVGC_2322_809', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2321_807_1eps', 1), ('UVGC_2322_809_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2324_812', 1), ('UVGC_2325_814', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2324_812_1eps', 1), ('UVGC_2325_814_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2324_813', 1), ('UVGC_2325_815', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2324_813_1eps', 1), ('UVGC_2325_815_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2343_843_1eps', 1), ('UVGC_2343_844_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2344_846_1eps', 1), ('UVGC_2344_847_1eps', 1), ('UVGC_2345_849_1eps', -1), ('UVGC_2345_850_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2344_845', 1), ('UVGC_2345_848', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2344_845_1eps', 1), ('UVGC_2345_848_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2344_846', 1), ('UVGC_2345_849', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2344_847', 1), ('UVGC_2345_850', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2348_854_1eps', 1), ('UVGC_2348_855_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2349_857_1eps', 1), ('UVGC_2349_858_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2350_860_1eps', 1), ('UVGC_2350_861_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_2352_1662', 1), ('UVGC_2351_863_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2353_866', 1), ('UVGC_2354_869', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2353_866_1eps', 1), ('UVGC_2354_869_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2359_882', 1), ('UVGC_2361_884', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2359_882_1eps', 1), ('UVGC_2361_884_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2362_885', 1), ('UVGC_2363_886', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2362_885_1eps', 1), ('UVGC_2363_886_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2364_887', 1), ('UVGC_2365_888', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2364_887_1eps', 1), ('UVGC_2365_888_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2366_889', 1), ('UVGC_2367_890', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2366_889_1eps', 1), ('UVGC_2367_890_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2368_891', 1), ('UVGC_2369_892', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2368_891_1eps', 1), ('UVGC_2369_892_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2370_893', 1), ('UVGC_2372_899', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2370_893_1eps', 1), ('UVGC_2372_899_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2370_894', 1), ('UVGC_2372_900', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2370_894_1eps', 1), ('UVGC_2372_900_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2370_895', 1), ('UVGC_2372_901', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2370_895_1eps', 1), ('UVGC_2372_901_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2373_902', 1), ('UVGC_2374_904', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2373_902_1eps', 1), ('UVGC_2374_904_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2373_903', 1), ('UVGC_2374_905', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2373_903_1eps', 1), ('UVGC_2374_905_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2315_795_1eps', 1), ('UVGC_2375_906_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2376_908_1eps', 1), ('UVGC_2376_909_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2377_910', 1), ('UVGC_2379_912', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2377_910_1eps', 1), ('UVGC_2379_912_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2380_913', 1), ('UVGC_2381_914', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2380_913_1eps', 1), ('UVGC_2381_914_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2382_915', 1), ('UVGC_2384_917', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2382_915_1eps', 1), ('UVGC_2384_917_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2385_918', 1), ('UVGC_2386_919', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2385_918_1eps', 1), ('UVGC_2386_919_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2388_921', 1), ('UVGC_2389_922', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2388_921_1eps', 1), ('UVGC_2389_922_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2391_924', 1), ('UVGC_2392_926', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2391_924_1eps', 1), ('UVGC_2392_926_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2391_925', 1), ('UVGC_2392_927', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2391_925_1eps', 1), ('UVGC_2392_927_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2393_928', 1), ('UVGC_2394_931', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2393_928_1eps', 1), ('UVGC_2394_931_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2393_929', 1), ('UVGC_2394_932', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2393_929_1eps', 1), ('UVGC_2394_932_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2393_930', 1), ('UVGC_2394_933', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2395_934', 1), ('UVGC_2397_936', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2395_934_1eps', 1), ('UVGC_2397_936_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2400_938_1eps', 1), ('UVGC_2400_939_1eps', 1), ('UVGC_2402_944_1eps', -1), ('UVGC_2402_945_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2401_941_1eps', 1), ('UVGC_2401_942_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2400_937', 1), ('UVGC_2402_943', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2400_937_1eps', 1), ('UVGC_2402_943_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2400_938', 1), ('UVGC_2402_944', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2400_939', 1), ('UVGC_2402_945', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2405_948', 1), ('UVGC_2407_950', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2405_948_1eps', 1), ('UVGC_2407_950_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2410_952', 1), ('UVGC_2412_956', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2410_952_1eps', 1), ('UVGC_2412_956_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2410_953', 1), ('UVGC_2412_957', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2410_953_1eps', 1), ('UVGC_2412_957_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2413_959_1eps', 1), ('UVGC_2413_960_1eps', 1), ('UVGC_2415_965_1eps', -1), ('UVGC_2415_966_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2414_962_1eps', 1), ('UVGC_2414_963_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2413_958', 1), ('UVGC_2415_964', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2413_958_1eps', 1), ('UVGC_2415_964_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2413_959', 1), ('UVGC_2415_965', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2413_960', 1), ('UVGC_2415_966', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2418_970_1eps', 1), ('UVGC_2418_971_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2419_972', 1), ('UVGC_2420_975', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2419_972_1eps', 1), ('UVGC_2420_975_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2419_973', 1), ('UVGC_2420_976', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2419_973_1eps', 1), ('UVGC_2420_976_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2419_974', 1), ('UVGC_2420_977', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2419_974_1eps', 1), ('UVGC_2420_977_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2421_979_1eps', 1), ('UVGC_2421_980_1eps', 1), ('UVGC_2422_982_1eps', -1), ('UVGC_2422_983_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2421_978', 1), ('UVGC_2422_981', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2421_978_1eps', 1), ('UVGC_2422_981_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2421_979', 1), ('UVGC_2422_982', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2421_980', 1), ('UVGC_2422_983', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2424_985', 1), ('UVGC_2425_988', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2424_985_1eps', 1), ('UVGC_2425_988_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2424_986', 1), ('UVGC_2425_989', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2424_986_1eps', 1), ('UVGC_2425_989_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2424_987', 1), ('UVGC_2425_990', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2424_987_1eps', 1), ('UVGC_2425_990_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2427_995_1eps', 1), ('UVGC_2427_996_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2430_999', 1), ('UVGC_2431_1000', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2430_999_1eps', 1), ('UVGC_2431_1000_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2432_1002_1eps', 1), ('UVGC_2432_1003_1eps', 1), ('UVGC_2433_1005_1eps', -1), ('UVGC_2433_1006_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2432_1001', 1), ('UVGC_2433_1004', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2432_1001_1eps', 1), ('UVGC_2433_1004_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2432_1002', 1), ('UVGC_2433_1005', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2432_1003', 1), ('UVGC_2433_1006', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2434_1008_1eps', 1), ('UVGC_2434_1009_1eps', 1)  [0m
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+[1;34mPass the definition of 'j' and 'p' to 5 flavour scheme.[0m
+Defined multiparticle all = g ghg ghg~ u c d s b u~ c~ d~ s~ b~ a gha gha~ ve vm vt e- mu- ta- ve~ vm~ vt~ e+ mu+ ta+ t t~ z w+ ghz ghwp ghwm h w- ghz~ ghwp~ ghwm~
+generate p p > H H QED=2 QCD=2 NP=2 [QCD]
+[1;34mInterpreting 'NP=2' as 'NP<=2'[0m
+[1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+[1;34mOrder NP is not constrained as squared_orders. Using: NP^2=4[0m
+[1;34mOrder QCD is not constrained as squared_orders. Using: QCD^2=4[0m
+[1;34mOrder QED is not constrained as squared_orders. Using: QED^2=4[0m
+INFO: Generating FKS-subtracted matrix elements for born process: g g > h h NP<=2 QCD<=3 QED<=2 NP^2=4 QCD^2=6 QED^2=4 (1 / 1) 
+INFO: Generating virtual matrix element with MadLoop for process: g g > h h NP<=2 QCD<=3 QED<=2 NP^2=4 QCD^2=6 QED^2=4 (1 / 1) 
+INFO: Generated 1 subprocesses with 48 real emission diagrams, 2 born diagrams and 78 virtual diagrams 
+output /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm
+INFO: Writing out the aMC@NLO code, using optimized Loops 
+INFO: directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: initialize a new directory: signal_sm 
+INFO: remove old information in signal_sm 
+INFO: Generating real emission matrix-elements... 
+INFO: Generating Helas calls for FKS process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 (1 / 1) 
+INFO: Processing color information for process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 
+INFO: ... Done 
+INFO: Writing files in P0_gg_hh (1 / 1) 
+INFO: Creating files in directory V0_gg_hh 
+[1;32mDEBUG: adding in aloha model 118 lorentz struct [0m
+ALOHA: aloha creates FFV87 set of routines with options: L1[0m
+ALOHA: aloha creates FFS37 set of routines with options: L1[0m
+ALOHA: aloha creates FFV87 set of routines with options: L2[0m
+ALOHA: aloha creates FFS37 set of routines with options: L2[0m
+ALOHA: aloha creates VVV8 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVSS15 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVS12 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVS17 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVSS25 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVV16 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVV19 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVV20 set of routines with options: L2,P0[0m
+ALOHA: aloha creates FFSS26 set of routines with options: L1[0m
+ALOHA: aloha creates FFV110 set of routines with options: L1[0m
+ALOHA: aloha creates FFVS127 set of routines with options: L2[0m
+ALOHA: aloha creates FFV110 set of routines with options: L2[0m
+ALOHA: aloha creates FFVS127 set of routines with options: L1[0m
+ALOHA: aloha creates FFSS26 set of routines with options: L2[0m
+ALOHA: aloha creates FFVV186 set of routines with options: L1[0m
+ALOHA: aloha creates FFVV186 set of routines with options: L2[0m
+ALOHA: aloha creates FFVVS151 set of routines with options: L2[0m
+INFO: Computing diagram color coefficients 
+INFO: Drawing loop Feynman diagrams for Process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 
+INFO: Generating born Feynman diagrams for Process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 
+History written to /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Cards/proc_card_mg5.dat
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates VVS12 routines[0m
+ALOHA: aloha creates VVSS15 routines[0m
+ALOHA: aloha creates SSS6 routines[0m
+ALOHA: aloha creates VVV8 routines[0m
+ALOHA: aloha creates VVVS17 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVSS25 routines[0m
+ALOHA: aloha creates FFV57 routines[0m
+ALOHA: aloha creates SSS10 routines[0m
+ALOHA: aloha creates FFV87 set of routines with options: L2[0m
+ALOHA: aloha creates FFS37 set of routines with options: L2[0m
+ALOHA: aloha creates VVVV16 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVV19 set of routines with options: L2,P0[0m
+ALOHA: aloha creates VVVV20 set of routines with options: L2,P0[0m
+ALOHA: aloha creates FFSS26 set of routines with options: L2[0m
+ALOHA: aloha creates FFV110 set of routines with options: L2[0m
+ALOHA: aloha creates FFVS127 set of routines with options: L2[0m
+ALOHA: aloha creates FFVV186 set of routines with options: L2[0m
+ALOHA: aloha creates FFVVS151 set of routines with options: L2[0m
+ALOHA: aloha creates VVS11 routines[0m
+ALOHA: aloha creates VVSS14 routines[0m
+ALOHA: aloha creates VVSS20 routines[0m
+ALOHA: aloha creates VVSS18 routines[0m
+ALOHA: aloha creates VVSS19 routines[0m
+ALOHA: aloha creates VVS16 routines[0m
+ALOHA: aloha creates VVS13 routines[0m
+ALOHA: aloha creates VVS15 routines[0m
+ALOHA: aloha creates VVSS11 routines[0m
+ALOHA: aloha creates VVSS16 routines[0m
+ALOHA: aloha creates VVS14 routines[0m
+ALOHA: aloha creates VVSS15_18 routines[0m
+ALOHA: aloha creates VVS12_13 routines[0m
+ALOHA: aloha creates VVSS11_14_16 routines[0m
+ALOHA: aloha creates VVS11_14 routines[0m
+ALOHA: aloha creates 54 routines in  3.923 s
+save configuration file to /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Cards/amcatnlo_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate jpeg diagrams 
+INFO: Generate web pages 
+Type "launch" to generate events from this process, or see
+/vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/README
+Run "open index.html" to see more information about this process.
+quit
