@@ -2,7 +2,7 @@
 This version is intended for development/beta testing and NOT for production.
 This version has not been fully tested (if at all) and might have limited user support (if at all)[0m
 Running MG5 in debug mode
-('WARNING: loading of madgraph too slow!!!', 4.711342811584473)
+('WARNING: loading of madgraph too slow!!!', 4.942400932312012)
 ************************************************************
 *                                                          *
 *                     W E L C O M E to                     *
@@ -49,7 +49,7 @@ set lhapdf to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf
 Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
 Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
 Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
-import /vols/cms/us322/tmp/generate.mg5
+import /tmp/generate.mg5
 The import format was not given, so we guess it as command
 generate p p > b b~ a a
 No model currently active, so we import the Standard Model
@@ -161,7 +161,7 @@ INFO: Process u~ u > b b~ a a added to mirror process u u~ > b b~ a a
 INFO: Process c~ c > b b~ a a added to mirror process c c~ > b b~ a a 
 INFO: Process d~ d > b b~ a a added to mirror process d d~ > b b~ a a 
 INFO: Process s~ s > b b~ a a added to mirror process s s~ > b b~ a a 
-5 processes with 110 diagrams generated in 0.386 s
+5 processes with 110 diagrams generated in 0.695 s
 Total: 5 processes with 110 diagrams
 output /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0
 INFO: directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0 already exists.
@@ -187,12 +187,12 @@ INFO: Creating files in directory P1_qq_bbxaa
 INFO: Generating Feynman diagrams for Process: u u~ > b b~ a a WEIGHTED<=6 @1 
 INFO: Generating Feynman diagrams for Process: d d~ > b b~ a a WEIGHTED<=6 @1 
 INFO: Finding symmetric diagrams for subprocess group qq_bbxaa 
-Generated helas calls for 3 subprocesses (70 diagrams) in 0.146 s
-Wrote files for 149 helas calls in 0.780 s
+Generated helas calls for 3 subprocesses (70 diagrams) in 0.233 s
+Wrote files for 149 helas calls in 0.667 s
 ALOHA: aloha starts to compute helicity amplitudes
 ALOHA: aloha creates VVV1 set of routines with options: P0[0m
 ALOHA: aloha creates FFV1 routines[0m
-ALOHA: aloha creates 2 routines in  0.820 s
+ALOHA: aloha creates 2 routines in  0.673 s
 save configuration file to /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt
 INFO: Use Fortran compiler gfortran 
 INFO: Use c++ compiler g++ 

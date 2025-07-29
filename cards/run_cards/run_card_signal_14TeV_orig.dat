@@ -91,18 +91,16 @@
 #*******************************
   0.0  = dsqrt_shat ! minimal shat for full process
 #                                                                    
-#
-#***********************************************************************
 # Include the NLO Monte Carlo subtr. terms for the following parton    *
 # shower (HERWIG6 | HERWIGPP | PYTHIA6Q | PYTHIA6PT | PYTHIA8)         *
 # WARNING: PYTHIA6PT works only for processes without FSR!!!!          *
 #***********************************************************************
-PYTHIA8=parton_shower 
+  PYTHIA8	= parton_shower !
   1.0	= shower_scale_factor ! multiply default shower starting
                             ! scale by this factor
   False	= mcatnlo_delta ! use MC@NLO-Delta matching, arXiv:2002.12716
                         ! (only with Pythia8309 or later)
-#*********************************************************************
+#***********************************************************************
 # BW cutoff (M+/-bwcutoff*Gamma) ! Define on/off-shell for "$" and decay  
 #*********************************************************************
   15.0  = bwcutoff      ! (M+/-bwcutoff*Gamma)

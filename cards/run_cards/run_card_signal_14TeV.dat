@@ -141,46 +141,6 @@
 #***********************************************************************
   0	= ickkw 
 #***********************************************************************
-#
-#***********************************************************************
-# BW cutoff (M+/-bwcutoff*Gamma). Determines which resonances are      *
-# written in the LHE event file                                        *
-#***********************************************************************
-  15.0	= bwcutoff 
-#***********************************************************************
-# Cuts on the jets. Jet clustering is performed by FastJet.            *
-#  - If gamma_is_j, photons are also clustered with jets.              *
-#    Otherwise, they will be treated as tagged particles and photon    * 
-#    isolation will be applied. Note that photons in the real emission *
-#    will always be clustered with QCD partons.                        *
-#  - When matching to a parton shower, these generation cuts should be *
-#    considerably softer than the analysis cuts.                       *
-#  - More specific cuts can be specified in SubProcesses/cuts.f        *
-#***********************************************************************
-  1.0	= jetalgo ! FastJet jet algorithm (1=kT, 0=C/A, -1=anti-kT)
-  0.7	= jetradius ! The radius parameter for the jet algorithm
-  10.0	= ptj ! Min jet transverse momentum
-  -1.0	= etaj ! Max jet abs(pseudo-rap) (a value .lt.0 means no cut)
-  False	= gamma_is_j ! Wether to cluster photons as jets or not
-#***********************************************************************
-# Cuts on the charged leptons (e+, e-, mu+, mu-, tau+ and tau-)        *
-# More specific cuts can be specified in SubProcesses/cuts.f           *
-#***********************************************************************
-  0.0	= ptl ! Min lepton transverse momentum
-  -1.0	= etal ! Max lepton abs(pseudo-rap) (a value .lt.0 means no cut)
-  0.0	= drll ! Min distance between opposite sign lepton pairs
-  0.0	= drll_sf ! Min distance between opp. sign same-flavor lepton pairs
-  0.0	= mll ! Min inv. mass of all opposite sign lepton pairs
-  30.0	= mll_sf ! Min inv. mass of all opp. sign same-flavor lepton pairs
-#***********************************************************************
-# Fermion-photon recombination parameters                              *
-# If Rphreco=0, no recombination is performed                          *
-#***********************************************************************
-  0.1	= rphreco ! Minimum fermion-photon distance for recombination
-  -1.0	= etaphreco ! Maximum abs(pseudo-rap) for photons to be recombined (a value .lt.0 means no cut)
-  False	= lepphreco ! Recombine photons and leptons together
-  False	= quarkphreco ! Recombine photons and quarks together
-#***********************************************************************
 # Photon-isolation cuts, according to hep-ph/9801442                   *
 # Not applied if gamma_is_j                                            *
 # When ptgmin=0, all the other parameters are ignored                  *

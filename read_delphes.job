@@ -1,4 +1,4 @@
-executable = generate_events.sh
+executable = read_delphes.sh
 request_cpus = 8
 request_memory = 16000
 +MaxRunTime = 1*60*60

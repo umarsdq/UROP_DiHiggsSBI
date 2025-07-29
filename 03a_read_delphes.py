@@ -74,7 +74,7 @@ for run_id in range(int(args.start), int(args.stop)+1):
                             is_background=is_background,
                             k_factor= 1.0,)
     else: 
-        delphes.add_sample(lhe_filename=f"{loc_dir}/unweighted_events_clean.lhe.gz",
+        delphes.add_sample(lhe_filename=f"{loc_dir}/unweighted_events.lhe.gz",
                             hepmc_filename=f"{loc_dir}/tag_1_pythia8_events.hepmc.gz",
                                weights="lhe",
                             sampled_from_benchmark=sampled_from_benchmark,
@@ -89,7 +89,7 @@ if args.delphes_run:
     print("Delphes has already been run.")
 else:
     delphes.run_delphes(
-        delphes_directory=mg_dir + "/HEPTools/Delphes",
+        delphes_directory=mg_dir + "/HEPTools/Delphes-3.5.0/", # For latest madgraph version.
         delphes_card="cards/delphes_card_HLLHC.tcl",
         log_file="logs/delphes.log",
     )

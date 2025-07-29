@@ -1,73 +1,4 @@
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesModule.h
-   requested to autoload type DelphesModule
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesFactory.h
-   requested to autoload type DelphesFactory
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/SortableObject.h
-   requested to autoload type SortableObject
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Event
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type LHCOEvent
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type LHEFEvent
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type LHEFWeight
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type HepMCEvent
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type GenParticle
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Vertex
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type MissingET
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type ScalarHT
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Rho
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Weight
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Photon
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Electron
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Muon
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Jet
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Track
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Tower
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type ParticleFlowCandidate
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type HectorHit
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for classes/DelphesClasses.h
-   requested to autoload type Candidate
-Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo/HEPTools/Delphes/ClassesDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
+Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/test_sbi/mg5amcnlo/HEPTools/Delphes-3.5.0/ClassesDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
 Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
    Missing FileEntry for ExRootAnalysis/ExRootTreeReader.h
    requested to autoload type ExRootTreeReader
@@ -98,174 +29,9 @@ Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
 Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
    Missing FileEntry for ExRootAnalysis/ExRootTask.h
    requested to autoload type ExRootTask
-Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo/HEPTools/Delphes/ExRootAnalysisDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Delphes.h
-   requested to autoload type Delphes
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/AngularSmearing.h
-   requested to autoload type AngularSmearing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/PhotonConversions.h
-   requested to autoload type PhotonConversions
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/ParticlePropagator.h
-   requested to autoload type ParticlePropagator
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Efficiency.h
-   requested to autoload type Efficiency
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/IdentificationMap.h
-   requested to autoload type IdentificationMap
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/EnergySmearing.h
-   requested to autoload type EnergySmearing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/MomentumSmearing.h
-   requested to autoload type MomentumSmearing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TrackSmearing.h
-   requested to autoload type TrackSmearing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TrackCovariance.h
-   requested to autoload type TrackCovariance
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/ClusterCounting.h
-   requested to autoload type ClusterCounting
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/ImpactParameterSmearing.h
-   requested to autoload type ImpactParameterSmearing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TimeSmearing.h
-   requested to autoload type TimeSmearing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TimeOfFlight.h
-   requested to autoload type TimeOfFlight
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/SimpleCalorimeter.h
-   requested to autoload type SimpleCalorimeter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/DenseTrackFilter.h
-   requested to autoload type DenseTrackFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Calorimeter.h
-   requested to autoload type Calorimeter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/DualReadoutCalorimeter.h
-   requested to autoload type DualReadoutCalorimeter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/OldCalorimeter.h
-   requested to autoload type OldCalorimeter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Isolation.h
-   requested to autoload type Isolation
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/EnergyScale.h
-   requested to autoload type EnergyScale
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/UniqueObjectFinder.h
-   requested to autoload type UniqueObjectFinder
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TrackCountingBTagging.h
-   requested to autoload type TrackCountingBTagging
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/BTagging.h
-   requested to autoload type BTagging
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TauTagging.h
-   requested to autoload type TauTagging
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TrackCountingTauTagging.h
-   requested to autoload type TrackCountingTauTagging
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TreeWriter.h
-   requested to autoload type TreeWriter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Merger.h
-   requested to autoload type Merger
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/LeptonDressing.h
-   requested to autoload type LeptonDressing
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/PileUpMerger.h
-   requested to autoload type PileUpMerger
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/JetPileUpSubtractor.h
-   requested to autoload type JetPileUpSubtractor
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TrackPileUpSubtractor.h
-   requested to autoload type TrackPileUpSubtractor
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TaggingParticlesSkimmer.h
-   requested to autoload type TaggingParticlesSkimmer
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/PileUpJetID.h
-   requested to autoload type PileUpJetID
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/PhotonID.h
-   requested to autoload type PhotonID
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/ConstituentFilter.h
-   requested to autoload type ConstituentFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/StatusPidFilter.h
-   requested to autoload type StatusPidFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/PdgCodeFilter.h
-   requested to autoload type PdgCodeFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/BeamSpotFilter.h
-   requested to autoload type BeamSpotFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/RecoPuFilter.h
-   requested to autoload type RecoPuFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Cloner.h
-   requested to autoload type Cloner
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Weighter.h
-   requested to autoload type Weighter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/Hector.h
-   requested to autoload type Hector
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/JetFlavorAssociation.h
-   requested to autoload type JetFlavorAssociation
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/JetFakeParticle.h
-   requested to autoload type JetFakeParticle
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/VertexSorter.h
-   requested to autoload type VertexSorter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/VertexFinder.h
-   requested to autoload type VertexFinder
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/VertexFinderDA4D.h
-   requested to autoload type VertexFinderDA4D
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/DecayFilter.h
-   requested to autoload type DecayFilter
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/ParticleDensity.h
-   requested to autoload type ParticleDensity
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/TruthVertexFinder.h
-   requested to autoload type TruthVertexFinder
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/ExampleModule.h
-   requested to autoload type ExampleModule
-Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo/HEPTools/Delphes/ModulesDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/FastJetFinder.h
-   requested to autoload type FastJetFinder
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/FastJetGridMedianEstimator.h
-   requested to autoload type FastJetGridMedianEstimator
-Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
-   Missing FileEntry for modules/RunPUPPI.h
-   requested to autoload type RunPUPPI
-Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo/HEPTools/Delphes/FastJetDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
+Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/test_sbi/mg5amcnlo/HEPTools/Delphes-3.5.0/ExRootAnalysisDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
+Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/test_sbi/mg5amcnlo/HEPTools/Delphes-3.5.0/ModulesDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
+Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/test_sbi/mg5amcnlo/HEPTools/Delphes-3.5.0/FastJetDict_rdict.pcm therefore preventing schema evolution when reading this file. The file was produced with ROOT version 6.36.00, while the current version is 6.36.02
 ** INFO: adding module        ParticlePropagator       ParticlePropagator       
 ** INFO: adding module        Merger                   TrackMergerProp          
 ** INFO: adding module        ParticlePropagator       DenseProp                
@@ -385,5 +151,5 @@ Warning in <TFile::Init>: no StreamerInfo found in /vols/cms/us322/nsbi_for_dihi
 ** INFO: initializing module  ScalarHT                 
 ** INFO: initializing module  TreeWriter               
 ** Reading /vols/cms/us322/nsbi_for_dihiggs/events/background_0/batch_0/run_01/tag_1_pythia8_events.hepmc
-** [----------------------------------------------------------------] (0.00%)** [#---------------------------------------------------------------] (1.60%)** [##--------------------------------------------------------------] (3.20%)** [###-------------------------------------------------------------] (4.72%)** [####------------------------------------------------------------] (6.29%)** [#####-----------------------------------------------------------] (7.87%)** [######----------------------------------------------------------] (9.41%)** [#######---------------------------------------------------------] (10.94%)** [########--------------------------------------------------------] (12.54%)** [#########-------------------------------------------------------] (14.13%)** [##########------------------------------------------------------] (15.68%)** [###########-----------------------------------------------------] (17.21%)** [############----------------------------------------------------] (18.79%)** [#############---------------------------------------------------] (20.38%)** [##############--------------------------------------------------] (21.92%)** [###############-------------------------------------------------] (23.45%)** [################------------------------------------------------] (25.09%)** [#################-----------------------------------------------] (26.59%)** [##################----------------------------------------------] (28.24%)** [###################---------------------------------------------] (29.73%)** [####################--------------------------------------------] (31.34%)** [#####################-------------------------------------------] (32.85%)** [######################------------------------------------------] (34.45%)** [#######################-----------------------------------------] (35.95%)** [########################----------------------------------------] (37.58%)** [#########################---------------------------------------] (39.08%)** [##########################--------------------------------------] (40.68%)** [###########################-------------------------------------] (42.23%)** [############################------------------------------------] (43.80%)** [#############################-----------------------------------] (45.33%)** [##############################----------------------------------] (46.97%)** [###############################---------------------------------] (48.54%)** [################################--------------------------------] (50.06%)** [#################################-------------------------------] (51.61%)** [##################################------------------------------] (53.22%)** [###################################-----------------------------] (54.80%)** [####################################----------------------------] (56.27%)** [#####################################---------------------------] (57.93%)** [######################################--------------------------] (59.47%)** [#######################################-------------------------] (60.98%)** [########################################------------------------] (62.54%)** [#########################################-----------------------] (64.13%)** [##########################################----------------------] (65.64%)** [###########################################---------------------] (67.21%)** [############################################--------------------] (68.82%)** [#############################################-------------------] (70.38%)** [##############################################------------------] (71.92%)** [###############################################-----------------] (73.45%)** [################################################----------------] (75.01%)** [#################################################---------------] (76.63%)** [##################################################--------------] (78.20%)** [###################################################-------------] (79.75%)** [####################################################------------] (81.28%)** [#####################################################-----------] (82.86%)** [######################################################----------] (84.45%)** [#######################################################---------] (85.95%)** [########################################################--------] (87.53%)** [#########################################################-------] (89.17%)** [##########################################################------] (90.73%)** [###########################################################-----] (92.21%)** [############################################################----] (93.76%)** [#############################################################---] (95.40%)** [##############################################################--] (96.90%)** [###############################################################-] (98.50%)** [################################################################] (100.00%)
+** [----------------------------------------------------------------] (0.00%)** [#---------------------------------------------------------------] (1.60%)** [##--------------------------------------------------------------] (3.14%)** [###-------------------------------------------------------------] (4.75%)** [####------------------------------------------------------------] (6.30%)** [#####-----------------------------------------------------------] (7.83%)** [######----------------------------------------------------------] (9.44%)** [#######---------------------------------------------------------] (10.95%)** [########--------------------------------------------------------] (12.56%)** [#########-------------------------------------------------------] (14.11%)** [##########------------------------------------------------------] (15.67%)** [###########-----------------------------------------------------] (17.21%)** [############----------------------------------------------------] (18.81%)** [#############---------------------------------------------------] (20.34%)** [##############--------------------------------------------------] (21.91%)** [###############-------------------------------------------------] (23.49%)** [################------------------------------------------------] (25.02%)** [#################-----------------------------------------------] (26.62%)** [##################----------------------------------------------] (28.15%)** [###################---------------------------------------------] (29.75%)** [####################--------------------------------------------] (31.30%)** [#####################-------------------------------------------] (32.87%)** [######################------------------------------------------] (34.43%)** [#######################-----------------------------------------] (35.98%)** [########################----------------------------------------] (37.52%)** [#########################---------------------------------------] (39.07%)** [##########################--------------------------------------] (40.66%)** [###########################-------------------------------------] (42.25%)** [############################------------------------------------] (43.80%)** [#############################-----------------------------------] (45.35%)** [##############################----------------------------------] (46.92%)** [###############################---------------------------------] (48.49%)** [################################--------------------------------] (50.05%)** [#################################-------------------------------] (51.62%)** [##################################------------------------------] (53.13%)** [###################################-----------------------------] (54.75%)** [####################################----------------------------] (56.28%)** [#####################################---------------------------] (57.81%)** [######################################--------------------------] (59.44%)** [#######################################-------------------------] (61.00%)** [########################################------------------------] (62.54%)** [#########################################-----------------------] (64.09%)** [##########################################----------------------] (65.63%)** [###########################################---------------------] (67.21%)** [############################################--------------------] (68.75%)** [#############################################-------------------] (70.32%)** [##############################################------------------] (71.94%)** [###############################################-----------------] (73.51%)** [################################################----------------] (75.05%)** [#################################################---------------] (76.57%)** [##################################################--------------] (78.20%)** [###################################################-------------] (79.70%)** [####################################################------------] (81.30%)** [#####################################################-----------] (82.82%)** [######################################################----------] (84.42%)** [#######################################################---------] (85.95%)** [########################################################--------] (87.54%)** [#########################################################-------] (89.10%)** [##########################################################------] (90.69%)** [###########################################################-----] (92.23%)** [############################################################----] (93.75%)** [#############################################################---] (95.36%)** [##############################################################--] (96.92%)** [###############################################################-] (98.46%)** [################################################################] (100.00%)
 ** Exiting...

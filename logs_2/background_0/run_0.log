@@ -76,62 +76,63 @@ INFO: load configuration from /vols/cms/us322/test_sbi/mg5amcnlo/input/mg5_confi
 INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt  
 Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
 generate_events run_01
+stty: 'standard input': Inappropriate ioctl for device
 The following switches determine which programs are run:
-/=================== Description ===================|============= values ==============|======== other options ========\
-| 1. Choose the shower/hadronization program        | [1m       shower[0m = [32mPythia8[0m           |     OFF                       |
-| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
-| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
-| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
-| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
-\=======================================================================================================================/
+/===========================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [32mPythia8[0m           |
+| 2. Choose the detector simulation program    [1mdetector[0m = [01mNot Avail.[0m        |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [01mNot Avail.[0m        |
+| 4. Decay onshell particles                   [1m madspin[0m = [31mOFF[0m               |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m               |
+\===========================================================================/
 Either type the switch number (1 to 5) to change its setting,
 Set any switch explicitly (e.g. type 'shower=OFF' at the prompt)
 Type 'help' for the list of all valid option
 Type '0', 'auto', 'done' or just press enter when you are done.
 The following switches determine which programs are run:
-/=================== Description ===================|============= values ==============|======== other options ========\
-| 1. Choose the shower/hadronization program        | [1m       shower[0m = [32mPythia8[0m           |     OFF                       |
-| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
-| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
-| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
-| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
-\=======================================================================================================================/
+/===========================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [32mPythia8[0m           |
+| 2. Choose the detector simulation program    [1mdetector[0m = [01mNot Avail.[0m        |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [01mNot Avail.[0m        |
+| 4. Decay onshell particles                   [1m madspin[0m = [31mOFF[0m               |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m               |
+\===========================================================================/
 Either type the switch number (1 to 5) to change its setting,
 Set any switch explicitly (e.g. type 'shower=OFF' at the prompt)
 Type 'help' for the list of all valid option
 Type '0', 'auto', 'done' or just press enter when you are done.
 The following switches determine which programs are run:
-/=================== Description ===================|============= values ==============|======== other options ========\
-| 1. Choose the shower/hadronization program        | [1m       shower[0m = [32mPythia8[0m           |     OFF                       |
-| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
-| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
-| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
-| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
-\=======================================================================================================================/
+/===========================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [32mPythia8[0m           |
+| 2. Choose the detector simulation program    [1mdetector[0m = [01mNot Avail.[0m        |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [01mNot Avail.[0m        |
+| 4. Decay onshell particles                   [1m madspin[0m = [31mOFF[0m               |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m               |
+\===========================================================================/
 Either type the switch number (1 to 5) to change its setting,
 Set any switch explicitly (e.g. type 'shower=OFF' at the prompt)
 Type 'help' for the list of all valid option
 Type '0', 'auto', 'done' or just press enter when you are done.
 The following switches determine which programs are run:
-/=================== Description ===================|============= values ==============|======== other options ========\
-| 1. Choose the shower/hadronization program        | [1m       shower[0m = [32mPythia8[0m           |     OFF                       |
-| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
-| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
-| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
-| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
-\=======================================================================================================================/
+/===========================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [32mPythia8[0m           |
+| 2. Choose the detector simulation program    [1mdetector[0m = [01mNot Avail.[0m        |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [01mNot Avail.[0m        |
+| 4. Decay onshell particles                   [1m madspin[0m = [31mOFF[0m               |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m               |
+\===========================================================================/
 Either type the switch number (1 to 5) to change its setting,
 Set any switch explicitly (e.g. type 'shower=OFF' at the prompt)
 Type 'help' for the list of all valid option
 Type '0', 'auto', 'done' or just press enter when you are done.
 The following switches determine which programs are run:
-/=================== Description ===================|============= values ==============|======== other options ========\
-| 1. Choose the shower/hadronization program        | [1m       shower[0m = [32mPythia8[0m           |     OFF                       |
-| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
-| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
-| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
-| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
-\=======================================================================================================================/
+/===========================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [32mPythia8[0m           |
+| 2. Choose the detector simulation program    [1mdetector[0m = [01mNot Avail.[0m        |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [01mNot Avail.[0m        |
+| 4. Decay onshell particles                   [1m madspin[0m = [31mOFF[0m               |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m               |
+\===========================================================================/
 Either type the switch number (1 to 5) to change its setting,
 Set any switch explicitly (e.g. type 'shower=OFF' at the prompt)
 Type 'help' for the list of all valid option
@@ -155,12 +156,13 @@ Do you want to edit a card (press enter to bypass editing)?
 [1;32mDEBUG: keep SDE to 2 [0m
 INFO: Update the dependent parameter of the param_card.dat 
 [1;34mWARNING: update the strong coupling value (alpha_s) to the value from the pdf selected: 0.119 [0m
-[1;34mWARNING: Unknow type of information in the card: loop,dim64f4l,dim64f,dim6,dim64f2l,dim62f,renor [0m
+[1;34mWARNING: Unknow type of information in the card: dim64f4l,dim64f2l,loop,renor,dim6,dim64f,dim62f [0m
 [1;34mvalue '[]' for entry 'bypass_check' is not valid.  Preserving previous value: '[]'.
 allowed values are any list composed of the following entries: partonshower[0m
 Generating 50000 events with run name run_01
 survey  run_01 
 INFO: compile directory 
+mkdir: cannot create directory ‘/.mozilla’: Permission denied
 [1;32mwrite compile file for card: /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/param_card.dat[0m
 [1;34mWARNING: information about "sminputs [1]" is missing using default value: 132.507. [0m
 [1;34mWARNING: information about "yukawa [5]" is missing using default value: 4.7. [0m
@@ -221,18 +223,18 @@ INFO:     P1_qq_bbxaa
 [1;32mDEBUG: (matrix1_orig.f) nb_hel: 16 zero amp: 0 bad_amps_hel: 0/320 [0m
 INFO:     P1_gg_bbxaa  
 INFO:     P1_qq_bbxaa  
-INFO:  Idle: 1,  Running: 7,  Completed: 0 [ current time: 14h24 ] 
-INFO:  Idle: 0,  Running: 7,  Completed: 1 [  17.1s  ] 
-INFO:  Idle: 0,  Running: 6,  Completed: 2 [  23.4s  ] 
-INFO:  Idle: 0,  Running: 5,  Completed: 3 [  28.3s  ] 
-INFO:  Idle: 0,  Running: 3,  Completed: 5 [  33.8s  ] 
-INFO:  Idle: 0,  Running: 0,  Completed: 8 [  35.9s  ] 
+INFO:  Idle: 1,  Running: 7,  Completed: 0 [ current time: 12h27 ] 
+INFO:  Idle: 0,  Running: 7,  Completed: 1 [  30.7s  ] 
+INFO:  Idle: 0,  Running: 6,  Completed: 2 [  42s  ] 
+INFO:  Idle: 0,  Running: 5,  Completed: 3 [  49.1s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 5 [  59.9s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 8 [  1m 2s  ] 
 INFO: End survey 
 refine 50000
 Creating Jobs
 INFO: Refine results to 50000 
 INFO: Generating 50000.0 unweighted events. 
-sum of cpu time of last step: 4m02s
+sum of cpu time of last step: 7m05s
 INFO: Effective Luminosity 1079321145.8548186 pb^-1 
 [1;32mDEBUG: channel G19 need to improve by 1.44 (xsec=5.244e-07 pb, iter=3) [0m
 [1;32mDEBUG: channel G2 need to improve by 3.50 (xsec=4.2183e-08 pb, iter=3) [0m
@@ -262,34 +264,57 @@ INFO: need to improve 12 channels
 - Current estimate of cross-section: 5.5590498000000004e-05 +- 9.201778711925003e-07
     P1_gg_bbxaa 
     P1_qq_bbxaa 
-INFO:  Idle: 1,  Running: 65,  Completed: 0 [ current time: 14h24 ] 
-INFO:  Idle: 0,  Running: 65,  Completed: 1 [  10.7s  ] 
-INFO:  Idle: 0,  Running: 60,  Completed: 6 [  15.5s  ] 
-INFO:  Idle: 0,  Running: 58,  Completed: 8 [  18.9s  ] 
-INFO:  Idle: 0,  Running: 51,  Completed: 15 [  22.5s  ] 
-INFO:  Idle: 0,  Running: 48,  Completed: 18 [  29s  ] 
-INFO:  Idle: 0,  Running: 46,  Completed: 20 [  32.3s  ] 
-INFO:  Idle: 0,  Running: 37,  Completed: 29 [  35.4s  ] 
-INFO:  Idle: 0,  Running: 34,  Completed: 32 [  39.2s  ] 
-INFO:  Idle: 0,  Running: 31,  Completed: 35 [  46.1s  ] 
-INFO:  Idle: 0,  Running: 30,  Completed: 36 [  49.7s  ] 
-INFO:  Idle: 0,  Running: 29,  Completed: 37 [  53.2s  ] 
-INFO:  Idle: 0,  Running: 26,  Completed: 40 [  57.9s  ] 
-INFO:  Idle: 0,  Running: 24,  Completed: 42 [  1m 4s  ] 
-INFO:  Idle: 0,  Running: 20,  Completed: 46 [  1m 8s  ] 
-INFO:  Idle: 0,  Running: 14,  Completed: 52 [  1m 12s  ] 
-INFO:  Idle: 0,  Running: 12,  Completed: 54 [  1m 20s  ] 
-INFO:  Idle: 0,  Running: 11,  Completed: 55 [  1m 29s  ] 
-INFO:  Idle: 0,  Running: 10,  Completed: 56 [  1m 35s  ] 
-INFO:  Idle: 0,  Running: 7,  Completed: 59 [  1m 48s  ] 
-INFO:  Idle: 0,  Running: 6,  Completed: 60 [  1m 52s  ] 
-INFO:  Idle: 0,  Running: 5,  Completed: 61 [  2m 2s  ] 
-INFO:  Idle: 0,  Running: 4,  Completed: 62 [  2m 6s  ] 
-INFO:  Idle: 0,  Running: 3,  Completed: 63 [  2m 37s  ] 
-INFO:  Idle: 0,  Running: 2,  Completed: 64 [  3m 21s  ] 
-INFO:  Idle: 0,  Running: 1,  Completed: 65 [  3m 47s  ] 
-INFO:  Idle: 0,  Running: 0,  Completed: 66 [  3m 57s  ] 
-INFO:  Idle: 0,  Running: 0,  Completed: 66 [  3m 57s  ] 
+INFO:  Idle: 54,  Running: 12,  Completed: 0 [ current time: 12h28 ] 
+INFO:  Idle: 53,  Running: 12,  Completed: 1 [  33s  ] 
+INFO:  Idle: 51,  Running: 12,  Completed: 3 [  42.6s  ] 
+INFO:  Idle: 50,  Running: 12,  Completed: 4 [  1m 2s  ] 
+INFO:  Idle: 48,  Running: 12,  Completed: 6 [  1m 17s  ] 
+INFO:  Idle: 47,  Running: 12,  Completed: 7 [  1m 27s  ] 
+INFO:  Idle: 46,  Running: 12,  Completed: 8 [  1m 34s  ] 
+INFO:  Idle: 44,  Running: 12,  Completed: 10 [  2m 7s  ] 
+INFO:  Idle: 43,  Running: 12,  Completed: 11 [  2m 12s  ] 
+INFO:  Idle: 42,  Running: 12,  Completed: 12 [  2m 31s  ] 
+INFO:  Idle: 39,  Running: 12,  Completed: 15 [  3m 15s  ] 
+INFO:  Idle: 38,  Running: 12,  Completed: 16 [  3m 28s  ] 
+INFO:  Idle: 37,  Running: 12,  Completed: 17 [  3m 37s  ] 
+INFO:  Idle: 36,  Running: 12,  Completed: 18 [  3m 49s  ] 
+INFO:  Idle: 34,  Running: 12,  Completed: 20 [  3m 54s  ] 
+INFO:  Idle: 33,  Running: 12,  Completed: 21 [  4m 37s  ] 
+INFO:  Idle: 32,  Running: 12,  Completed: 22 [  4m 40s  ] 
+INFO:  Idle: 31,  Running: 12,  Completed: 23 [  4m 46s  ] 
+INFO:  Idle: 30,  Running: 12,  Completed: 24 [  4m 54s  ] 
+INFO:  Idle: 29,  Running: 12,  Completed: 25 [  5m 1s  ] 
+INFO:  Idle: 27,  Running: 12,  Completed: 27 [  5m 32s  ] 
+INFO:  Idle: 25,  Running: 12,  Completed: 29 [  5m 38s  ] 
+INFO:  Idle: 24,  Running: 12,  Completed: 30 [  5m 50s  ] 
+INFO:  Idle: 23,  Running: 12,  Completed: 31 [  5m 56s  ] 
+INFO:  Idle: 22,  Running: 12,  Completed: 32 [  6m 11s  ] 
+INFO:  Idle: 21,  Running: 12,  Completed: 33 [  6m 18s  ] 
+INFO:  Idle: 20,  Running: 12,  Completed: 34 [  6m 34s  ] 
+INFO:  Idle: 19,  Running: 12,  Completed: 35 [  6m 38s  ] 
+INFO:  Idle: 17,  Running: 12,  Completed: 37 [  6m 58s  ] 
+INFO:  Idle: 16,  Running: 12,  Completed: 38 [  7m 13s  ] 
+INFO:  Idle: 13,  Running: 12,  Completed: 41 [  7m 30s  ] 
+INFO:  Idle: 11,  Running: 12,  Completed: 43 [  7m 41s  ] 
+INFO:  Idle: 9,  Running: 12,  Completed: 45 [  7m 45s  ] 
+INFO:  Idle: 8,  Running: 12,  Completed: 46 [  7m 50s  ] 
+INFO:  Idle: 7,  Running: 12,  Completed: 47 [  7m 57s  ] 
+INFO:  Idle: 6,  Running: 12,  Completed: 48 [  8m 8s  ] 
+INFO:  Idle: 5,  Running: 12,  Completed: 49 [  8m 15s  ] 
+INFO:  Idle: 3,  Running: 12,  Completed: 51 [  8m 28s  ] 
+INFO:  Idle: 2,  Running: 12,  Completed: 52 [  8m 32s  ] 
+INFO:  Idle: 0,  Running: 12,  Completed: 54 [  8m 42s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 55 [  8m 50s  ] 
+INFO:  Idle: 0,  Running: 9,  Completed: 57 [  8m 57s  ] 
+INFO:  Idle: 0,  Running: 8,  Completed: 58 [  9m 6s  ] 
+INFO:  Idle: 0,  Running: 7,  Completed: 59 [  9m 12s  ] 
+INFO:  Idle: 0,  Running: 5,  Completed: 61 [  9m 37s  ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 62 [  10m 6s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 63 [  10m 16s  ] 
+INFO:  Idle: 0,  Running: 2,  Completed: 64 [  11m 13s  ] 
+INFO:  Idle: 0,  Running: 1,  Completed: 65 [  11m 17s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 66 [  11m 31s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 66 [  11m 32s  ] 
 INFO: Combining runs 
 [1;32mfind 5 multijob in /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_gg_bbxaa/G7[0m
 [1;32mCombined 5 file generating 27637 events for /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_gg_bbxaa/G7 [0m
@@ -309,13 +334,13 @@ INFO: Combining runs
 [1;32mCombined 11 file generating 19172 events for /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_qq_bbxaa/G15 [0m
 [1;32mfind 5 multijob in /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_qq_bbxaa/G16[0m
 [1;32mCombined 5 file generating 10974 events for /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/SubProcesses/P1_qq_bbxaa/G16 [0m
-sum of cpu time of last step: 1h01m30s
+sum of cpu time of last step: 1h24m05s
 INFO: finish refine 
 refine 50000 --treshold=0.9
 No need for second refine due to stability of cross-section
 INFO: Combining Events 
 [1;32mDEBUG: write 50000 event (efficiency 23 %, truncation 0.011 %) after 5 iteration(s) [0m
-combination of events done in 58.693899393081665 s 
+combination of events done in 88.91051435470581 s 
   === Results Summary for run: run_01 tag: tag_1 ===
 
      Cross-section :   5.507e-05 +- 8.055e-08 pb
@@ -329,81 +354,21 @@ decay_events -from_cards
 INFO: [92mRunning Pythia8 [arXiv:1410.3012][0m 
 Splitting .lhe event file for PY8 parallelization...
 Submitting Pythia8 jobs...
-Pythia8 shower jobs: 1 Idle, 71 Running, 0 Done [13 seconds]
-Pythia8 shower jobs: 0 Idle, 71 Running, 1 Done [18 seconds]
-Pythia8 shower jobs: 0 Idle, 70 Running, 2 Done [18 seconds]
-Pythia8 shower jobs: 0 Idle, 69 Running, 3 Done [18 seconds]
-Pythia8 shower jobs: 0 Idle, 68 Running, 4 Done [18 seconds]
-Pythia8 shower jobs: 0 Idle, 67 Running, 5 Done [18 seconds]
-Pythia8 shower jobs: 0 Idle, 66 Running, 6 Done [19 seconds]
-Pythia8 shower jobs: 0 Idle, 65 Running, 7 Done [19 seconds]
-Pythia8 shower jobs: 0 Idle, 64 Running, 8 Done [19 seconds]
-Pythia8 shower jobs: 0 Idle, 63 Running, 9 Done [19 seconds]
-Pythia8 shower jobs: 0 Idle, 62 Running, 10 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 61 Running, 11 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 60 Running, 12 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 59 Running, 13 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 58 Running, 14 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 57 Running, 15 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 56 Running, 16 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 55 Running, 17 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 54 Running, 18 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 53 Running, 19 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 52 Running, 20 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 51 Running, 21 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 50 Running, 22 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 49 Running, 23 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 48 Running, 24 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 47 Running, 25 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 46 Running, 26 Done [20 seconds]
-Pythia8 shower jobs: 0 Idle, 45 Running, 27 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 44 Running, 28 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 43 Running, 29 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 42 Running, 30 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 41 Running, 31 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 40 Running, 32 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 39 Running, 33 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 38 Running, 34 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 37 Running, 35 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 36 Running, 36 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 35 Running, 37 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 34 Running, 38 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 33 Running, 39 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 32 Running, 40 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 31 Running, 41 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 30 Running, 42 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 29 Running, 43 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 28 Running, 44 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 27 Running, 45 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 26 Running, 46 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 25 Running, 47 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 24 Running, 48 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 23 Running, 49 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 22 Running, 50 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 21 Running, 51 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 20 Running, 52 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 19 Running, 53 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 18 Running, 54 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 17 Running, 55 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 16 Running, 56 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 15 Running, 57 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 14 Running, 58 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 13 Running, 59 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 12 Running, 60 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 11 Running, 61 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 10 Running, 62 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 9 Running, 63 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 8 Running, 64 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 7 Running, 65 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 6 Running, 66 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 5 Running, 67 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 4 Running, 68 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 3 Running, 69 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 2 Running, 70 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 1 Running, 71 Done [21 seconds]
-Pythia8 shower jobs: 0 Idle, 0 Running, 72 Done [21 seconds]
+Pythia8 shower jobs: 1 Idle, 11 Running, 0 Done [17 seconds]
+Pythia8 shower jobs: 0 Idle, 11 Running, 1 Done [50 seconds]
+Pythia8 shower jobs: 0 Idle, 10 Running, 2 Done [52 seconds]
+Pythia8 shower jobs: 0 Idle, 9 Running, 3 Done [54 seconds]
+Pythia8 shower jobs: 0 Idle, 8 Running, 4 Done [54 seconds]
+Pythia8 shower jobs: 0 Idle, 7 Running, 5 Done [55 seconds]
+Pythia8 shower jobs: 0 Idle, 6 Running, 6 Done [56 seconds]
+Pythia8 shower jobs: 0 Idle, 5 Running, 7 Done [56 seconds]
+Pythia8 shower jobs: 0 Idle, 4 Running, 8 Done [56 seconds]
+Pythia8 shower jobs: 0 Idle, 3 Running, 9 Done [56 seconds]
+Pythia8 shower jobs: 0 Idle, 2 Running, 10 Done [57 seconds]
+Pythia8 shower jobs: 0 Idle, 1 Running, 11 Done [57 seconds]
+Pythia8 shower jobs: 0 Idle, 0 Running, 12 Done [59 seconds]
 Merging results from the split PY8 runs...
-INFO: Pythia8 shower finished after 31 seconds. 
+INFO: Pythia8 shower finished after 1m41s. 
   === Results Summary for run: run_01 tag: tag_1 ===
 
      Cross-section :   5.507e-05 +- 8.055e-08 pb
@@ -414,5 +379,4 @@ INFO: Storing Pythia8 files of previous run
 INFO: Done 
 quit
 INFO:  
-more information in /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/index.html
-quit 
+quit

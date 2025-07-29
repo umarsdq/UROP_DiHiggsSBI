@@ -4,5 +4,8 @@ mg_processes/
 mg_processes_2/
 madminer/
 mg5amcnlo/
-
 data/
+joblogs/
+logs/
+logs_2/
+train_outputs/

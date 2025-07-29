@@ -2,7 +2,6 @@
 This version is intended for development/beta testing and NOT for production.
 This version has not been fully tested (if at all) and might have limited user support (if at all)[0m
 Running MG5 in debug mode
-('WARNING: loading of madgraph too slow!!!', 1.4708092212677002)
 ************************************************************
 *                                                          *
 *                     W E L C O M E to                     *
@@ -15,7 +14,7 @@ Running MG5 in debug mode
 *                   *        * *        *                  *
 *                 *                       *                *
 *                                                          *
-*         VERSION 3.5.1                 2023-07-11         *
+*         VERSION 3.6.3                 2025-06-12         *
 [1;31m*                                                          *[1;0m
 [1;31m*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
 [1;31m*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
@@ -32,13 +31,20 @@ Running MG5 in debug mode
 *    Type 'tutorial MadLoop' to learn how MadLoop works    *
 *                                                          *
 ************************************************************
-load MG5 configuration from mg5amcnlo/input/mg5_configuration.txt 
-set fastjet to /home/hep/us322/mg5amcnlo/HEPTools/fastjet/bin/fastjet-config
-set eMELA to /home/hep/us322/mg5amcnlo/HEPTools/eMELA/bin/eMELA-config
-set ninja to /home/hep/us322/mg5amcnlo/HEPTools/lib
-set collier to /home/hep/us322/mg5amcnlo/HEPTools/lib
-set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
-set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
+load MG5 configuration from ../test_sbi/mg5amcnlo/input/mg5_configuration.txt 
+set fastjet to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/fastjet/bin/fastjet-config
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lib
+set collier to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lib
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+set lhapdf to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
 Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
 Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
 Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
@@ -56,7 +62,7 @@ INFO: ************************************************************
 *                   *        * *        *                  *
 *                 *                       *                *
 *                                                          *
-*         VERSION 3.5.1                 2023-07-11         *
+*         VERSION 3.6.3                 2025-06-12         *
 *                                                          *
 *    The MadGraph5_aMC@NLO Development Team - Find us at   *
 *                 http://amcatnlo.cern.ch                  *
@@ -65,7 +71,7 @@ INFO: ************************************************************
 *                                                          *
 ************************************************************ 
 INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Cards/amcatnlo_configuration.txt  
-INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo/input/mg5_configuration.txt  
+INFO: load configuration from /vols/cms/us322/test_sbi/mg5amcnlo/input/mg5_configuration.txt  
 INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Cards/amcatnlo_configuration.txt  
 Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
 launch auto 
@@ -122,15 +128,16 @@ Do you want to edit a card (press enter to bypass editing)?
  [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ]
 [1;34mfound line : detector=OFF[0m
 [1;34mThis answer is not valid for current question. Keep it for next question and use here default: 0[0m
-INFO: modify parameter extralibs of the shower_card.dat to pythia8 dl 
-INFO: modify parameter extrapaths of the shower_card.dat to ../lib /home/hep/us322/mg5amcnlo/HEPTools/pythia8/install/lib l,-rpath,/home/hep/us322/mg5amcnlo/HEPTools/pythia8/install/lib 
+INFO: modify parameter extralibs of the shower_card.dat to pythia8 z dl stdc++ 
+INFO: modify parameter extrapaths of the shower_card.dat to ../lib /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/pythia8/lib l,-rpath,/home/hep/us322/test_sbi/mg5amcnlo/HEPTools/pythia8/lib /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/zlib/lib l,-rpath,/home/hep/us322/test_sbi/mg5amcnlo/HEPTools/zlib/lib 
 INFO: Update the dependent parameter of the param_card.dat 
 [1;34mWARNING: update the strong coupling value (alpha_s) to the value from the pdf selected: 0.119 [0m
 unexpected indent (<unknown>, line 1)
+unexpected indent (<unknown>, line 1)
+[1;32mTrying to add argument use_syst in RunCardNLO. This argument is not defined by default. Please consider adding it.[0m
 INFO: Starting run 
-mkdir: cannot create directory ‘/.mozilla’: Permission denied
-INFO: Compiling the code 
-Error: no DISPLAY environment variable specified
+mkdir: cannot create directory ‘/.mozilla’: Permission deniedINFO: Compiling the code 
+
 INFO: Using built-in libraries for PDFs 
 [1;32mrun_card missed argument muf1_ref_fixed. Takes default: 91.118[0m
 [1;32mrun_card missed argument muf2_ref_fixed. Takes default: 91.118[0m
@@ -146,1922 +153,153 @@ INFO: Using built-in libraries for PDFs
 [1;32mrun_card missed argument rw_fscale_up. Takes default: -1.0[0m
 [1;32mrun_card missed argument pdf_set_min. Takes default: 244601[0m
 [1;32mrun_card missed argument pdf_set_max. Takes default: 244700[0m
+[1;32mrun_card missed argument flavour_bias. Takes default: [5, 1][0m
 [1;32mrun_card missed argument maxjetflavor. Takes default: 4[0m
 [1mINFO: For gauge cancellation, the width of 'H' has been set to zero. [0m
 INFO: Compiling source... 
+Error: no DISPLAY environment variable specified
+INFO:           ...done, continuing with P* directories 
+INFO: Compiling directories... 
+INFO: Compiling on 12 cores 
+INFO:  Compiling P0_gg_hh... 
+STOP 1
+INFO:     P0_gg_hh done. 
+INFO: Checking test output: 
+INFO: P0_gg_hh 
+INFO:  Result for test_ME: 
+INFO:    Passed. 
+[1;32mDEBUG: 
+Sum of all orders:      Soft test  1 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  1 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  1 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  1 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  1 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  1 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  1 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  1 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  2 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  2 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  2 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  2 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  2 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  3 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  3 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  3 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  3 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  3 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  3 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  3 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  3 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  4 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  4 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  4 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  4 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  4 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  4 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  4 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  4 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  5 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  5 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  5 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  5 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  5 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  5 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  5 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  5 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  6 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  6 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  6 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  6 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  6 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  6 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  6 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  6 PASSED. Fraction of failures: 0.00 [0m
+INFO:  Result for test_MC: 
+INFO:    Passed. 
+[1;32mDEBUG: 
+Sum of all orders:      Soft test  1 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  1 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  1 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  1 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  1 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  1 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  1 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  1 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  2 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  2 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  2 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  2 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  2 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  3 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  3 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  3 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  3 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  3 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  3 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  3 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  3 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  4 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  4 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  4 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  4 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  4 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  4 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  4 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  4 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  5 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  5 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  5 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  5 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  5 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  5 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  5 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  5 PASSED. Fraction of failures: 0.00
+Sum of all orders:      Soft test  6 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4;      Soft test  6 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3;      Soft test  6 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4;      Soft test  6 PASSED. Fraction of failures: 0.00
+Sum of all orders: Collinear test  6 PASSED. Fraction of failures: 0.00
+Split-order  2:  NP:  4; QCD:  2; QED:  4; Collinear test  6 PASSED. Fraction of failures: 0.00
+Split-order  3:  NP:  4; QCD:  2; QED:  3; Collinear test  6 PASSED. Fraction of failures: 0.00
+Split-order  4:  NP:  2; QCD:  2; QED:  4; Collinear test  6 PASSED. Fraction of failures: 0.00 [0m
+INFO:  Result for check_poles: 
+[1;34mWARNING: 0 points have been tried [0m
+INFO: Starting run 
+INFO: Using 12 cores 
+INFO: Cleaning previous results 
+INFO: Doing NLO matched to parton shower 
+INFO: Setting up grids 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [ current time: 12h35 ] 
+[1;31mError when reading /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/SubProcesses/P0_gg_hh/GF2.0/results.dat[0m
+sum of cpu time of last step: 0 second
+Traceback (most recent call last):
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1548, in onecmd
+    return self.onecmd_orig(line, **opt)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1497, in onecmd_orig
+    return func(arg, **opt)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/amcatnlo_run_interface.py", line 1785, in do_launch
+    self.run_generate_events(mode, options, argss, switch)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/common_run_interface.py", line 7897, in new_fct
+    scan_over_run_card(original_fct, obj, *args, **opts)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/common_run_interface.py", line 7829, in scan_over_run_card
+    return original_fct(obj, *args, **opts)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/amcatnlo_run_interface.py", line 1837, in run_generate_events
+    evt_file = self.run(mode, options)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/amcatnlo_run_interface.py", line 2021, in run
+    jobs_to_run,jobs_to_collect=self.collect_the_results(options,req_acc,jobs_to_run, \
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/amcatnlo_run_interface.py", line 2292, in collect_the_results
+    jobs_to_run_new=self.update_jobs_to_run(req_acc,integration_step,jobs_to_run,fixed_order)
+  File "/vols/cms/us322/test_sbi/mg5amcnlo/madgraph/interface/amcatnlo_run_interface.py", line 2697, in update_jobs_to_run
+    accuracy=min(math.sqrt(totABS/(req_acc2_inv*job['resultABS'])),0.2)
+ZeroDivisionError: float division by zero
 [1;31mCommand "launch auto " interrupted with error:
-MadGraph5Error : A compilation Error occurs when trying to compile /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Source.
-	The compilation fails with the following output message:
-	    rm -f ../lib/libdhelas.a
-	    cd DHELAS; make
-	    make[1]: Entering directory '/vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Source/DHELAS'
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o aloha_functions.o aloha_functions.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFV87L1_2.o FFV87L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFV87L2_1.o FFV87L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS14_0.o VVS14_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFV110L2_1.o FFV110L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFV87L2_1.o MP_FFV87L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS14_0.o VVSS14_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFVVS151L2_1.o FFVVS151L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS15L2P0_1.o VVSS15L2P0_1.f
-	    VVSS15L2P0_1.f:84:27:
-	    
-	       84 |       COEFF(1,0,2)= COUP*-CI * P2(0)*S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:86:27:
-	    
-	       86 |       COEFF(3,0,2)= COUP*-CI * P2(2)*S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:87:27:
-	    
-	       87 |       COEFF(4,0,2)= COUP*-CI * P2(3)*S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:88:27:
-	    
-	       88 |       COEFF(1,1,2)= COUP*-CI * S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:92:27:
-	    
-	       92 |       COEFF(1,2,2)= COUP*-CI * P2(0)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:94:27:
-	    
-	       94 |       COEFF(3,2,2)= COUP*-CI * P2(2)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:95:27:
-	    
-	       95 |       COEFF(4,2,2)= COUP*-CI * P2(3)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:98:27:
-	    
-	       98 |       COEFF(3,3,2)= COUP*-CI * S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:103:27:
-	    
-	      103 |       COEFF(4,4,2)= COUP*-CI * S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:105:27:
-	    
-	      105 |       COEFF(2,5,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:108:27:
-	    
-	      108 |       COEFF(1,6,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:122:27:
-	    
-	      122 |       COEFF(3,9,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:135:28:
-	    
-	      135 |       COEFF(4,12,2)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:144:27:
-	    
-	      144 |       COEFF(1,0,3)= COUP*-CI * P2(0)*S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:145:27:
-	    
-	      145 |       COEFF(2,0,3)= COUP*-CI * P2(1)*S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:147:27:
-	    
-	      147 |       COEFF(4,0,3)= COUP*-CI * P2(3)*S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:148:27:
-	    
-	      148 |       COEFF(1,1,3)= COUP*-CI * S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:153:27:
-	    
-	      153 |       COEFF(2,2,3)= COUP*-CI * S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:156:27:
-	    
-	      156 |       COEFF(1,3,3)= COUP*-CI * P2(0)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:157:27:
-	    
-	      157 |       COEFF(2,3,3)= COUP*-CI * P2(1)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:159:27:
-	    
-	      159 |       COEFF(4,3,3)= COUP*-CI * P2(3)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:163:27:
-	    
-	      163 |       COEFF(4,4,3)= COUP*-CI * S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:166:27:
-	    
-	      166 |       COEFF(3,5,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:176:27:
-	    
-	      176 |       COEFF(1,8,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:181:27:
-	    
-	      181 |       COEFF(2,9,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:199:28:
-	    
-	      199 |       COEFF(4,13,3)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:204:27:
-	    
-	      204 |       COEFF(1,0,4)= COUP*-CI * P2(0)*S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:205:27:
-	    
-	      205 |       COEFF(2,0,4)= COUP*-CI * P2(1)*S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:206:27:
-	    
-	      206 |       COEFF(3,0,4)= COUP*-CI * P2(2)*S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:208:27:
-	    
-	      208 |       COEFF(1,1,4)= COUP*-CI * S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:213:27:
-	    
-	      213 |       COEFF(2,2,4)= COUP*-CI * S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:218:27:
-	    
-	      218 |       COEFF(3,3,4)= COUP*-CI * S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:220:27:
-	    
-	      220 |       COEFF(1,4,4)= COUP*-CI * P2(0)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:221:27:
-	    
-	      221 |       COEFF(2,4,4)= COUP*-CI * P2(1)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:222:27:
-	    
-	      222 |       COEFF(3,4,4)= COUP*-CI * P2(2)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:227:27:
-	    
-	      227 |       COEFF(4,5,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:248:28:
-	    
-	      248 |       COEFF(1,11,4)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:253:28:
-	    
-	      253 |       COEFF(2,12,4)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVSS15L2P0_1.f:258:28:
-	    
-	      258 |       COEFF(3,13,4)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVV20L2P0_1.o MP_VVVV20L2P0_1.f
-	    MP_VVVV20L2P0_1.f:25:27:
-	    
-	       25 |       COEFF(2,0,1)= COUP*-CI * V3(6)*V4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVV20L2P0_1.f:26:27:
-	    
-	       26 |       COEFF(3,0,1)= COUP*-CI * V3(7)*V4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVV20L2P0_1.f:27:27:
-	    
-	       27 |       COEFF(4,0,1)= COUP*-CI * V3(8)*V4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12_13P0_1.o MP_VVS12_13P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_SSS10_1.o MP_SSS10_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS11_14_0.o MP_VVS11_14_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVSS25L2P0_1.o MP_VVVSS25L2P0_1.f
-	    MP_VVVSS25L2P0_1.f:43:27:
-	    
-	       43 |       COEFF(2,1,1)= COUP*-CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:44:27:
-	    
-	       44 |       COEFF(3,1,1)= COUP*-CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:45:27:
-	    
-	       45 |       COEFF(4,1,1)= COUP*-CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:46:27:
-	    
-	       46 |       COEFF(1,2,1)= COUP*-2Q0 * CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:47:27:
-	    
-	       47 |       COEFF(2,2,1)= COUP*-CI * V3(5)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:50:27:
-	    
-	       50 |       COEFF(1,3,1)= COUP*-2Q0 * CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:52:27:
-	    
-	       52 |       COEFF(3,3,1)= COUP*-CI * V3(5)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:54:27:
-	    
-	       54 |       COEFF(1,4,1)= COUP*-2Q0 * CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:57:27:
-	    
-	       57 |       COEFF(4,4,1)= COUP*-CI * V3(5)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:75:27:
-	    
-	       75 |       COEFF(2,3,2)= COUP*-2Q0 * CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:79:27:
-	    
-	       79 |       COEFF(2,4,2)= COUP*-2Q0 * CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:96:27:
-	    
-	       96 |       COEFF(3,2,3)= COUP*-2Q0 * CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:104:27:
-	    
-	      104 |       COEFF(3,4,3)= COUP*-2Q0 * CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:121:27:
-	    
-	      121 |       COEFF(4,2,4)= COUP*-2Q0 * CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVSS25L2P0_1.f:125:27:
-	    
-	      125 |       COEFF(4,3,4)= COUP*-2Q0 * CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS18_0.o MP_VVSS18_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o SSS10_1.o SSS10_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS20_0.o MP_VVSS20_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFSS26L1_2.o MP_FFSS26L1_2.f
-	    MP_FFSS26L1_2.f:28:27:
-	    
-	       28 |       COEFF(3,1,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:33:27:
-	    
-	       33 |       COEFF(4,2,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:40:27:
-	    
-	       40 |       COEFF(3,4,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:49:27:
-	    
-	       49 |       COEFF(4,1,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:52:27:
-	    
-	       52 |       COEFF(3,2,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:56:27:
-	    
-	       56 |       COEFF(3,3,2)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:66:27:
-	    
-	       66 |       COEFF(1,1,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:75:27:
-	    
-	       75 |       COEFF(2,3,3)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:87:27:
-	    
-	       87 |       COEFF(2,1,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L1_2.f:99:27:
-	    
-	       99 |       COEFF(2,4,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFV87L1_2.o MP_FFV87L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12_13L2P0_1.o MP_VVS12_13L2P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS16_0.o VVS16_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS18_0.o VVSS18_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFVS127L2_1.o FFVS127L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS16_0.o MP_VVS16_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS11_14_16_0.o MP_VVSS11_14_16_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFV57_0.o MP_FFV57_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFV110L2_1.o MP_FFV110L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS11_14_0.o VVS11_14_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12P0_1.o VVS12P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12_13_3.o VVS12_13_3.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o SSS6_0.o SSS6_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFS37L1_2.o MP_FFS37L1_2.f
-	    MP_FFS37L1_2.f:27:27:
-	    
-	       27 |       COEFF(3,1,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:32:27:
-	    
-	       32 |       COEFF(4,2,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:39:27:
-	    
-	       39 |       COEFF(3,4,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:48:27:
-	    
-	       48 |       COEFF(4,1,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:51:27:
-	    
-	       51 |       COEFF(3,2,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:55:27:
-	    
-	       55 |       COEFF(3,3,2)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:65:27:
-	    
-	       65 |       COEFF(1,1,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:74:27:
-	    
-	       74 |       COEFF(2,3,3)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:86:27:
-	    
-	       86 |       COEFF(2,1,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L1_2.f:98:27:
-	    
-	       98 |       COEFF(2,4,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFV57P0_3.o MP_FFV57P0_3.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVS17L2P0_1.o MP_VVVS17L2P0_1.f
-	    MP_VVVS17L2P0_1.f:41:27:
-	    
-	       41 |       COEFF(2,1,1)= COUP*-CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:42:27:
-	    
-	       42 |       COEFF(3,1,1)= COUP*-CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:43:27:
-	    
-	       43 |       COEFF(4,1,1)= COUP*-CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:44:27:
-	    
-	       44 |       COEFF(1,2,1)= COUP*-2Q0 * CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:45:27:
-	    
-	       45 |       COEFF(2,2,1)= COUP*-CI * V3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:48:27:
-	    
-	       48 |       COEFF(1,3,1)= COUP*-2Q0 * CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:50:27:
-	    
-	       50 |       COEFF(3,3,1)= COUP*-CI * V3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:52:27:
-	    
-	       52 |       COEFF(1,4,1)= COUP*-2Q0 * CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:55:27:
-	    
-	       55 |       COEFF(4,4,1)= COUP*-CI * V3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:73:27:
-	    
-	       73 |       COEFF(2,3,2)= COUP*-2Q0 * CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:77:27:
-	    
-	       77 |       COEFF(2,4,2)= COUP*-2Q0 * CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:94:27:
-	    
-	       94 |       COEFF(3,2,3)= COUP*-2Q0 * CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:102:27:
-	    
-	      102 |       COEFF(3,4,3)= COUP*-2Q0 * CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:119:27:
-	    
-	      119 |       COEFF(4,2,4)= COUP*-2Q0 * CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVS17L2P0_1.f:123:27:
-	    
-	      123 |       COEFF(4,3,4)= COUP*-2Q0 * CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVV16L2P0_1.o MP_VVVV16L2P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS15_18_0.o MP_VVSS15_18_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12_0.o MP_VVS12_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS15P0_1.o MP_VVSS15P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFVV186L2_1.o MP_FFVV186L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS11_0.o VVSS11_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVSS25_0.o MP_VVVSS25_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFV57_0.o FFV57_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS15_0.o VVSS15_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS13_0.o VVS13_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS14_0.o MP_VVSS14_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVV8L2P0_1.o VVV8L2P0_1.f
-	    VVV8L2P0_1.f:40:27:
-	    
-	       40 |       COEFF(2,1,1)= COUP*-CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:41:27:
-	    
-	       41 |       COEFF(3,1,1)= COUP*-CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:42:27:
-	    
-	       42 |       COEFF(4,1,1)= COUP*-CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:43:27:
-	    
-	       43 |       COEFF(1,2,1)= COUP*-2D0 * CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:44:27:
-	    
-	       44 |       COEFF(2,2,1)= COUP*-CI * V3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:47:27:
-	    
-	       47 |       COEFF(1,3,1)= COUP*-2D0 * CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:49:27:
-	    
-	       49 |       COEFF(3,3,1)= COUP*-CI * V3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:51:27:
-	    
-	       51 |       COEFF(1,4,1)= COUP*-2D0 * CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:54:27:
-	    
-	       54 |       COEFF(4,4,1)= COUP*-CI * V3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:71:27:
-	    
-	       71 |       COEFF(2,3,2)= COUP*-2D0 * CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:75:27:
-	    
-	       75 |       COEFF(2,4,2)= COUP*-2D0 * CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:91:27:
-	    
-	       91 |       COEFF(3,2,3)= COUP*-2D0 * CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:99:27:
-	    
-	       99 |       COEFF(3,4,3)= COUP*-2D0 * CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:115:27:
-	    
-	      115 |       COEFF(4,2,4)= COUP*-2D0 * CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVV8L2P0_1.f:119:27:
-	    
-	      119 |       COEFF(4,3,4)= COUP*-2D0 * CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVSS25L2P0_1.o VVVSS25L2P0_1.f
-	    VVVSS25L2P0_1.f:42:27:
-	    
-	       42 |       COEFF(2,1,1)= COUP*-CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:43:27:
-	    
-	       43 |       COEFF(3,1,1)= COUP*-CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:44:27:
-	    
-	       44 |       COEFF(4,1,1)= COUP*-CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:45:27:
-	    
-	       45 |       COEFF(1,2,1)= COUP*-2D0 * CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:46:27:
-	    
-	       46 |       COEFF(2,2,1)= COUP*-CI * V3(5)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:49:27:
-	    
-	       49 |       COEFF(1,3,1)= COUP*-2D0 * CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:51:27:
-	    
-	       51 |       COEFF(3,3,1)= COUP*-CI * V3(5)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:53:27:
-	    
-	       53 |       COEFF(1,4,1)= COUP*-2D0 * CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:56:27:
-	    
-	       56 |       COEFF(4,4,1)= COUP*-CI * V3(5)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:74:27:
-	    
-	       74 |       COEFF(2,3,2)= COUP*-2D0 * CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:78:27:
-	    
-	       78 |       COEFF(2,4,2)= COUP*-2D0 * CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:95:27:
-	    
-	       95 |       COEFF(3,2,3)= COUP*-2D0 * CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:103:27:
-	    
-	      103 |       COEFF(3,4,3)= COUP*-2D0 * CI * V3(8)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:120:27:
-	    
-	      120 |       COEFF(4,2,4)= COUP*-2D0 * CI * V3(6)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVSS25L2P0_1.f:124:27:
-	    
-	      124 |       COEFF(4,3,4)= COUP*-2D0 * CI * V3(7)*S4(5)*S5(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFV57P0_3.o FFV57P0_3.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS19_0.o MP_VVSS19_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS15_18P0_1.o MP_VVSS15_18P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12L2P0_1.o VVS12L2P0_1.f
-	    VVS12L2P0_1.f:83:27:
-	    
-	       83 |       COEFF(1,0,2)= COUP*-CI * P2(0)*S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:85:27:
-	    
-	       85 |       COEFF(3,0,2)= COUP*-CI * P2(2)*S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:86:27:
-	    
-	       86 |       COEFF(4,0,2)= COUP*-CI * P2(3)*S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:87:27:
-	    
-	       87 |       COEFF(1,1,2)= COUP*-CI * S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:91:27:
-	    
-	       91 |       COEFF(1,2,2)= COUP*-CI * P2(0)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:93:27:
-	    
-	       93 |       COEFF(3,2,2)= COUP*-CI * P2(2)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:94:27:
-	    
-	       94 |       COEFF(4,2,2)= COUP*-CI * P2(3)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:97:27:
-	    
-	       97 |       COEFF(3,3,2)= COUP*-CI * S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:102:27:
-	    
-	      102 |       COEFF(4,4,2)= COUP*-CI * S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:104:27:
-	    
-	      104 |       COEFF(2,5,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:107:27:
-	    
-	      107 |       COEFF(1,6,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:121:27:
-	    
-	      121 |       COEFF(3,9,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:134:28:
-	    
-	      134 |       COEFF(4,12,2)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:143:27:
-	    
-	      143 |       COEFF(1,0,3)= COUP*-CI * P2(0)*S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:144:27:
-	    
-	      144 |       COEFF(2,0,3)= COUP*-CI * P2(1)*S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:146:27:
-	    
-	      146 |       COEFF(4,0,3)= COUP*-CI * P2(3)*S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:147:27:
-	    
-	      147 |       COEFF(1,1,3)= COUP*-CI * S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:152:27:
-	    
-	      152 |       COEFF(2,2,3)= COUP*-CI * S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:155:27:
-	    
-	      155 |       COEFF(1,3,3)= COUP*-CI * P2(0)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:156:27:
-	    
-	      156 |       COEFF(2,3,3)= COUP*-CI * P2(1)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:158:27:
-	    
-	      158 |       COEFF(4,3,3)= COUP*-CI * P2(3)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:162:27:
-	    
-	      162 |       COEFF(4,4,3)= COUP*-CI * S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:165:27:
-	    
-	      165 |       COEFF(3,5,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:175:27:
-	    
-	      175 |       COEFF(1,8,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:180:27:
-	    
-	      180 |       COEFF(2,9,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:198:28:
-	    
-	      198 |       COEFF(4,13,3)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:203:27:
-	    
-	      203 |       COEFF(1,0,4)= COUP*-CI * P2(0)*S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:204:27:
-	    
-	      204 |       COEFF(2,0,4)= COUP*-CI * P2(1)*S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:205:27:
-	    
-	      205 |       COEFF(3,0,4)= COUP*-CI * P2(2)*S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:207:27:
-	    
-	      207 |       COEFF(1,1,4)= COUP*-CI * S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:212:27:
-	    
-	      212 |       COEFF(2,2,4)= COUP*-CI * S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:217:27:
-	    
-	      217 |       COEFF(3,3,4)= COUP*-CI * S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:219:27:
-	    
-	      219 |       COEFF(1,4,4)= COUP*-CI * P2(0)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:220:27:
-	    
-	      220 |       COEFF(2,4,4)= COUP*-CI * P2(1)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:221:27:
-	    
-	      221 |       COEFF(3,4,4)= COUP*-CI * P2(2)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:226:27:
-	    
-	      226 |       COEFF(4,5,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:247:28:
-	    
-	      247 |       COEFF(1,11,4)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:252:28:
-	    
-	      252 |       COEFF(2,12,4)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVS12L2P0_1.f:257:28:
-	    
-	      257 |       COEFF(3,13,4)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVV20L2P0_1.o VVVV20L2P0_1.f
-	    VVVV20L2P0_1.f:25:27:
-	    
-	       25 |       COEFF(2,0,1)= COUP*-CI * V3(6)*V4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVV20L2P0_1.f:26:27:
-	    
-	       26 |       COEFF(3,0,1)= COUP*-CI * V3(7)*V4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVV20L2P0_1.f:27:27:
-	    
-	       27 |       COEFF(4,0,1)= COUP*-CI * V3(8)*V4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVS17L2P0_1.o VVVS17L2P0_1.f
-	    VVVS17L2P0_1.f:41:27:
-	    
-	       41 |       COEFF(2,1,1)= COUP*-CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:42:27:
-	    
-	       42 |       COEFF(3,1,1)= COUP*-CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:43:27:
-	    
-	       43 |       COEFF(4,1,1)= COUP*-CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:44:27:
-	    
-	       44 |       COEFF(1,2,1)= COUP*-2D0 * CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:45:27:
-	    
-	       45 |       COEFF(2,2,1)= COUP*-CI * V3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:48:27:
-	    
-	       48 |       COEFF(1,3,1)= COUP*-2D0 * CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:50:27:
-	    
-	       50 |       COEFF(3,3,1)= COUP*-CI * V3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:52:27:
-	    
-	       52 |       COEFF(1,4,1)= COUP*-2D0 * CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:55:27:
-	    
-	       55 |       COEFF(4,4,1)= COUP*-CI * V3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:73:27:
-	    
-	       73 |       COEFF(2,3,2)= COUP*-2D0 * CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:77:27:
-	    
-	       77 |       COEFF(2,4,2)= COUP*-2D0 * CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:94:27:
-	    
-	       94 |       COEFF(3,2,3)= COUP*-2D0 * CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:102:27:
-	    
-	      102 |       COEFF(3,4,3)= COUP*-2D0 * CI * V3(8)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:119:27:
-	    
-	      119 |       COEFF(4,2,4)= COUP*-2D0 * CI * V3(6)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVS17L2P0_1.f:123:27:
-	    
-	      123 |       COEFF(4,3,4)= COUP*-2D0 * CI * V3(7)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVV19L2P0_1.o VVVV19L2P0_1.f
-	    VVVV19L2P0_1.f:25:27:
-	    
-	       25 |       COEFF(2,0,1)= COUP*-CI * V3(5)*V4(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVV19L2P0_1.f:26:27:
-	    
-	       26 |       COEFF(3,0,1)= COUP*-CI * V3(5)*V4(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    VVVV19L2P0_1.f:27:27:
-	    
-	       27 |       COEFF(4,0,1)= COUP*-CI * V3(5)*V4(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS16_0.o MP_VVSS16_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12_13P0_1.o VVS12_13P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12_0.o VVS12_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFS37L2_1.o FFS37L2_1.f
-	    FFS37L2_1.f:32:27:
-	    
-	       32 |       COEFF(4,2,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L2_1.f:36:27:
-	    
-	       36 |       COEFF(4,3,1)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L2_1.f:39:27:
-	    
-	       39 |       COEFF(3,4,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L2_1.f:51:27:
-	    
-	       51 |       COEFF(3,2,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L2_1.f:93:27:
-	    
-	       93 |       COEFF(1,3,4)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L2_1.f:98:27:
-	    
-	       98 |       COEFF(2,4,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12_13_3.o MP_VVS12_13_3.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS15L2P0_1.o MP_VVSS15L2P0_1.f
-	    MP_VVSS15L2P0_1.f:84:27:
-	    
-	       84 |       COEFF(1,0,2)= COUP*-CI * P2(0)*S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:86:27:
-	    
-	       86 |       COEFF(3,0,2)= COUP*-CI * P2(2)*S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:87:27:
-	    
-	       87 |       COEFF(4,0,2)= COUP*-CI * P2(3)*S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:88:27:
-	    
-	       88 |       COEFF(1,1,2)= COUP*-CI * S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:92:27:
-	    
-	       92 |       COEFF(1,2,2)= COUP*-CI * P2(0)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:94:27:
-	    
-	       94 |       COEFF(3,2,2)= COUP*-CI * P2(2)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:95:27:
-	    
-	       95 |       COEFF(4,2,2)= COUP*-CI * P2(3)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:98:27:
-	    
-	       98 |       COEFF(3,3,2)= COUP*-CI * S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:103:27:
-	    
-	      103 |       COEFF(4,4,2)= COUP*-CI * S3(5)*P1(1)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:105:27:
-	    
-	      105 |       COEFF(2,5,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:108:27:
-	    
-	      108 |       COEFF(1,6,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:122:27:
-	    
-	      122 |       COEFF(3,9,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:135:28:
-	    
-	      135 |       COEFF(4,12,2)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:144:27:
-	    
-	      144 |       COEFF(1,0,3)= COUP*-CI * P2(0)*S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:145:27:
-	    
-	      145 |       COEFF(2,0,3)= COUP*-CI * P2(1)*S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:147:27:
-	    
-	      147 |       COEFF(4,0,3)= COUP*-CI * P2(3)*S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:148:27:
-	    
-	      148 |       COEFF(1,1,3)= COUP*-CI * S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:153:27:
-	    
-	      153 |       COEFF(2,2,3)= COUP*-CI * S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:156:27:
-	    
-	      156 |       COEFF(1,3,3)= COUP*-CI * P2(0)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:157:27:
-	    
-	      157 |       COEFF(2,3,3)= COUP*-CI * P2(1)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:159:27:
-	    
-	      159 |       COEFF(4,3,3)= COUP*-CI * P2(3)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:163:27:
-	    
-	      163 |       COEFF(4,4,3)= COUP*-CI * S3(5)*P1(2)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:166:27:
-	    
-	      166 |       COEFF(3,5,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:176:27:
-	    
-	      176 |       COEFF(1,8,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:181:27:
-	    
-	      181 |       COEFF(2,9,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:199:28:
-	    
-	      199 |       COEFF(4,13,3)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:204:27:
-	    
-	      204 |       COEFF(1,0,4)= COUP*-CI * P2(0)*S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:205:27:
-	    
-	      205 |       COEFF(2,0,4)= COUP*-CI * P2(1)*S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:206:27:
-	    
-	      206 |       COEFF(3,0,4)= COUP*-CI * P2(2)*S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:208:27:
-	    
-	      208 |       COEFF(1,1,4)= COUP*-CI * S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:213:27:
-	    
-	      213 |       COEFF(2,2,4)= COUP*-CI * S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:218:27:
-	    
-	      218 |       COEFF(3,3,4)= COUP*-CI * S3(5)*P1(3)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:220:27:
-	    
-	      220 |       COEFF(1,4,4)= COUP*-CI * P2(0)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:221:27:
-	    
-	      221 |       COEFF(2,4,4)= COUP*-CI * P2(1)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:222:27:
-	    
-	      222 |       COEFF(3,4,4)= COUP*-CI * P2(2)*S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:227:27:
-	    
-	      227 |       COEFF(4,5,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:248:28:
-	    
-	      248 |       COEFF(1,11,4)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:253:28:
-	    
-	      253 |       COEFF(2,12,4)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVSS15L2P0_1.f:258:28:
-	    
-	      258 |       COEFF(3,13,4)= COUP*-CI * S3(5)*S4(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVS17_4.o MP_VVVS17_4.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS11_0.o VVS11_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS15_0.o MP_VVS15_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFVVS151L2_1.o MP_FFVVS151L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFSS26L2_1.o FFSS26L2_1.f
-	    FFSS26L2_1.f:33:27:
-	    
-	       33 |       COEFF(4,2,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L2_1.f:37:27:
-	    
-	       37 |       COEFF(4,3,1)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L2_1.f:40:27:
-	    
-	       40 |       COEFF(3,4,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L2_1.f:52:27:
-	    
-	       52 |       COEFF(3,2,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L2_1.f:94:27:
-	    
-	       94 |       COEFF(1,3,4)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L2_1.f:99:27:
-	    
-	       99 |       COEFF(2,4,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFVS127L1_2.o FFVS127L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS13_0.o MP_VVS13_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_SSS6_0.o MP_SSS6_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS19_0.o VVSS19_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFSS26L2_1.o MP_FFSS26L2_1.f
-	    MP_FFSS26L2_1.f:33:27:
-	    
-	       33 |       COEFF(4,2,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L2_1.f:37:27:
-	    
-	       37 |       COEFF(4,3,1)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L2_1.f:40:27:
-	    
-	       40 |       COEFF(3,4,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L2_1.f:52:27:
-	    
-	       52 |       COEFF(3,2,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L2_1.f:94:27:
-	    
-	       94 |       COEFF(1,3,4)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFSS26L2_1.f:99:27:
-	    
-	       99 |       COEFF(2,4,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o SSS6_1.o SSS6_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12_13L2P0_1.o VVS12_13L2P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12_13_0.o MP_VVS12_13_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS16_0.o VVSS16_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS15_0.o MP_VVSS15_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVV16L2P0_1.o VVVV16L2P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12_3.o VVS12_3.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFVS127L1_2.o MP_FFVS127L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVV8P0_1.o VVV8P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12L2P0_1.o MP_VVS12L2P0_1.f
-	    MP_VVS12L2P0_1.f:83:27:
-	    
-	       83 |       COEFF(1,0,2)= COUP*-CI * P2(0)*S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:85:27:
-	    
-	       85 |       COEFF(3,0,2)= COUP*-CI * P2(2)*S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:86:27:
-	    
-	       86 |       COEFF(4,0,2)= COUP*-CI * P2(3)*S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:87:27:
-	    
-	       87 |       COEFF(1,1,2)= COUP*-CI * S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:91:27:
-	    
-	       91 |       COEFF(1,2,2)= COUP*-CI * P2(0)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:93:27:
-	    
-	       93 |       COEFF(3,2,2)= COUP*-CI * P2(2)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:94:27:
-	    
-	       94 |       COEFF(4,2,2)= COUP*-CI * P2(3)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:97:27:
-	    
-	       97 |       COEFF(3,3,2)= COUP*-CI * S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:102:27:
-	    
-	      102 |       COEFF(4,4,2)= COUP*-CI * S3(5)*P1(1)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:104:27:
-	    
-	      104 |       COEFF(2,5,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:107:27:
-	    
-	      107 |       COEFF(1,6,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:121:27:
-	    
-	      121 |       COEFF(3,9,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:134:28:
-	    
-	      134 |       COEFF(4,12,2)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:143:27:
-	    
-	      143 |       COEFF(1,0,3)= COUP*-CI * P2(0)*S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:144:27:
-	    
-	      144 |       COEFF(2,0,3)= COUP*-CI * P2(1)*S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:146:27:
-	    
-	      146 |       COEFF(4,0,3)= COUP*-CI * P2(3)*S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:147:27:
-	    
-	      147 |       COEFF(1,1,3)= COUP*-CI * S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:152:27:
-	    
-	      152 |       COEFF(2,2,3)= COUP*-CI * S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:155:27:
-	    
-	      155 |       COEFF(1,3,3)= COUP*-CI * P2(0)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:156:27:
-	    
-	      156 |       COEFF(2,3,3)= COUP*-CI * P2(1)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:158:27:
-	    
-	      158 |       COEFF(4,3,3)= COUP*-CI * P2(3)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:162:27:
-	    
-	      162 |       COEFF(4,4,3)= COUP*-CI * S3(5)*P1(2)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:165:27:
-	    
-	      165 |       COEFF(3,5,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:175:27:
-	    
-	      175 |       COEFF(1,8,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:180:27:
-	    
-	      180 |       COEFF(2,9,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:198:28:
-	    
-	      198 |       COEFF(4,13,3)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:203:27:
-	    
-	      203 |       COEFF(1,0,4)= COUP*-CI * P2(0)*S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:204:27:
-	    
-	      204 |       COEFF(2,0,4)= COUP*-CI * P2(1)*S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:205:27:
-	    
-	      205 |       COEFF(3,0,4)= COUP*-CI * P2(2)*S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:207:27:
-	    
-	      207 |       COEFF(1,1,4)= COUP*-CI * S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:212:27:
-	    
-	      212 |       COEFF(2,2,4)= COUP*-CI * S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:217:27:
-	    
-	      217 |       COEFF(3,3,4)= COUP*-CI * S3(5)*P1(3)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:219:27:
-	    
-	      219 |       COEFF(1,4,4)= COUP*-CI * P2(0)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:220:27:
-	    
-	      220 |       COEFF(2,4,4)= COUP*-CI * P2(1)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:221:27:
-	    
-	      221 |       COEFF(3,4,4)= COUP*-CI * P2(2)*S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:226:27:
-	    
-	      226 |       COEFF(4,5,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:247:28:
-	    
-	      247 |       COEFF(1,11,4)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:252:28:
-	    
-	      252 |       COEFF(2,12,4)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVS12L2P0_1.f:257:28:
-	    
-	      257 |       COEFF(3,13,4)= COUP*-CI * S3(5)
-	          |                            1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS11_14_16_0.o VVSS11_14_16_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12P0_1.o MP_VVS12P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS15P0_1.o VVSS15P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS15_18_0.o VVSS15_18_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS14_0.o MP_VVS14_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFVV186L1_2.o MP_FFVV186L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS11_0.o MP_VVS11_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVV8_0.o MP_VVV8_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVS17_4.o VVVS17_4.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVVV19L2P0_1.o MP_VVVV19L2P0_1.f
-	    MP_VVVV19L2P0_1.f:25:27:
-	    
-	       25 |       COEFF(2,0,1)= COUP*-CI * V3(5)*V4(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVV19L2P0_1.f:26:27:
-	    
-	       26 |       COEFF(3,0,1)= COUP*-CI * V3(5)*V4(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVVV19L2P0_1.f:27:27:
-	    
-	       27 |       COEFF(4,0,1)= COUP*-CI * V3(5)*V4(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVV8L2P0_1.o MP_VVV8L2P0_1.f
-	    MP_VVV8L2P0_1.f:40:27:
-	    
-	       40 |       COEFF(2,1,1)= COUP*-CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:41:27:
-	    
-	       41 |       COEFF(3,1,1)= COUP*-CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:42:27:
-	    
-	       42 |       COEFF(4,1,1)= COUP*-CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:43:27:
-	    
-	       43 |       COEFF(1,2,1)= COUP*-2Q0 * CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:44:27:
-	    
-	       44 |       COEFF(2,2,1)= COUP*-CI * V3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:47:27:
-	    
-	       47 |       COEFF(1,3,1)= COUP*-2Q0 * CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:49:27:
-	    
-	       49 |       COEFF(3,3,1)= COUP*-CI * V3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:51:27:
-	    
-	       51 |       COEFF(1,4,1)= COUP*-2Q0 * CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:54:27:
-	    
-	       54 |       COEFF(4,4,1)= COUP*-CI * V3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:71:27:
-	    
-	       71 |       COEFF(2,3,2)= COUP*-2Q0 * CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:75:27:
-	    
-	       75 |       COEFF(2,4,2)= COUP*-2Q0 * CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:91:27:
-	    
-	       91 |       COEFF(3,2,3)= COUP*-2Q0 * CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:99:27:
-	    
-	       99 |       COEFF(3,4,3)= COUP*-2Q0 * CI * V3(8)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:115:27:
-	    
-	      115 |       COEFF(4,2,4)= COUP*-2Q0 * CI * V3(6)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_VVV8L2P0_1.f:119:27:
-	    
-	      119 |       COEFF(4,3,4)= COUP*-2Q0 * CI * V3(7)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVV8P0_1.o MP_VVV8P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS15_18L2P0_1.o VVSS15_18L2P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFS37L2_1.o MP_FFS37L2_1.f
-	    MP_FFS37L2_1.f:32:27:
-	    
-	       32 |       COEFF(4,2,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L2_1.f:36:27:
-	    
-	       36 |       COEFF(4,3,1)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L2_1.f:39:27:
-	    
-	       39 |       COEFF(3,4,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L2_1.f:51:27:
-	    
-	       51 |       COEFF(3,2,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L2_1.f:93:27:
-	    
-	       93 |       COEFF(1,3,4)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    MP_FFS37L2_1.f:98:27:
-	    
-	       98 |       COEFF(2,4,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFSS26L1_2.o FFSS26L1_2.f
-	    FFSS26L1_2.f:28:27:
-	    
-	       28 |       COEFF(3,1,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:33:27:
-	    
-	       33 |       COEFF(4,2,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:40:27:
-	    
-	       40 |       COEFF(3,4,1)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:49:27:
-	    
-	       49 |       COEFF(4,1,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:52:27:
-	    
-	       52 |       COEFF(3,2,2)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:56:27:
-	    
-	       56 |       COEFF(3,3,2)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:66:27:
-	    
-	       66 |       COEFF(1,1,3)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:75:27:
-	    
-	       75 |       COEFF(2,3,3)= COUP*-S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:87:27:
-	    
-	       87 |       COEFF(2,1,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFSS26L1_2.f:99:27:
-	    
-	       99 |       COEFF(2,4,4)= COUP*-CI * S3(5)*S4(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS11_0.o MP_VVSS11_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_SSS6_1.o MP_SSS6_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVVSS25_0.o VVVSS25_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS20_0.o VVSS20_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVSS15_18L2P0_1.o MP_VVSS15_18L2P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFV110L1_2.o MP_FFV110L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_FFVS127L2_1.o MP_FFVS127L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVSS15_18P0_1.o VVSS15_18P0_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVV8_0.o VVV8_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFV110L1_2.o FFV110L1_2.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS15_0.o VVS15_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFVV186L2_1.o FFVV186L2_1.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o VVS12_13_0.o VVS12_13_0.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFS37L1_2.o FFS37L1_2.f
-	    FFS37L1_2.f:27:27:
-	    
-	       27 |       COEFF(3,1,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:32:27:
-	    
-	       32 |       COEFF(4,2,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:39:27:
-	    
-	       39 |       COEFF(3,4,1)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:48:27:
-	    
-	       48 |       COEFF(4,1,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:51:27:
-	    
-	       51 |       COEFF(3,2,2)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:55:27:
-	    
-	       55 |       COEFF(3,3,2)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:65:27:
-	    
-	       65 |       COEFF(1,1,3)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:74:27:
-	    
-	       74 |       COEFF(2,3,3)= COUP*-S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:86:27:
-	    
-	       86 |       COEFF(2,1,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    FFS37L1_2.f:98:27:
-	    
-	       98 |       COEFF(2,4,4)= COUP*-CI * S3(5)
-	          |                           1
-	    Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o MP_VVS12_3.o MP_VVS12_3.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132   -c -o FFVV186L1_2.o FFVV186L1_2.f
-	    ar cru  ../../lib/libdhelas.a  aloha_functions.o FFV87L1_2.o FFV87L2_1.o VVS14_0.o FFV110L2_1.o MP_FFV87L2_1.o VVSS14_0.o FFVVS151L2_1.o VVSS15L2P0_1.o MP_VVVV20L2P0_1.o MP_VVS12_13P0_1.o MP_SSS10_1.o MP_VVS11_14_0.o MP_VVVSS25L2P0_1.o MP_VVSS18_0.o SSS10_1.o MP_VVSS20_0.o MP_FFSS26L1_2.o MP_FFV87L1_2.o MP_VVS12_13L2P0_1.o VVS16_0.o VVSS18_0.o FFVS127L2_1.o MP_VVS16_0.o MP_VVSS11_14_16_0.o MP_FFV57_0.o MP_FFV110L2_1.o VVS11_14_0.o VVS12P0_1.o VVS12_13_3.o SSS6_0.o MP_FFS37L1_2.o MP_FFV57P0_3.o MP_VVVS17L2P0_1.o MP_VVVV16L2P0_1.o MP_VVSS15_18_0.o MP_VVS12_0.o MP_VVSS15P0_1.o MP_FFVV186L2_1.o VVSS11_0.o MP_VVVSS25_0.o FFV57_0.o VVSS15_0.o VVS13_0.o MP_VVSS14_0.o VVV8L2P0_1.o VVVSS25L2P0_1.o FFV57P0_3.o MP_VVSS19_0.o MP_VVSS15_18P0_1.o VVS12L2P0_1.o VVVV20L2P0_1.o VVVS17L2P0_1.o VVVV19L2P0_1.o MP_VVSS16_0.o VVS12_13P0_1.o VVS12_0.o FFS37L2_1.o MP_VVS12_13_3.o MP_VVSS15L2P0_1.o MP_VVVS17_4.o VVS11_0.o MP_VVS15_0.o MP_FFVVS151L2_1.o FFSS26L2_1.o FFVS127L1_2.o MP_VVS13_0.o MP_SSS6_0.o VVSS19_0.o MP_FFSS26L2_1.o SSS6_1.o VVS12_13L2P0_1.o MP_VVS12_13_0.o VVSS16_0.o MP_VVSS15_0.o VVVV16L2P0_1.o VVS12_3.o MP_FFVS127L1_2.o VVV8P0_1.o MP_VVS12L2P0_1.o VVSS11_14_16_0.o MP_VVS12P0_1.o VVSS15P0_1.o VVSS15_18_0.o MP_VVS14_0.o MP_FFVV186L1_2.o MP_VVS11_0.o MP_VVV8_0.o VVVS17_4.o MP_VVVV19L2P0_1.o MP_VVV8L2P0_1.o MP_VVV8P0_1.o VVSS15_18L2P0_1.o MP_FFS37L2_1.o FFSS26L1_2.o MP_VVSS11_0.o MP_SSS6_1.o VVVSS25_0.o VVSS20_0.o MP_VVSS15_18L2P0_1.o MP_FFV110L1_2.o MP_FFVS127L2_1.o VVSS15_18P0_1.o VVV8_0.o FFV110L1_2.o VVS15_0.o FFVV186L2_1.o VVS12_13_0.o FFS37L1_2.o MP_VVS12_3.o FFVV186L1_2.o
-	    ranlib  ../../lib/libdhelas.a
-	    make[1]: Leaving directory '/vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Source/DHELAS'
-	    gfortran -O -fno-automatic -ffixed-line-length-132 -c alfas_functions.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132 -c rw_routines.f
-	    gfortran -O -fno-automatic -ffixed-line-length-132 -c kin_functions.f
-	    run.inc:30:132:
-	    
-	       30 |       DOUBLE PRECISION MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:32:132:
-	    
-	       32 |       COMMON/CSCALES_FACT/MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:36:132:
-	    
-	       36 |       DOUBLE PRECISION MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:38:132:
-	    
-	       38 |       COMMON/CSCALES_FIXED_VALUES/MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:43:132:
-	    
-	       43 |       DOUBLE PRECISION MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:45:132:
-	    
-	       45 |       COMMON/CSCALES_CURRENT_VALUES/MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:86:132:
-	    
-	       86 |      $  RW_RSCALE_DOWN, RW_RSCALE_UP,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:30:132:
-	    
-	       30 |       DOUBLE PRECISION MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:32:132:
-	    
-	       32 |       COMMON/CSCALES_FACT/MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:36:132:
-	    
-	       36 |       DOUBLE PRECISION MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:38:132:
-	    
-	       38 |       COMMON/CSCALES_FIXED_VALUES/MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:43:132:
-	    
-	       43 |       DOUBLE PRECISION MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:45:132:
-	    
-	       45 |       COMMON/CSCALES_CURRENT_VALUES/MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:86:132:
-	    
-	       86 |      $  RW_RSCALE_DOWN, RW_RSCALE_UP,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:30:132:
-	    
-	       30 |       DOUBLE PRECISION MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:32:132:
-	    
-	       32 |       COMMON/CSCALES_FACT/MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:36:132:
-	    
-	       36 |       DOUBLE PRECISION MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:38:132:
-	    
-	       38 |       COMMON/CSCALES_FIXED_VALUES/MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:43:132:
-	    
-	       43 |       DOUBLE PRECISION MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:45:132:
-	    
-	       45 |       COMMON/CSCALES_CURRENT_VALUES/MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:86:132:
-	    
-	       86 |      $  RW_RSCALE_DOWN, RW_RSCALE_UP,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:30:132:
-	    
-	       30 |       DOUBLE PRECISION MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:32:132:
-	    
-	       32 |       COMMON/CSCALES_FACT/MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:36:132:
-	    
-	       36 |       DOUBLE PRECISION MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:38:132:
-	    
-	       38 |       COMMON/CSCALES_FIXED_VALUES/MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:43:132:
-	    
-	       43 |       DOUBLE PRECISION MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:45:132:
-	    
-	       45 |       COMMON/CSCALES_CURRENT_VALUES/MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:86:132:
-	    
-	       86 |      $  RW_RSCALE_DOWN, RW_RSCALE_UP,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:30:132:
-	    
-	       30 |       DOUBLE PRECISION MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:32:132:
-	    
-	       32 |       COMMON/CSCALES_FACT/MUR_OVER_REF,MUF1_OVER_REF,MUF2_OVER_REF,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:36:132:
-	    
-	       36 |       DOUBLE PRECISION MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:38:132:
-	    
-	       38 |       COMMON/CSCALES_FIXED_VALUES/MUR_REF_FIXED,MUF1_REF_FIXED,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:43:132:
-	    
-	       43 |       DOUBLE PRECISION MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Invalid character in name at (1)
-	    run.inc:45:132:
-	    
-	       45 |       COMMON/CSCALES_CURRENT_VALUES/MUR2_CURRENT,MUF12_CURRENT,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    run.inc:86:132:
-	    
-	       86 |      $  RW_RSCALE_DOWN, RW_RSCALE_UP,
-	          |                                                                                                                                    1
-	    Error: Syntax error in COMMON statement at (1)
-	    make: *** [makefile:21: kin_functions.o] Error 1
-	    
-	Please try to fix this compilations issue and retry.
-	Help might be found at https://answers.launchpad.net/mg5amcnlo.
-	If you think that this is a bug, you can report this at https://bugs.launchpad.net/mg5amcnlo
+ZeroDivisionError : float division by zero
 Please report this bug on https://bugs.launchpad.net/mg5amcnlo
 More information is found in '/vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/run_01_tag_1_debug.log'.
 Please attach this file to your report.[0m

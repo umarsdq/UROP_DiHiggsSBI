@@ -2,7 +2,7 @@
 This version is intended for development/beta testing and NOT for production.
 This version has not been fully tested (if at all) and might have limited user support (if at all)[0m
 Running MG5 in debug mode
-('WARNING: loading of madgraph too slow!!!', 2.85750150680542)
+('WARNING: loading of madgraph too slow!!!', 4.10524582862854)
 ************************************************************
 *                                                          *
 *                     W E L C O M E to                     *
@@ -15,7 +15,7 @@ Running MG5 in debug mode
 *                   *        * *        *                  *
 *                 *                       *                *
 *                                                          *
-*         VERSION 3.5.1                 2023-07-11         *
+*         VERSION 3.6.3                 2025-06-12         *
 [1;31m*                                                          *[1;0m
 [1;31m*          WARNING: UNKNOWN DEVELOPMENT VERSION.           *[1;0m
 [1;31m*            WARNING: DO NOT USE FOR PRODUCTION            *[1;0m
@@ -32,20 +32,27 @@ Running MG5 in debug mode
 *    Type 'tutorial MadLoop' to learn how MadLoop works    *
 *                                                          *
 ************************************************************
-load MG5 configuration from mg5amcnlo/input/mg5_configuration.txt 
-set fastjet to /home/hep/us322/mg5amcnlo/HEPTools/fastjet/bin/fastjet-config
-set eMELA to /home/hep/us322/mg5amcnlo/HEPTools/eMELA/bin/eMELA-config
-set ninja to /home/hep/us322/mg5amcnlo/HEPTools/lib
-set collier to /home/hep/us322/mg5amcnlo/HEPTools/lib
-set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
-set lhapdf to /home/hep/us322/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
+load MG5 configuration from ../test_sbi/mg5amcnlo/input/mg5_configuration.txt 
+set fastjet to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/fastjet/bin/fastjet-config
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lib
+set collier to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lib
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+set lhapdf to /home/hep/us322/test_sbi/mg5amcnlo/HEPTools/lhapdf6_py3/bin/lhapdf-config
 Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
 Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
 Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
 import /tmp/generate.mg5
 The import format was not given, so we guess it as command
 import model SMEFTatNLO-LO
-INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restrict_LO.dat . 
+INFO: Restrict model SMEFTatNLO-LO with file ../test_sbi/mg5amcnlo/models/SMEFTatNLO/restrict_LO.dat . 
 [1;32mDEBUG: Simplifying conditional expressions [0m
 [1;32mDEBUG: coupling with small value GC_468: 8.673617379884035e-19j treated as zero [0m
 [1;32mDEBUG: coupling with small value GC_471: (-8.673617379884035e-19+0j) treated as zero [0m
@@ -58,7 +65,7 @@ INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restric
 [1;32mDEBUG: remove interactions: s s g at order: QCD=3 [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_102', 1), ('GC_103', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_101', 1), ('GC_104', -1)  [0m
-[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1150', 1), ('GC_1152', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1150', 1), ('GC_1152', -1), ('GC_467', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_1154', 1), ('GC_1155', -1), ('GC_413', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_114', 1), ('GC_116', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('GC_117', 1), ('GC_118', -1)  [0m
@@ -258,6 +265,7 @@ INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restric
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1403_795', 1), ('R2GC_1407_808', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1403_796', 1), ('R2GC_1407_809', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1419_851', 1), ('R2GC_1419_854', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1420_856', 1), ('R2GC_1420_859', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_888', 1), ('R2GC_1429_892', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_889', 1), ('R2GC_1429_893', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1428_890', 1), ('R2GC_1429_894', -1)  [0m
@@ -542,6 +550,7 @@ INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restric
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_360_1eps', 1), ('UVGC_1923_363_1eps', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_361', 1), ('UVGC_1923_364', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1921_361_1eps', 1), ('UVGC_1923_364_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1920_356', 1), ('UVGC_1925_365', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1906_319', 1), ('UVGC_1926_367', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1930_1386', 1), ('UVGC_1929_372_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1933_376', 1), ('UVGC_1934_377', -1)  [0m
@@ -556,6 +565,7 @@ INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restric
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1946_389', 1), ('UVGC_1947_390', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('R2GC_1948_1395', 1), ('UVGC_1948_391_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1926_367_1eps', 1), ('UVGC_1949_392_1eps', 1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1926_369', 1), ('UVGC_1949_393', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1926_368_1eps', 1), ('UVGC_1949_393_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1962_398', 1), ('UVGC_1963_399', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1962_398_1eps', 1), ('UVGC_1963_399_1eps', -1)  [0m
@@ -705,12 +715,11 @@ INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restric
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_634_1eps', 1), ('UVGC_2176_637_1eps', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_635', 1), ('UVGC_2176_638', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2175_635_1eps', 1), ('UVGC_2176_638_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_630', 1), ('UVGC_2177_639', 1), ('UVGC_2178_642', -1), ('UVGC_2179_645', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_630_1eps', 1), ('UVGC_2177_639_1eps', -1), ('UVGC_2178_642_1eps', -1), ('UVGC_2179_645_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_631_1eps', 1), ('UVGC_2177_640_1eps', -1), ('UVGC_2178_643_1eps', -1), ('UVGC_2179_646_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_632_1eps', 1), ('UVGC_2177_641_1eps', -1)  [0m
-[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_630', 1), ('UVGC_2178_642', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2174_631', 1), ('UVGC_2178_643', -1)  [0m
-[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2177_639', 1), ('UVGC_2179_645', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2177_640', 1), ('UVGC_2179_646', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2178_644_1eps', 1), ('UVGC_2179_647_1eps', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2170_624_1eps', 1), ('UVGC_2182_650_1eps', -1)  [0m
@@ -753,12 +762,11 @@ INFO: Restrict model SMEFTatNLO-LO with file mg5amcnlo/models/SMEFTatNLO/restric
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_721_1eps', 1), ('UVGC_2240_724_1eps', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_722', 1), ('UVGC_2240_725', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2239_722_1eps', 1), ('UVGC_2240_725_1eps', -1)  [0m
+[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_717', 1), ('UVGC_2241_726', 1), ('UVGC_2242_729', -1), ('UVGC_2243_732', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_717_1eps', 1), ('UVGC_2241_726_1eps', -1), ('UVGC_2242_729_1eps', -1), ('UVGC_2243_732_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_718_1eps', 1), ('UVGC_2241_727_1eps', -1), ('UVGC_2242_730_1eps', -1), ('UVGC_2243_733_1eps', 1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_719_1eps', 1), ('UVGC_2241_728_1eps', -1)  [0m
-[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_717', 1), ('UVGC_2242_729', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2238_718', 1), ('UVGC_2242_730', -1)  [0m
-[1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2241_726', 1), ('UVGC_2243_732', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2241_727', 1), ('UVGC_2243_733', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_2242_731_1eps', 1), ('UVGC_2243_734_1eps', -1)  [0m
 [1;32mDEBUG:  Fuse the Following coupling (they have the same value): ('UVGC_1680_35_1eps', 1), ('UVGC_2246_737_1eps', 1)  [0m
@@ -906,6 +914,8 @@ Defined multiparticle vl~ = ve~ vm~ vt~
 [1;34mPass the definition of 'j' and 'p' to 5 flavour scheme.[0m
 Defined multiparticle all = g ghg ghg~ u c d s b u~ c~ d~ s~ b~ a gha gha~ ve vm vt e- mu- ta- ve~ vm~ vt~ e+ mu+ ta+ t t~ z w+ ghz ghwp ghwm h w- ghz~ ghwp~ ghwm~
 generate p p > H H QED=2 QCD=2 NP=2 [QCD]
+[1;34mGenerating a process including the Sudakov approximation of EW corrections.
+Please cite arxiv:2110.03714, arxiv:2309.00452[0m
 [1;34mInterpreting 'NP=2' as 'NP<=2'[0m
 [1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
 [1;34mInterpreting 'QED=2' as 'QED<=2'[0m
@@ -930,7 +940,7 @@ INFO: Processing color information for process: g g > h h NP<=2 QCD<=3 QED<=2 [ 
 INFO: ... Done 
 INFO: Writing files in P0_gg_hh (1 / 1) 
 INFO: Creating files in directory V0_gg_hh 
-[1;32mDEBUG: adding in aloha model 118 lorentz struct [0m
+[1;32mDEBUG: adding in aloha model 124 lorentz struct [0m
 ALOHA: aloha creates FFV87 set of routines with options: L1[0m
 ALOHA: aloha creates FFS37 set of routines with options: L1[0m
 ALOHA: aloha creates FFV87 set of routines with options: L2[0m
@@ -990,7 +1000,7 @@ ALOHA: aloha creates VVSS15_18 routines[0m
 ALOHA: aloha creates VVS12_13 routines[0m
 ALOHA: aloha creates VVSS11_14_16 routines[0m
 ALOHA: aloha creates VVS11_14 routines[0m
-ALOHA: aloha creates 54 routines in  3.047 s
+ALOHA: aloha creates 54 routines in  5.709 s
 save configuration file to /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_sm/Cards/amcatnlo_configuration.txt
 INFO: Use Fortran compiler gfortran 
 INFO: Use c++ compiler g++ 

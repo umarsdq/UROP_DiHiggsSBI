@@ -4,8 +4,8 @@ morphing_setup: /vols/cms/us322/nsbi_for_dihiggs/data/setup.h5
 
 # MG generation (step 2)
 madgraph:
-    dir: /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo
-    #dir: /vols/cms/us322/test_sbi/mg5amcnlo
+    #dir: /vols/cms/us322/nsbi_for_dihiggs/mg5amcnlo # v3.5.1
+    dir: /vols/cms/us322/test_sbi/mg5amcnlo # Latest version.
     n_runs: 1
     output_dir: /vols/cms/us322/nsbi_for_dihiggs/mg_processes
     energy: 14 # 100 TeV (FC) or 14 TeV (HL-LHC)
@@ -18,9 +18,9 @@ delphes:
     
 # Sampling (step 4)
 sampling:
-    #input_dir: /vols/cms/us322/post_delphes_data
-    input_dir: /vols/cms/us322/nsbi_for_dihiggs/data
-    output_dir: /vols/cms/us322/nsbi_dihiggs/samples
+    input_dir: /vols/cms/us322/post_delphes_data
+    #input_dir: /vols/cms/us322/nsbi_for_dihiggs # Use author's dataset
+    output_dir: /vols/cms/us322/new_dataset_dihiggs
     
 # Plotting
 plotting:
