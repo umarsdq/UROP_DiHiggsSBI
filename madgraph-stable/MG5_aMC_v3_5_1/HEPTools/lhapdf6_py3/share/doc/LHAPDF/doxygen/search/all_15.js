@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['unbind_285',['unbind',['../classLHAPDF_1_1Extrapolator.html#a5d6f30e6c2063575e2ee96346141d212',1,'LHAPDF::Extrapolator::unbind()'],['../classLHAPDF_1_1Interpolator.html#a59a36d1bb959a0a0e3f9497dabc0b522',1,'LHAPDF::Interpolator::unbind()']]],
+  ['uncertainties_286',['uncertainties',['../classLHAPDF_1_1PDFSet.html#af95eb9ea4a922dc93c7edcffa38594a0',1,'LHAPDF::PDFSet::uncertainties(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;observables_values, double cl=CL1SIGMA, bool alternative=false) const'],['../classLHAPDF_1_1PDFSet.html#af32da0bce10cca336ad3f7a04b62ef78',1,'LHAPDF::PDFSet::uncertainties(std::vector&lt; PDFUncertainty &gt; &amp;rtn, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;observables_values, double cl=CL1SIGMA, bool alternative=false) const']]],
+  ['uncertainty_287',['uncertainty',['../classLHAPDF_1_1PDFSet.html#aaf328325a4f913542dac6f8c39c6128b',1,'LHAPDF::PDFSet::uncertainty(const std::vector&lt; double &gt; &amp;values, double cl=CL1SIGMA, bool alternative=false) const'],['../classLHAPDF_1_1PDFSet.html#a13e19ebd301a2e07fe3b0156391ea5b6',1,'LHAPDF::PDFSet::uncertainty(PDFUncertainty &amp;rtn, const std::vector&lt; double &gt; &amp;values, double cl=CL1SIGMA, bool alternative=false) const']]],
+  ['usererror_288',['UserError',['../classLHAPDF_1_1UserError.html',1,'LHAPDF::UserError'],['../classLHAPDF_1_1UserError.html#a8e405982aafa4d1ae5d97525fb09a668',1,'LHAPDF::UserError::UserError()']]]
+];

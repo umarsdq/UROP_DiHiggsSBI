@@ -1,0 +1,10 @@
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/collier.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/uninstall.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/demo.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/democache.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/edit_cache.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/rebuild_cache.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/list_install_components.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/install.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/install/local.dir
+/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/collier/COLLIER-1.2.8/build/CMakeFiles/install/strip.dir

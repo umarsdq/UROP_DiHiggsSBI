@@ -1,0 +1,12 @@
+prefix=/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3
+exec_prefix=${prefix}
+libdir=/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3//lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+
+Name: lhapdf
+Description: LHAPDF parton density library
+URL: https://lhapdf.hepforge.org
+Version: 6.5.4
+Libs: -L/vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3//lib -lLHAPDF
+Cflags: -I${prefix}/include
