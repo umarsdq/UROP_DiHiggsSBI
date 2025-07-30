@@ -1,0 +1,89 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lib
+set collier to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lib
+set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5/madminer/cards/mg_commands_0.dat
+The import format was not given, so we guess it as command
+launch /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5
+INFO: ************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D G R A P H 5           *
+*                       a M C @ N L O                      *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*                 http://amcatnlo.cern.ch                  *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************ 
+INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5/Cards/amcatnlo_configuration.txt  
+INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt  
+INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5/Cards/amcatnlo_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+launch auto 
+[1;31mCommand "launch auto " interrupted with error:
+KeyError : 'parton_shower'
+Please report this bug on https://bugs.launchpad.net/mg5amcnlo
+More information is found in 'ME5_debug'.
+Please attach this file to your report.[0m
+INFO:  
+quit
+INFO:  
+shower=Pythia8
+[1;34mCommand "shower=Pythia8" not recognized, please try again[0m
+detector=OFF
+[1;34mCommand "detector=OFF" not recognized, please try again[0m
+analysis=OFF
+[1;34mCommand "analysis=OFF" not recognized, please try again[0m
+madspin=ON
+[1;34mCommand "madspin=ON" not recognized, please try again[0m
+reweight=ON
+[1;34mCommand "reweight=ON" not recognized, please try again[0m
+done
+[1;34mCommand "done" not recognized, please try again[0m
+quit

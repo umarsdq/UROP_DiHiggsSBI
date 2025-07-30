@@ -1,0 +1,98 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lib
+set collier to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lib
+set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /vols/cms/us322/tmp-m/generate.mg5
+The import format was not given, so we guess it as command
+import model SMEFTatNLO-LO
+INFO: Restrict model SMEFTatNLO-LO with file madgraph-stable/MG5_aMC_v3_5_1/models/SMEFTatNLO/restrict_LO.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+[1;34mPass the definition of 'j' and 'p' to 5 flavour scheme.[0m
+Defined multiparticle all = g ghg ghg~ u c d s b u~ c~ d~ s~ b~ a gha gha~ ve vm vt e- mu- ta- ve~ vm~ vt~ e+ mu+ ta+ t t~ z w+ ghz ghwp ghwm h w- ghz~ ghwp~ ghwm~
+set acknowledged_v3.1_syntax True --global
+save options acknowledged_v3.1_syntax
+save configuration file to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt
+generate p p > H H QED=2 QCD=2 NP=2 [QCD]
+[1;34mInterpreting 'NP=2' as 'NP<=2'[0m
+[1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+[1;34mOrder NP is not constrained as squared_orders. Using: NP^2=4[0m
+[1;34mOrder QCD is not constrained as squared_orders. Using: QCD^2=4[0m
+[1;34mOrder QED is not constrained as squared_orders. Using: QED^2=4[0m
+INFO: Generating FKS-subtracted matrix elements for born process: g g > h h NP<=2 QCD<=3 QED<=2 NP^2=4 QCD^2=6 QED^2=4 (1 / 1) 
+INFO: Generating virtual matrix element with MadLoop for process: g g > h h NP<=2 QCD<=3 QED<=2 NP^2=4 QCD^2=6 QED^2=4 (1 / 1) 
+INFO: Generated 1 subprocesses with 48 real emission diagrams, 2 born diagrams and 78 virtual diagrams 
+output /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5
+INFO: Writing out the aMC@NLO code, using optimized Loops 
+INFO: directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5 already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: initialize a new directory: morphing_basis_vector_5 
+INFO: remove old information in morphing_basis_vector_5 
+INFO: Generating real emission matrix-elements... 
+INFO: Generating Helas calls for FKS process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 (1 / 1) 
+INFO: Processing color information for process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 
+INFO: ... Done 
+INFO: Writing files in P0_gg_hh (1 / 1) 
+INFO: Creating files in directory V0_gg_hh 
+INFO: Computing diagram color coefficients 
+INFO: Drawing loop Feynman diagrams for Process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 
+INFO: Generating born Feynman diagrams for Process: g g > h h NP<=2 QCD<=3 QED<=2 [ all = QCD ] NP^2=4 QCD^2=6 QED^2=4 
+History written to /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5/Cards/proc_card_mg5.dat
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 54 routines in  3.817 s
+save configuration file to /vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5/Cards/amcatnlo_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate jpeg diagrams 
+INFO: Generate web pages 
+Type "launch" to generate events from this process, or see
+/vols/cms/us322/nsbi_for_dihiggs/mg_processes/signal_supp/morphing_basis_vector_5/README
+Run "open index.html" to see more information about this process.
+quit

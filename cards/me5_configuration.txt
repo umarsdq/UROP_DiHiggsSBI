@@ -60,6 +60,7 @@
 #!  on containing the lib, bin and include directories) .
 #!  If using a relative path, that starts from the mg5 directory
 # pythia8_path = ./HEPTools/pythia8
+pythia8_path = ./HEPTools/pythia-install
 
 #! MG5aMC_PY8_interface path
 #!  Defines the path of the C++ driver file that is used by MG5_aMC to
@@ -96,7 +97,6 @@
 automatic_html_opening = False
 #! allow notification of finished job in the notification center (Mac Only)
 notification_center = False
-
 
 #! Default Running mode 
 #!  0: single machine/ 1: cluster / 2: multicore
@@ -163,6 +163,7 @@ notification_center = False
 #!  If None: try to find one available on the system
 # lhapdf = lhapdf-config
 lhapdf = ./HEPTools/lhapdf6_py3/bin/lhapdf-config
+lhapdf_py3 = ./HEPTools/lhapdf6_py3/bin/lhapdf-config
 
 #! fastjet-config
 #!  If None: try to find one available on the system

@@ -1,0 +1,179 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lib
+set collier to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lib
+set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/madminer/cards/mg_commands_0.dat
+The import format was not given, so we guess it as command
+launch /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt  
+INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt  
+INFO: load configuration from /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+generate_events run_01
+[1;34m"Pythia8" not valid option for "shower"[0m
+The following switches determine which programs are run:
+/=================== Description ===================|============= values ==============|======== other options ========\
+| 1. Choose the shower/hadronization program        | [1m       shower[0m = [01mNot Avail.[0m        |     Please install module     |
+| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
+| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
+| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
+| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
+\=======================================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/=================== Description ===================|============= values ==============|======== other options ========\
+| 1. Choose the shower/hadronization program        | [1m       shower[0m = [01mNot Avail.[0m        |     Please install module     |
+| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
+| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
+| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
+| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
+\=======================================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/=================== Description ===================|============= values ==============|======== other options ========\
+| 1. Choose the shower/hadronization program        | [1m       shower[0m = [01mNot Avail.[0m        |     Please install module     |
+| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
+| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
+| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
+| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
+\=======================================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/=================== Description ===================|============= values ==============|======== other options ========\
+| 1. Choose the shower/hadronization program        | [1m       shower[0m = [01mNot Avail.[0m        |     Please install module     |
+| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
+| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
+| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
+| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
+\=======================================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+The following switches determine which programs are run:
+/=================== Description ===================|============= values ==============|======== other options ========\
+| 1. Choose the shower/hadronization program        | [1m       shower[0m = [01mNot Avail.[0m        |     Please install module     |
+| 2. Choose the detector simulation program         | [1m     detector[0m = [01mNot Avail.[0m        |     Please install module     |
+| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
+| 4. Decay onshell particles                        | [1m      madspin[0m = [31mOFF[0m               |     ON|onshell|full           |
+| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [31mOFF[0m               |     ON                        |
+\=======================================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param : [32mparam_card.dat[0m                                 |
+|  [31m2[0m. run   : [32mrun_card.dat[0m                                   |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, enter path]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse 0 value[0m
+INFO: Update the dependent parameter of the param_card.dat 
+[1;34mWARNING: update the strong coupling value (alpha_s) to the value from the pdf selected: 0.119 [0m
+[1;34mWARNING: Unknow type of information in the card: dim6,renor,dim62f,loop,dim64f,dim64f4l,dim64f2l [0m
+Generating 50000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+[1;34mWARNING: information about "sminputs [1]" is missing using default value: 132.507. [0m
+[1;34mWARNING: information about "yukawa [5]" is missing using default value: 4.7. [0m
+[1;34mWARNING: information about "yukawa [15]" is missing using default value: 1.777. [0m
+compile Source Directory
+Error: no DISPLAY environment variable specified
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO: Compiling for process 1/2. 
+INFO:     P1_gg_bbxaa  
+INFO: Compiling for process 2/2. 
+INFO:     P1_qq_bbxaa  
+INFO:     P1_gg_bbxaa  
+INFO:     P1_qq_bbxaa  
+INFO:  Idle: 1,  Running: 7,  Completed: 0 [ current time: 10h50 ] 
+INFO:  Idle: 0,  Running: 7,  Completed: 1 [  32.7s  ] 
+INFO:  Idle: 0,  Running: 6,  Completed: 2 [  38.4s  ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 4 [  52.3s  ] 
+rm jobs on queue
+INFO: Stop by the user 
+[1;31mstopping all operation
+            in order to quit MadGraph5_aMC@NLO please enter exit[0m
+INFO: generate_events Stop by the user 
+quit
+INFO:  
+[1;31mGeneration failed (no results.dat file found)[0m
+quit

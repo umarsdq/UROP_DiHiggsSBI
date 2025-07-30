@@ -10,7 +10,7 @@ import argparse
 #os.environ["TMPDIR"] = "/vols/cms/us322/tmp"
 
 # MadMiner output
-logging.basicConfig( 
+logging.basicConfig(
     format="%(asctime)-5.5s %(name)-20.20s %(levelname)-7.7s %(message)s",
     datefmt="%H:%M",
     level=logging.DEBUG,
@@ -92,7 +92,7 @@ if args.supp:
         pythia8_card_file=f"{working_dir}/cards/pythia8_card.dat", 
         log_directory=f"{working_dir}/logs/signal_supp",
         #python_executable="python3",
-        order="LO"
+        order="LO",
         #systematics=["signal_norm"]
     )
 
@@ -108,5 +108,5 @@ if args.b:
             param_card_template_file=f"{working_dir}/cards/restrict_LO.dat",
             pythia8_card_file=f"{working_dir}/cards/pythia8_card.dat", 
             run_card_files=run_cards_background,
-            log_directory=f"{working_dir}/logs_2/background_{i}"
+            log_directory=f"{working_dir}/logs_2/background_{i}",
         )
