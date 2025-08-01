@@ -1,0 +1,20 @@
+executable = 03_run_delphes_all.sh
+request_cpus = 8
+request_memory = 8000
++MaxRunTime = 3*60*60
+
+batch = 0
+
+error  = ./delpheslogs/$(Cluster)_$(Process)_$(arguments).err
+
+# Signal SM
+arguments = signal_sm $(batch)
+queue
+
+# Background
+arguments = background_0 $(batch)
+queue
+
+# BSM points 0-8
+arguments = signal_supp $(batch) $(bsm_id)
+queue bsm_id in 1,2,3,4,5,6,7,8,9

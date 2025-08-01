@@ -1,0 +1,45 @@
+000 (3077136.000.000) 2025-08-01 11:57:56 Job submitted from host: <146.179.108.134:9618?addrs=146.179.108.134-9618&alias=htcmaster00.hep.ph.ic.ac.uk&noUDP&sock=schedd_961_be9a>
+...
+001 (3077136.000.000) 2025-08-01 11:57:57 Job executing on host: <146.179.108.88:9618?addrs=146.179.108.88-9618+[2a0c-5bc0-88-111-216-3eff-fe7f-1b5]-9618&alias=lxbgpu02.hep.ph.ic.ac.uk&noUDP&sock=startd_1813_254b>
+	SlotName: slot1_1@lxbgpu02.hep.ph.ic.ac.uk
+	CondorScratchDir = "/srv/localstage/condor/dir_647414"
+	Cpus = 16
+	Disk = 32769025
+	GPUs = 0
+	Memory = 64000
+...
+006 (3077136.000.000) 2025-08-01 11:58:10 Image size of job updated: 97144
+	95  -  MemoryUsage of job (MB)
+	97144  -  ResidentSetSize of job (KB)
+...
+006 (3077136.000.000) 2025-08-01 12:00:10 Image size of job updated: 646352
+	365  -  MemoryUsage of job (MB)
+	373492  -  ResidentSetSize of job (KB)
+...
+006 (3077136.000.000) 2025-08-01 12:02:10 Image size of job updated: 1202908
+	1175  -  MemoryUsage of job (MB)
+	1202908  -  ResidentSetSize of job (KB)
+...
+006 (3077136.000.000) 2025-08-01 12:04:10 Image size of job updated: 1212196
+	1184  -  MemoryUsage of job (MB)
+	1212196  -  ResidentSetSize of job (KB)
+...
+006 (3077136.000.000) 2025-08-01 12:06:11 Image size of job updated: 1214752
+	1184  -  MemoryUsage of job (MB)
+	1212196  -  ResidentSetSize of job (KB)
+...
+006 (3077136.000.000) 2025-08-01 12:08:12 Image size of job updated: 1214752
+	1185  -  MemoryUsage of job (MB)
+	1212716  -  ResidentSetSize of job (KB)
+...
+006 (3077136.000.000) 2025-08-01 12:10:13 Image size of job updated: 1214752
+	1185  -  MemoryUsage of job (MB)
+	1212720  -  ResidentSetSize of job (KB)
+...
+012 (3077136.000.000) 2025-08-01 12:58:24 Job was held.
+	Job held by SYSTEM_PERIODIC_HOLD due to wall time exceeded.
+	Code 26 Subcode 0
+...
+009 (3077136.000.000) 2025-08-01 18:17:55 Job was aborted.
+	via condor_rm (by user us322)
+...

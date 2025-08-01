@@ -1,11 +1,11 @@
-bkg.N_train: 10000000
+bkg.N_train: 10000
 features:
 - 15
 - 16
 - 17
 - 10
 - 9
-hyperparam.batch_size: 1024
+hyperparam.batch_size: 128
 hyperparam.lr: 0.001
 hyperparam.n_epochs: 150
 hyperparam.patience_ES: 20

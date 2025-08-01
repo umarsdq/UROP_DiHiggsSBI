@@ -1,8 +1,0 @@
-executable = read_delphes.sh
-request_cpus = 8
-request_memory = 16000
-+MaxRunTime = 1*60*60
-output = ./joblogs/$(Cluster)_$(Process).out
-error  = ./joblogs/$(Cluster)_$(Process).err
-log    = ./joblogs/$(Cluster)_$(Process).log
-queue

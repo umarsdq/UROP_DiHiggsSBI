@@ -32,11 +32,10 @@ parser.add_argument("-n","--num_batch",help="num_background_batches",default=1,t
 args = parser.parse_args()   
 
 # batch indices for the SM benchmark
-signal_batches = [0, 1, 2, 3] # CHANGE THIS
+signal_batches = [0] # CHANGE THIS
 
 # {morphing basis: batch indices} for non-SM benchmarks
-supp_batches = {1:[0,1],2:[0,1],3:[0,1],4:[0,1],5:[0],6:[0],7:[0],8:[0,1],9:[0,1]} # CHANGE THIS
-
+supp_batches = {1:[0],2:[0],3:[0],4:[0],5:[0],6:[0],7:[0],8:[0],9:[0]}  # Only batch 0 exists for all morphing points
 
 if args.process_code == "signal":
     to_combine = []

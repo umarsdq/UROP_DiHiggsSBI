@@ -1,0 +1,43 @@
+000 (3077129.000.000) 2025-08-01 11:40:14 Job submitted from host: <146.179.108.134:9618?addrs=146.179.108.134-9618&alias=htcmaster00.hep.ph.ic.ac.uk&noUDP&sock=schedd_961_be9a>
+...
+001 (3077129.000.000) 2025-08-01 11:40:27 Job executing on host: <146.179.108.88:9618?addrs=146.179.108.88-9618+[2a0c-5bc0-88-111-216-3eff-fe7f-1b5]-9618&alias=lxbgpu02.hep.ph.ic.ac.uk&noUDP&sock=startd_1813_254b>
+	SlotName: slot1_1@lxbgpu02.hep.ph.ic.ac.uk
+	CondorScratchDir = "/srv/localstage/condor/dir_644620"
+	Cpus = 8
+	Disk = 16385024
+	GPUs = 0
+	Memory = 32000
+...
+006 (3077129.000.000) 2025-08-01 11:40:41 Image size of job updated: 93344
+	92  -  MemoryUsage of job (MB)
+	93344  -  ResidentSetSize of job (KB)
+...
+006 (3077129.000.000) 2025-08-01 11:42:42 Image size of job updated: 640704
+	362  -  MemoryUsage of job (MB)
+	369920  -  ResidentSetSize of job (KB)
+...
+006 (3077129.000.000) 2025-08-01 11:44:43 Image size of job updated: 1223620
+	1195  -  MemoryUsage of job (MB)
+	1223620  -  ResidentSetSize of job (KB)
+...
+006 (3077129.000.000) 2025-08-01 11:45:20 Image size of job updated: 1225924
+	1195  -  MemoryUsage of job (MB)
+	1223620  -  ResidentSetSize of job (KB)
+...
+004 (3077129.000.000) 2025-08-01 11:45:20 Job was evicted.
+	(0) CPU times
+		Usr 0 00:26:51, Sys 0 00:00:11  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     7.66        8         8 
+	   Disk (KB)            :     2    16384000  16385024 
+	   GPUs                 :                           0 
+	   Memory (MB)          :  1195       32000     32000 
+	   TimeExecute (s)      :   292                       
+	   TimeSlotBusy (s)     :   293                       
+...
+009 (3077129.000.000) 2025-08-01 11:45:20 Job was aborted.
+	via condor_rm (by user us322)
+...

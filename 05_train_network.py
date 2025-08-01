@@ -64,15 +64,15 @@ os.makedirs("models", exist_ok=True)
 run_configs["features"] = [15, 16, 17, 10, 9, 0, 2, 5, 7][:int(args.num_features)]
 
 
-run_configs["bkg.N_train"] = 10000000 # ORIGINAL used in paper
-#run_configs["bkg.N_train"] = 10000000 # To reduce training time
+# run_configs["bkg.N_train"] = 10000000 # ORIGINAL used in paper
+run_configs["bkg.N_train"] = 10000 # Reduced for smaller dataset
 
 # network architecture
 run_configs["network.type"] = args.network
 run_configs["network.layers"] = [32, 32]
 
 # training hyperparameters
-run_configs["hyperparam.batch_size"] = 1024
+run_configs["hyperparam.batch_size"] = 128 ### change based on bkg size
 run_configs["hyperparam.lr"] = 0.001
 run_configs["hyperparam.n_epochs"] = 150
 run_configs["hyperparam.patience_ES"] = 20
@@ -100,6 +100,7 @@ parameter_code = run_configs["parameter_code"]
 samples_SM = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/x_sm.npy')[:,features]
 samples_alt = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/x_alt_{parameter_code}.npy')[:,features]
 samples_bkg = np.load(f'{samples_dir}/plain_real/delphes_b0/{parameter_code}/x_bkg.npy')[:,features]
+
 # load in the theta values
 theta_alt = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/theta_alt_{parameter_code}.npy')
 theta_alt_sm = np.load(f'{samples_dir}/plain_real/{identity_code}/{parameter_code}/theta_alt_{parameter_code}.npy')

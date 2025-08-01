@@ -24,7 +24,7 @@
 *                                                          *
 ************************************************************
 load MG5 configuration from madgraph-stable/MG5_aMC_v3_5_1/input/mg5_configuration.txt 
-fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+./HEPTools/fastjet/bin/fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
  Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
  MG5_aMC> set fastjet /PATH/TO/fastjet-config
 
@@ -39,7 +39,7 @@ set lhapdf to /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HE
 Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
 Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
 Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
-import /vols/cms/us322/tmp-m/generate.mg5
+import /tmp/generate.mg5
 The import format was not given, so we guess it as command
 generate p p > b b~ a a
 No model currently active, so we import the Standard Model
@@ -74,10 +74,10 @@ INFO: Process u~ u > b b~ a a added to mirror process u u~ > b b~ a a
 INFO: Process c~ c > b b~ a a added to mirror process c c~ > b b~ a a 
 INFO: Process d~ d > b b~ a a added to mirror process d d~ > b b~ a a 
 INFO: Process s~ s > b b~ a a added to mirror process s s~ > b b~ a a 
-5 processes with 110 diagrams generated in 0.332 s
+5 processes with 110 diagrams generated in 0.490 s
 Total: 5 processes with 110 diagrams
-output /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0
-INFO: directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0 already exists.
+output /vols/cms/us322/02_event_generation_14/mg_processes_2/background_0
+INFO: directory /vols/cms/us322/02_event_generation_14/mg_processes_2/background_0 already exists.
 If you continue this directory will be deleted and replaced.
 Do you want to continue? [[4my[0m, n]
 [1mThe answer to the previous question is not set in your input file[0m
@@ -100,17 +100,17 @@ INFO: Creating files in directory P1_qq_bbxaa
 INFO: Generating Feynman diagrams for Process: u u~ > b b~ a a WEIGHTED<=6 @1 
 INFO: Generating Feynman diagrams for Process: d d~ > b b~ a a WEIGHTED<=6 @1 
 INFO: Finding symmetric diagrams for subprocess group qq_bbxaa 
-Generated helas calls for 3 subprocesses (70 diagrams) in 0.134 s
-Wrote files for 149 helas calls in 0.475 s
+Generated helas calls for 3 subprocesses (70 diagrams) in 0.184 s
+Wrote files for 149 helas calls in 0.426 s
 ALOHA: aloha starts to compute helicity amplitudes
-ALOHA: aloha creates 2 routines in  0.465 s
-save configuration file to /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/Cards/me5_configuration.txt
+ALOHA: aloha creates 2 routines in  0.707 s
+save configuration file to /vols/cms/us322/02_event_generation_14/mg_processes_2/background_0/Cards/me5_configuration.txt
 INFO: Use Fortran compiler gfortran 
 INFO: Use c++ compiler g++ 
 INFO: Generate jpeg diagrams 
 INFO: Generate web pages 
-Output to directory /vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0 done.
+Output to directory /vols/cms/us322/02_event_generation_14/mg_processes_2/background_0 done.
 Type "launch" to generate events from this process, or see
-/vols/cms/us322/nsbi_for_dihiggs/mg_processes_2/background_0/README
+/vols/cms/us322/02_event_generation_14/mg_processes_2/background_0/README
 Run "open index.html" to see more information about this process.
 quit

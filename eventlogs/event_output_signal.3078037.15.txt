@@ -1,0 +1,4 @@
+Generated job ID: 16
+Created temporary directory: /tmp/tmp.HedTYZAmv8
+Running signal generation (-sm) with random seed
+Modified run card with seed: 48

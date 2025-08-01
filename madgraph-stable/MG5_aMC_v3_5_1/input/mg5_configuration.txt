@@ -29,7 +29,67 @@
 #! Allow/Refuse syntax that changed meaning in version 3.1 of the code
 #! (Compare to 3.0, 3.1 is back to the meaning of 2.x branch)
 #!
-acknowledged_v3.1_syntax = True #           
+acknowledged_v3.1_syntax = True #                                                                       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -76,14 +136,14 @@ acknowledged_v3.1_syntax = True #
 #!  Defines the path to the pythia8 installation directory (i.e. the
 #!  on containing the lib, bin and include directories) .
 #!  If using a relative path, that starts from the mg5 directory
-# pythia8_path = ./HEPTools/pythia8
+pythia8_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/pythia8 #  
 
 #! MG5aMC_PY8_interface path
 #!  Defines the path of the C++ driver file that is used by MG5_aMC to
 #!  steer the Pythia8 shower.
 #!  Can be installed directly from within MG5_aMC with the following command:
 #!     MG5_aMC> install mg5amc_py8_interface
-# mg5amc_py8_interface_path = ./HEPTools/MG5aMC_PY8_interface 
+mg5amc_py8_interface_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/MG5aMC_PY8_interface #  
 
 #! Herwig++/Herwig7 paths
 #!  specify here the paths also to HepMC ant ThePEG
@@ -117,7 +177,7 @@ acknowledged_v3.1_syntax = True #
 
 #! Default Running mode 
 #!  0: single machine/ 1: cluster / 2: multicore
-# run_mode = 2
+run_mode = 2
 
 #! Cluster Type [pbs|sge|condor|lsf|ge|slurm|htcaas|htcaas2] Use for cluster run only
 #!  And cluster queue (or partition for slurm)
@@ -149,7 +209,7 @@ acknowledged_v3.1_syntax = True #
 
 #! Nb_core to use (None = all) This is use only for multicore run
 #!  This correspond also to the number core used for code compilation for cluster mode
-nb_core = 8
+nb_core = 1
 
 #! Pythia-PGS Package
 #!  relative path start from main directory
@@ -157,7 +217,7 @@ nb_core = 8
 
 #! Delphes Package
 #!  relative path start from main directory
-# delphes_path = ./Delphes
+delphes_path = ./HEPTools/Delphes-3.5.0
 
 #! MadAnalysis4 fortran-based package [for basic analysis]
 #!  relative path start from main directory
@@ -266,6 +326,192 @@ mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
 # MG5 MAIN DIRECTORY
 mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
 lhapdf = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config 
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
+
+# MG5 MAIN DIRECTORY
+mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1
 
 # MG5 MAIN DIRECTORY
 mg5_path = /vols/cms/us322/nsbi_for_dihiggs/madgraph-stable/MG5_aMC_v3_5_1

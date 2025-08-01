@@ -1,0 +1,99 @@
+Running 06b evaluation with parameter_code=c0c1 and number_features=5
+Started at: Thu Jul 31 16:20:02 BST 2025
+Running 06b with parameter_code=c0c1, number_features=5
+Total RAM: 125.17 GB
+Available RAM: 113.94 GB
+Total Disk Space: 19.52 GB
+Used Disk Space: 8.12 GB
+Free Disk Space: 10.38 GB
+Using device: cpu
+Loading data with 5 features
+['sm', 'alt_c0c1_m10p2p0', 'alt_c0c1_p3m2p0', 'alt_c0c1_m4p1p0']
+['sm', 'alt_c0c1_m10p2p0', 'alt_c0c1_p3m2p0', 'alt_c0c1_m4p1p0']
+test code sm at [0, 0, 0] has N_sig 3600.0, sig frac = 0.30716723549488056
+dataset # 0 // num signal events: 3610 // num background events: 8115
+dataset # 1 // num signal events: 3551 // num background events: 8034
+dataset # 2 // num signal events: 3567 // num background events: 7991
+dataset # 3 // num signal events: 3609 // num background events: 8087
+dataset # 4 // num signal events: 3519 // num background events: 8127
+dataset # 5 // num signal events: 3650 // num background events: 8044
+dataset # 6 // num signal events: 3708 // num background events: 8133
+dataset # 7 // num signal events: 3697 // num background events: 8034
+dataset # 8 // num signal events: 3590 // num background events: 8135
+dataset # 9 // num signal events: 3535 // num background events: 8235
+dataset # 10 // num signal events: 3611 // num background events: 8061
+dataset # 11 // num signal events: 3588 // num background events: 8132
+dataset # 12 // num signal events: 3648 // num background events: 8136
+dataset # 13 // num signal events: 3512 // num background events: 8200
+dataset # 14 // num signal events: 3634 // num background events: 8138
+dataset # 15 // num signal events: 3727 // num background events: 8145
+dataset # 16 // num signal events: 3606 // num background events: 8100
+dataset # 17 // num signal events: 3578 // num background events: 8143
+dataset # 18 // num signal events: 3749 // num background events: 8030
+dataset # 19 // num signal events: 3551 // num background events: 8102
+test code alt_c0c1_m10p2p0 at [-1.0, 0.2, 0.0] has N_sig 3947.2918399018604, sig frac = 0.3271066857643813
+dataset # 0 // num signal events: 3616 // num background events: 8148
+dataset # 1 // num signal events: 3653 // num background events: 8074
+dataset # 2 // num signal events: 3709 // num background events: 8185
+dataset # 3 // num signal events: 3695 // num background events: 8160
+dataset # 4 // num signal events: 3576 // num background events: 8055
+dataset # 5 // num signal events: 3587 // num background events: 8040
+dataset # 6 // num signal events: 3563 // num background events: 7982
+dataset # 7 // num signal events: 3620 // num background events: 8302
+dataset # 8 // num signal events: 3580 // num background events: 8071
+dataset # 9 // num signal events: 3643 // num background events: 8141
+dataset # 10 // num signal events: 3647 // num background events: 8228
+dataset # 11 // num signal events: 3659 // num background events: 8341
+dataset # 12 // num signal events: 3513 // num background events: 8156
+dataset # 13 // num signal events: 3631 // num background events: 8123
+dataset # 14 // num signal events: 3519 // num background events: 8222
+dataset # 15 // num signal events: 3592 // num background events: 8211
+dataset # 16 // num signal events: 3694 // num background events: 8087
+dataset # 17 // num signal events: 3531 // num background events: 8104
+dataset # 18 // num signal events: 3593 // num background events: 8087
+dataset # 19 // num signal events: 3612 // num background events: 8115
+test code alt_c0c1_p3m2p0 at [0.3, -0.2, 0.0] has N_sig 9014.071750642994, sig frac = 0.5260904635995073
+dataset # 0 // num signal events: 3616 // num background events: 8148
+dataset # 1 // num signal events: 3653 // num background events: 8074
+dataset # 2 // num signal events: 3709 // num background events: 8185
+dataset # 3 // num signal events: 3695 // num background events: 8160
+dataset # 4 // num signal events: 3576 // num background events: 8055
+dataset # 5 // num signal events: 3587 // num background events: 8040
+dataset # 6 // num signal events: 3563 // num background events: 7982
+dataset # 7 // num signal events: 3620 // num background events: 8302
+dataset # 8 // num signal events: 3580 // num background events: 8071
+dataset # 9 // num signal events: 3643 // num background events: 8141
+dataset # 10 // num signal events: 3647 // num background events: 8228
+dataset # 11 // num signal events: 3659 // num background events: 8341
+dataset # 12 // num signal events: 3513 // num background events: 8156
+dataset # 13 // num signal events: 3631 // num background events: 8123
+dataset # 14 // num signal events: 3519 // num background events: 8222
+dataset # 15 // num signal events: 3592 // num background events: 8211
+dataset # 16 // num signal events: 3694 // num background events: 8087
+dataset # 17 // num signal events: 3531 // num background events: 8104
+dataset # 18 // num signal events: 3593 // num background events: 8087
+dataset # 19 // num signal events: 3612 // num background events: 8115
+test code alt_c0c1_m4p1p0 at [-0.4, 0.1, 0.0] has N_sig 1466.3582240667197, sig frac = 0.15296301158300152
+dataset # 0 // num signal events: 3616 // num background events: 8148
+dataset # 1 // num signal events: 3653 // num background events: 8074
+dataset # 2 // num signal events: 3709 // num background events: 8185
+dataset # 3 // num signal events: 3695 // num background events: 8160
+dataset # 4 // num signal events: 3576 // num background events: 8055
+dataset # 5 // num signal events: 3587 // num background events: 8040
+dataset # 6 // num signal events: 3563 // num background events: 7982
+dataset # 7 // num signal events: 3620 // num background events: 8302
+dataset # 8 // num signal events: 3580 // num background events: 8071
+dataset # 9 // num signal events: 3643 // num background events: 8141
+dataset # 10 // num signal events: 3647 // num background events: 8228
+dataset # 11 // num signal events: 3659 // num background events: 8341
+dataset # 12 // num signal events: 3513 // num background events: 8156
+dataset # 13 // num signal events: 3631 // num background events: 8123
+dataset # 14 // num signal events: 3519 // num background events: 8222
+dataset # 15 // num signal events: 3592 // num background events: 8211
+dataset # 16 // num signal events: 3694 // num background events: 8087
+dataset # 17 // num signal events: 3531 // num background events: 8104
+dataset # 18 // num signal events: 3593 // num background events: 8087
+dataset # 19 // num signal events: 3612 // num background events: 8115
+Done
+Completed 06b with number_features=5
+Finished at: Thu Jul 31 16:48:38 BST 2025

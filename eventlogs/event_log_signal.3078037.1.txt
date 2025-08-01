@@ -1,0 +1,18 @@
+000 (3078037.001.000) 2025-08-01 18:27:11 Job submitted from host: <146.179.108.134:9618?addrs=146.179.108.134-9618&alias=htcmaster00.hep.ph.ic.ac.uk&noUDP&sock=schedd_961_be9a>
+...
+001 (3078037.001.000) 2025-08-01 18:27:12 Job executing on host: <146.179.108.60:9618?addrs=146.179.108.60-9618+[2a0c-5bc0-88-111-92e2-baff-fea6-6928]-9618&alias=lxa08.hep.ph.ic.ac.uk&noUDP&sock=startd_1766_e857>
+	SlotName: slot1_2@lxa08.hep.ph.ic.ac.uk
+	CondorScratchDir = "/srv/localstage/condor/dir_1617589"
+	Cpus = 1
+	Disk = 2049024
+	GPUs = 0
+	Memory = 4000
+...
+006 (3078037.001.000) 2025-08-01 18:27:25 Image size of job updated: 91108
+	89  -  MemoryUsage of job (MB)
+	91108  -  ResidentSetSize of job (KB)
+...
+006 (3078037.001.000) 2025-08-01 18:29:25 Image size of job updated: 221956
+	217  -  MemoryUsage of job (MB)
+	221956  -  ResidentSetSize of job (KB)
+...

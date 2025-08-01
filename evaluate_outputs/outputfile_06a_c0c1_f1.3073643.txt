@@ -1,0 +1,9 @@
+Running 06a evaluation with parameter_code=c0c1 and number_features=1
+Started at: Thu Jul 31 16:20:02 BST 2025
+Running 06a with parameter_code=c0c1, number_features=1
+Total RAM: 125.17 GB
+Available RAM: 113.39 GB
+Total Disk Space: 19.52 GB
+Used Disk Space: 8.12 GB
+Free Disk Space: 10.38 GB
+Using device: cpu

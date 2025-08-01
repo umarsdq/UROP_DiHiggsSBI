@@ -1,0 +1,20 @@
+Running 06a evaluation with parameter_code=c0 and number_features=5
+Started at: Thu Jul 31 16:20:02 BST 2025
+Running 06a with parameter_code=c0, number_features=5
+Total RAM: 125.17 GB
+Available RAM: 114.24 GB
+Total Disk Space: 19.52 GB
+Used Disk Space: 8.12 GB
+Free Disk Space: 10.38 GB
+Using device: cpu
+Loading data with 5 features
+['sm', 'alt_c0_m10', 'alt_c0_m6', 'alt_c0_m4', 'alt_c0_p1']
+['sm', 'alt_c0_m10', 'alt_c0_m6', 'alt_c0_m4', 'alt_c0_p1']
+test code sm at (0, 0, 0) has N_sig 3600.0, sig frac = 0.30612244897959184
+test code alt_c0_m10 at (-10, 0, 0) has N_sig 2363.3870049688508, sig frac = 0.22458425256554046
+test code alt_c0_m6 at (-6, 0, 0) has N_sig 1266.3271169556856, sig frac = 0.13433939871213135
+test code alt_c0_m4 at (-4, 0, 0) has N_sig 1513.649715961916, sig frac = 0.15647142086035348
+test code alt_c0_p1 at (1, 0, 0) has N_sig 4453.19279726486, sig frac = 0.3530583309747334
+Done
+Completed 06a with number_features=5
+Finished at: Thu Jul 31 16:20:44 BST 2025
