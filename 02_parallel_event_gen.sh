@@ -5,15 +5,35 @@ conda activate madminer_env
 
 # Parse command line arguments
 GENERATION_TYPE=$1
-SUPP_ID=$2
 
-# Generate a unique job ID using Condor's PROCESS variable for sequential numbering
-JOB_ID=$((PROCESS + 1))
-echo "Generated job ID: $JOB_ID"
+# For BSM jobs, get supp_id and queue_line from command line arguments
+if [ "$GENERATION_TYPE" = "bsm" ]; then
+    SUPP_ID=$2
+    QUEUE_LINE=$3
+    echo "BSM job: using supp_id from command line argument: $SUPP_ID, queue_line: $QUEUE_LINE"
+else
+    SUPP_ID=$2
+fi
 
-# Create a unique temporary directory for this job
-TEMP_DIR=$(mktemp -d)
-echo "Created temporary directory: $TEMP_DIR"
+# Generate a unique job ID based on queue line number
+# Use CLUSTER to identify the queue line, PROCESS for individual job within that line
+if [ -n "$CLUSTER" ]; then
+    # For BSM jobs, we want each queue line to create one folder
+    if [ "$GENERATION_TYPE" = "bsm" ]; then
+        # Use the queue_line argument directly as job ID
+        JOB_ID=$QUEUE_LINE
+    else
+        # For other jobs, use PROCESS + 1 (PROCESS starts from 0)
+        JOB_ID=$((PROCESS + 1))
+    fi
+else
+    JOB_ID=1
+fi
+echo "Generated job ID: $JOB_ID (CLUSTER=$CLUSTER, PROCESS=$PROCESS)"
+
+# Use Condor's temporary directory (automatically provided)
+TEMP_DIR="$TMPDIR"
+echo "Using Condor temporary directory: $TEMP_DIR"
 
 # Function to generate random seed
 generate_random_seed() {
@@ -36,14 +56,7 @@ modify_run_card() {
     echo "Modified run card with seed: $random_seed"
 }
 
-# Function to clean up temporary directory
-cleanup() {
-    echo "Cleaning up temporary directory: $TEMP_DIR"
-    rm -rf "$TEMP_DIR"
-}
-
-# Set up cleanup on exit
-trap cleanup EXIT
+# No cleanup needed - Condor handles temporary directory cleanup automatically
 
 # Run the event generation script based on the generation type
 case $GENERATION_TYPE in
@@ -52,13 +65,7 @@ case $GENERATION_TYPE in
         
         # Use 14TeV signal run card
         RUN_CARD="./cards/run_cards/run_card_signal_14TeV.dat"
-        if [ ! -f "$RUN_CARD" ]; then
-            echo "Error: Signal run card not found: $RUN_CARD"
-            exit 1
-        fi
-        
-        # Create temporary run card with random seed
-        TEMP_RUN_CARD="$TEMP_DIR/run_card_signal_job${JOB_ID}.dat"
+        TEMP_RUN_CARD="$TEMP_DIR/run_card_signal.dat"
         RANDOM_SEED=$(generate_random_seed)
         modify_run_card "$RUN_CARD" "$TEMP_RUN_CARD" "$RANDOM_SEED"
         
@@ -71,13 +78,7 @@ case $GENERATION_TYPE in
         
         # Use 14TeV background run card
         RUN_CARD="./cards/run_cards/run_card_background_14TeV.dat"
-        if [ ! -f "$RUN_CARD" ]; then
-            echo "Error: Background run card not found: $RUN_CARD"
-            exit 1
-        fi
-        
-        # Create temporary run card with random seed
-        TEMP_RUN_CARD="$TEMP_DIR/run_card_background_job${JOB_ID}.dat"
+        TEMP_RUN_CARD="$TEMP_DIR/run_card_background.dat"
         RANDOM_SEED=$(generate_random_seed)
         modify_run_card "$RUN_CARD" "$TEMP_RUN_CARD" "$RANDOM_SEED"
         
@@ -94,13 +95,7 @@ case $GENERATION_TYPE in
         
         # Use 14TeV signal run card for BSM (same as signal generation)
         RUN_CARD="./cards/run_cards/run_card_signal_14TeV.dat"
-        if [ ! -f "$RUN_CARD" ]; then
-            echo "Error: Signal run card not found for BSM generation: $RUN_CARD"
-            exit 1
-        fi
-        
-        # Create temporary run card with random seed
-        TEMP_RUN_CARD="$TEMP_DIR/run_card_signal_job${JOB_ID}.dat"
+        TEMP_RUN_CARD="$TEMP_DIR/run_card_signal.dat"
         RANDOM_SEED=$(generate_random_seed)
         modify_run_card "$RUN_CARD" "$TEMP_RUN_CARD" "$RANDOM_SEED"
         

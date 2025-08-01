@@ -1,4 +1,0 @@
-Generated job ID: 8
-Created temporary directory: /tmp/tmp.5iKs7R35hv
-Running signal generation (-sm) with random seed
-Modified run card with seed: 24333

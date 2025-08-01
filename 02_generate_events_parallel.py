@@ -88,7 +88,7 @@ if args.supp:
     miner.run_multiple(
         sample_benchmarks=[f"morphing_basis_vector_{args.supp_id}"],
         mg_directory=mg_dir,
-        mg_process_directory="{mg_process_output_dir}/signal_supp/morphing_basis_vector_{supp_id}{job_suffix}".format(mg_process_output_dir = workflow["madgraph"]["output_dir"], supp_id = args.supp_id, job_suffix = job_suffix),
+        mg_process_directory="{mg_process_output_dir}/signal_supp{job_suffix}/morphing_basis_vector_{supp_id}".format(mg_process_output_dir = workflow["madgraph"]["output_dir"], supp_id = args.supp_id, job_suffix = job_suffix),
         proc_card_file=f"{working_dir}/cards/proc_card_signal.dat",
         param_card_template_file=f"{working_dir}/cards/restrict_LO.dat",
         madspin_card_file=f"{working_dir}/cards/madspin_card.dat",

@@ -4,26 +4,21 @@ request_cpus = 1
 output = eventlogs/event_output_$(arguments)$(bsm_id).$(CLUSTER).$(PROCESS).txt
 error = eventlogs/event_error_$(arguments)$(bsm_id).$(CLUSTER).$(PROCESS).txt
 log = eventlogs/event_log_$(arguments)$(bsm_id).$(CLUSTER).$(PROCESS).txt
-environment = "PROCESS=$(PROCESS)"
+environment = "PROCESS=$(PROCESS) CLUSTER=$(CLUSTER)"
 
 # Queue entries for different generation types
 # Signal generation (20 runs for 14 TeV)
-arguments = signal
-queue 20
+#arguments = signal
+#queue 3
 
 # Background generation (160 runs for 14 TeV)
-#arguments = background
-#queue 160
+arguments = background
+queue 3
 
 # BSM generation for each bsm_id (1-9) with 10 runs each for 14 TeV
-#arguments = bsm
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9
-#queue bsm_id in 1,2,3,4,5,6,7,8,9 
+#arguments = bsm $(bsm_id) 1
+#queue bsm_id in 1,2
+#arguments = bsm $(bsm_id) 2
+#queue bsm_id in 1,2
+#arguments = bsm $(bsm_id) 3
+#queue bsm_id in 1,2 
